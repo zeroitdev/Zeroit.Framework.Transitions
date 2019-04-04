@@ -1,0 +1,932 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7CBBA14-D3ED-4A44-93D5-4429E7168BF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeroit.Framework.Transitions</RootNamespace>
+    <AssemblyName>Zeroit.Framework.Transitions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Zeroit.Framework.Transitions.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\Zeroit.Framework.Transitions.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ZeroitStrongKeys.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Added_Animations\FormAnimator\AnimationPreparer.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Constants.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Enum.cs" />
+    <Compile Include="Added_Animations\FormAnimator\FormAnimations.cs" />
+    <Compile Include="Added_Animations\FormAnimator\FormAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\FormAnimator\FormAnimator.Designer.cs">
+      <DependentUpon>FormAnimator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Added_Animations\FormTransformer\FormTransformer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\FormTransformer\FormTransformer.Designer.cs">
+      <DependentUpon>FormTransformer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Added_Animations\FormTransformer\Transformer.cs" />
+    <Compile Include="Added_Animations\MatAnimation\AnimationDirection.cs" />
+    <Compile Include="Added_Animations\MatAnimation\AnimationManager.cs" />
+    <Compile Include="Added_Animations\MatAnimation\Animations.cs" />
+    <Compile Include="Added_Animations\SpecAnimator\AnimatorBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\ControlBackColorAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\ControlBoundsAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\ControlForeColorAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\DummyAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\FormOpacityAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\LoopMode.cs" />
+    <Compile Include="Added_Animations\SpecAnimator\SynchronizationMode.cs" />
+    <Compile Include="Added_Animations\SpecAnimator\TrackBarValueAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\AtomicAnimatorDialog\AtomicAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\AtomicAnimatorDialog\AtomicAnimatorDialog.Designer.cs">
+      <DependentUpon>AtomicAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\AtomicAnimatorDialog\AtomicAnimatorInput.cs" />
+    <Compile Include="AnimationEditors\AtomicAnimatorDialog\AtomicAnimatorUITypeEditor.cs" />
+    <Compile Include="Added_Animations\Betwixt\Annotations.cs" />
+    <Compile Include="Added_Animations\Betwixt\Betwixt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\Betwixt\Ease.cs" />
+    <Compile Include="Added_Animations\Betwixt\EaseImplementations.cs" />
+    <Compile Include="Added_Animations\Betwixt\GenericEaseImpl.cs" />
+    <Compile Include="Added_Animations\Betwixt\GenericMath.cs" />
+    <Compile Include="Added_Animations\Betwixt\Tweener.cs" />
+    <Compile Include="Added_Animations\DBTweener\DefineConstants.cs" />
+    <Compile Include="Added_Animations\DBTweener\CRelay.cs" />
+    <Compile Include="Added_Animations\DBTweener\MathLookup.cs" />
+    <Compile Include="Added_Animations\DBTweener\IListener.cs" />
+    <Compile Include="Added_Animations\DBTweener\CTween.cs" />
+    <Compile Include="Added_Animations\DBTweener\SValue.cs" />
+    <Compile Include="Added_Animations\DBTweener\CElastic.cs" />
+    <Compile Include="Added_Animations\DBTweener\CBack.cs" />
+    <Compile Include="Added_Animations\DBTweener\CBounce.cs" />
+    <Compile Include="Added_Animations\DBTweener\CCircular.cs" />
+    <Compile Include="Added_Animations\DBTweener\CExponential.cs" />
+    <Compile Include="Added_Animations\DBTweener\CSinusoidal.cs" />
+    <Compile Include="Added_Animations\DBTweener\CQuintic.cs" />
+    <Compile Include="Added_Animations\DBTweener\CCubic.cs" />
+    <Compile Include="Added_Animations\DBTweener\CQuadratic.cs" />
+    <Compile Include="Added_Animations\DBTweener\CLinear.cs" />
+    <Compile Include="Added_Animations\DBTweener\CEquation.cs" />
+    <Compile Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorDialog.Designer.cs">
+      <DependentUpon>ObjectAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorInput.cs" />
+    <Compile Include="AnimationEditors\PeaceAnimatorDialog\PeaceAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PeaceAnimatorDialog\PeaceAnimatorDialog.Designer.cs">
+      <DependentUpon>PeaceAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PeaceAnimatorDialog\PeaceAnimatorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\PeaceAnimatorDialog\PeaceInput.cs" />
+    <Compile Include="AnimationEditors\PeaceAnimatorDialog\Old Codes\PeaceInputStartUps.cs" />
+    <Compile Include="AnimationEditors\PeaceAnimatorDialog\Old Codes\PeaceInputStartUpsV1.cs" />
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\PizaroAnimatorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\PizaroAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\PizaroAnimatorDialog.Designer.cs">
+      <DependentUpon>PizaroAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\PizaroAnimatorInput.cs" />
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\BottomAnchoredHeightEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\BottomAnchoredHeightEffect_UserControl.Designer.cs">
+      <DependentUpon>BottomAnchoredHeightEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ColorChannelShiftEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ColorChannelShiftEffect_UserControl.Designer.cs">
+      <DependentUpon>ColorChannelShiftEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ColorShiftEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ColorShiftEffect_UserControl.Designer.cs">
+      <DependentUpon>ColorShiftEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ControlFadeEffect2_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ControlFadeEffect2_UserControl.Designer.cs">
+      <DependentUpon>ControlFadeEffect2_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ControlFadeEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ControlFadeEffect_UserControl.Designer.cs">
+      <DependentUpon>ControlFadeEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FoldEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FoldEffect_UserControl.Designer.cs">
+      <DependentUpon>FoldEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FontSizeEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FontSizeEffect_UserControl.Designer.cs">
+      <DependentUpon>FontSizeEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FormFadeEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FormFadeEffect_UserControl.Designer.cs">
+      <DependentUpon>FormFadeEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\HorizontalFoldEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\HorizontalFoldEffect_UserControl.Designer.cs">
+      <DependentUpon>HorizontalFoldEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\LeftAnchoredWidthEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\LeftAnchoredWidthEffect_UserControl.Designer.cs">
+      <DependentUpon>LeftAnchoredWidthEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\RightAnchoredWidthEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\RightAnchoredWidthEffect_UserControl.Designer.cs">
+      <DependentUpon>RightAnchoredWidthEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\TopAnchoredHeightEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\TopAnchoredHeightEffect_UserControl.Designer.cs">
+      <DependentUpon>TopAnchoredHeightEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\VerticalFoldEffect_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\VerticalFoldEffect_UserControl.Designer.cs">
+      <DependentUpon>VerticalFoldEffect_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\XLocation_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\XLocation_UserControl.Designer.cs">
+      <DependentUpon>XLocation_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\YLocation_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\YLocation_UserControl.Designer.cs">
+      <DependentUpon>YLocation_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\VisualEffectsEditorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\VisualEffectsInput.cs" />
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\AnimateInput.cs" />
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\AnimateEditorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Custom_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Custom_UserControl.Designer.cs">
+      <DependentUpon>Custom_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Rotate_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Rotate_UserControl.Designer.cs">
+      <DependentUpon>Rotate_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizSlide_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizSlide_UserControl.Designer.cs">
+      <DependentUpon>HorizSlide_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\ScaleAndHorizSlide_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\ScaleAndHorizSlide_UserControl.Designer.cs">
+      <DependentUpon>ScaleAndHorizSlide_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Scale_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Scale_UserControl.Designer.cs">
+      <DependentUpon>Scale_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\VertSlide_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\VertSlide_UserControl.Designer.cs">
+      <DependentUpon>VertSlide_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\ScaleAndRotate_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\ScaleAndRotate_UserControl.Designer.cs">
+      <DependentUpon>ScaleAndRotate_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizSlideAndRotate_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizSlideAndRotate_UserControl.Designer.cs">
+      <DependentUpon>HorizSlideAndRotate_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Transparent_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Transparent_UserControl.Designer.cs">
+      <DependentUpon>Transparent_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Leaf_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Leaf_UserControl.Designer.cs">
+      <DependentUpon>Leaf_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Mosaic_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Mosaic_UserControl.Designer.cs">
+      <DependentUpon>Mosaic_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Particles_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Particles_UserControl.Designer.cs">
+      <DependentUpon>Particles_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\VertBlind_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\VertBlind_UserControl.Designer.cs">
+      <DependentUpon>VertBlind_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizBlind_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizBlind_UserControl.Designer.cs">
+      <DependentUpon>HorizBlind_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\ZeroitAnimateAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\ZeroitAnimateAnimatorDialog.Designer.cs">
+      <DependentUpon>ZeroitAnimateAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_Transition_Google_AnimatorDialog\ZeroitTransitionEditorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\ZeroitAnimate_Transition_Google_AnimatorDialog\ZeroitAnimateTransitionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_Transition_Google_AnimatorDialog\ZeroitAnimateTransitionDialog.Designer.cs">
+      <DependentUpon>ZeroitAnimateTransitionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\ZeroitAnimate_Transition_Google_AnimatorDialog\ZeroitTransitionInput.cs" />
+    <Compile Include="ClickAnimator\MetroAnimator.cs" />
+    <Compile Include="Visual Effects Animation\FoldAnimation .cs" />
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\Animation.cs" />
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\AnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\Controller.cs" />
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\DecorationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\DoubleBitmapControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\DoubleBitmapControl.Designer.cs">
+      <DependentUpon>DoubleBitmapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\DoubleBitmapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\DoubleBitmapFormDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\Flags.cs" />
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\PointFConverter.cs" />
+    <Compile Include="ZeroitAnimate_Animator _WithEditor\TransfromHelper.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\IManagedType.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\ITransitionType.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\ManagedType_Color.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\ManagedType_Double.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\ManagedType_Float.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\ManagedType_Int.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\ManagedType_String.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionChain.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionElement.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionManager.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Acceleration.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Bounce.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_CriticalDamping.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Deceleration.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_EaseInEaseOut.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Flash.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Linear.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_ThrowAndCatch.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_UserDefined.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Zeroit.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\Utility.cs" />
+    <Compile Include="_HelpingControls\NoFlickerPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_SlideFrom_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_SlideFrom_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_SlideFrom_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Slide_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Slide_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_Slide_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_ResizeWidth_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_ResizeWidth_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_ResizeWidth_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_ResizeHeight_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_ResizeHeight_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_ResizeHeight_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Resize_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Resize_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_Resize_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeOutandHide_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeOutandHide_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_FadeOutandHide_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeOut_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeOut_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_FadeOut_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeInAndShow_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeInAndShow_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_FadeInAndShow_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeIn_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeIn_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_FadeIn_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Fade_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Fade_UserControl.Designer.cs">
+      <DependentUpon>Pizaro_Fade_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\Utilities.cs" />
+    <Compile Include="Added_Animations\DBTweener\CQuartic.cs" />
+    <Compile Include="Added_Animations\DBTweener\Enumeration.cs" />
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\VisualEffectsAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\VisualEffectsAnimatorDialog.Designer.cs">
+      <DependentUpon>VisualEffectsAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Easing.cs" />
+    <Compile Include="EasingFunctions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AtomicAnimator\AnimationContext.cs" />
+    <Compile Include="AtomicAnimator\Atomic Animator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AtomicAnimator\Atomic AnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AtomicAnimator\DefaultAnimationCurves\AnimationCurve.cs" />
+    <Compile Include="AtomicAnimator\DefaultAnimationCurves\BezierCurve.cs" />
+    <Compile Include="AtomicAnimator\DefaultAnimationCurves\LinearCurve.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\ColorValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\DateTimeValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\DoubleValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\FloatValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\IntValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\LongValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\PointFValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\PointValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\RectangleFValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\RectangleValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\SizeFValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\SizeValueHandler.cs" />
+    <Compile Include="AtomicAnimator\DefaultValueHandlers\WPFColorValueHandler.cs" />
+    <Compile Include="AtomicAnimator\Dispatch.cs" />
+    <Compile Include="AtomicAnimator\IAnimationCurve.cs" />
+    <Compile Include="AtomicAnimator\IMainThreadDispatcher.cs" />
+    <Compile Include="AtomicAnimator\IValueHandler.cs" />
+    <Compile Include="AtomicAnimator\MainThreadCallerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AtomicAnimator\MainThreadCallerWPFControl.xaml.cs" />
+    <Compile Include="AtomicAnimator\ValueAnimator.cs" />
+    <Compile Include="ObjectAnimator\ZeroitObjectAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectAnimator\ZeroitObjectAnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PeaceAnimator_WinformAnimation\AnimationFunctions.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Animator.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Animator2D.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Animator3D.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\AnimatorStatus.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\float2D.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\float3D.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\FloatExtensions.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\FPSLimiterKnownValues.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\IAnimator.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\KnownAnimationFunctions.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Path.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Path2D.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Path2DExtensions.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Path3D.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Path3DExtensions.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\PathExtensions.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\PeaceAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - Extension.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - StartFast.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\SafeInvoker.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\SafeInvoker`1.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - StartFasterAnimation.cs" />
+    <Compile Include="PeaceAnimator_WinformAnimation\Timer.cs" />
+    <Compile Include="PizaroAnimator\Animation2D.cs" />
+    <Compile Include="PizaroAnimator\Animation.cs" />
+    <Compile Include="PizaroAnimator\AnimationException.cs" />
+    <Compile Include="PizaroAnimator\AnimationStatus.cs" />
+    <Compile Include="PizaroAnimator\Easing.cs" />
+    <Compile Include="PizaroAnimator\Fade.cs" />
+    <Compile Include="PizaroAnimator\FadeIn.cs" />
+    <Compile Include="PizaroAnimator\FadeInAndShow.cs" />
+    <Compile Include="PizaroAnimator\FadeOut.cs" />
+    <Compile Include="PizaroAnimator\FadeOutAndHide.cs" />
+    <Compile Include="PizaroAnimator\Flags.cs" />
+    <Compile Include="PizaroAnimator\IEffect.cs" />
+    <Compile Include="PizaroAnimator\PizaroTransition.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PizaroAnimator\PizaroTransitionWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PizaroAnimator\PredefinedEffect.cs" />
+    <Compile Include="PizaroAnimator\Resize.cs" />
+    <Compile Include="PizaroAnimator\ResizeHeight.cs" />
+    <Compile Include="PizaroAnimator\ResizeWidth.cs" />
+    <Compile Include="PizaroAnimator\Slide .cs" />
+    <Compile Include="PizaroAnimator\SlideFrom.cs" />
+    <Compile Include="Added_Animations\DBTweener\DBTweener.cs" />
+    <Compile Include="Added_Animations\SmoothTransitions\DelayedCall.cs" />
+    <Compile Include="Added_Animations\SmoothTransitions\SmoothAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SmoothTransitions\SmoothTransition.cs" />
+    <Compile Include="Added_Animations\TweenerAnimator\Ease.cs" />
+    <Compile Include="Added_Animations\TweenerAnimator\Tween.cs" />
+    <Compile Include="Added_Animations\TweenerAnimator\Tweener.cs" />
+    <Compile Include="Added_Animations\TweenerAnimator\Unglide.cs" />
+    <Compile Include="Added_Animations\TweenerAnimator\ZeroitAnimate_Tweener.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Visual Effects Animation\AnimationExtensions.cs" />
+    <Compile Include="Visual Effects Animation\AnimationStatus.cs" />
+    <Compile Include="Visual Effects Animation\BottomAnchoredHeightEffect.cs" />
+    <Compile Include="Visual Effects Animation\ColorChannelShiftEffect.cs" />
+    <Compile Include="Visual Effects Animation\ColorShiftEffect.cs" />
+    <Compile Include="Visual Effects Animation\ControlExtensions.cs" />
+    <Compile Include="Visual Effects Animation\ControlFadeEffect.cs" />
+    <Compile Include="Visual Effects Animation\EasingFunctions.cs" />
+    <Compile Include="Visual Effects Animation\ExampleFoldAnimation.cs" />
+    <Compile Include="Visual Effects Animation\Flags.cs" />
+    <Compile Include="Visual Effects Animation\FoldEffect.cs" />
+    <Compile Include="Visual Effects Animation\FontSizeEffect.cs" />
+    <Compile Include="Visual Effects Animation\FormFadeEffect.cs" />
+    <Compile Include="Visual Effects Animation\HorizontalFoldEffect.cs" />
+    <Compile Include="Visual Effects Animation\IEffect.cs" />
+    <Compile Include="Visual Effects Animation\ImageExtensions.cs" />
+    <Compile Include="Visual Effects Animation\LeftAnchoredWidthEffect.cs" />
+    <Compile Include="Visual Effects Animation\RightAnchoredWidthEffect.cs" />
+    <Compile Include="Visual Effects Animation\TopAnchoredHeightEffect.cs" />
+    <Compile Include="Visual Effects Animation\VerticalFoldEffect.cs" />
+    <Compile Include="Visual Effects Animation\XLocationEffect.cs" />
+    <Compile Include="Visual Effects Animation\YLocationEffect.cs" />
+    <Compile Include="Visual Effects Animation\ZeroitAnimate_VisualEffectsAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Visual Effects Animation\ZeroitAnimate_VisualEffectsAnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZenxTransition\ZenxTransition.cs" />
+    <Compile Include="ZeroitAnimate_Animator\Animation.cs" />
+    <Compile Include="ZeroitAnimate_Animator\Animator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator\Controller.cs" />
+    <Compile Include="ZeroitAnimate_Animator\DecorationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator\DoubleBitmapControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator\DoubleBitmapControl.Designer.cs">
+      <DependentUpon>DoubleBitmapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator\DoubleBitmapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator\DoubleBitmapFormDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Animator\Flags.cs" />
+    <Compile Include="ZeroitAnimate_Animator\PointFConverter.cs" />
+    <Compile Include="ZeroitAnimate_Animator\TransfromHelper.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\IManagedType.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\ITransitionType.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\ManagedType_Color.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\ManagedType_Double.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\ManagedType_Float.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\ManagedType_Int.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\ManagedType_String.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\Transition.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionChain.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionElement.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionManager.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_Acceleration.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_Bounce.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_CriticalDamping.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_Deceleration.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_EaseInEaseOut.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_Flash.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_Linear.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_ThrowAndCatch.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_UserDefined.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\TransitionType_Zeroit.cs" />
+    <Compile Include="ZeroitAnimate_Transition_GoogleTransition\Utility.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\EasingFunctions.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\IManagedType.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ITransitionType.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ManagedType_Color.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ManagedType_Double.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ManagedType_Float.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ManagedType_Int.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ManagedType_String.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionChain.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionElement.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionManager.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_Acceleration.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_Bounce.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_CriticalDamping.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_Deceleration.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_EaseInEaseOut.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_EaseInQuad.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_Flash.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_Linear.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_LinearTween.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_ThrowAndCatch.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_UserDefined.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\TransitionType_Zeroit.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\Utility.cs" />
+    <Compile Include="ZeroitPride_Transition_GoogleTransition\ZeroitPride_Transition.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Zeroit_Transitions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_HelpingControls\KnobControl\KnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\LBKnob\LBKnob.cs" />
+    <Compile Include="_HelpingControls\Rotating3DCube\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\Rotating3DCube\Point3D.cs" />
+    <Compile Include="_HelpingControls\Rotating3DCube\RotatingCube.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\Simple\SimpleLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\Simple\SimpleLine2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\Design Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\Hacker Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\HatchStyleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\J Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\NYX Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\OrainsTheme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\Spicylips Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\Themes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_HelpingControls\ThemeManagers\Utils.cs" />
+    <Compile Include="_HelpingControls\TrackBar\ZeroitTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnimationEditors\AtomicAnimatorDialog\AtomicAnimatorDialog.resx">
+      <DependentUpon>AtomicAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorDialog.resx">
+      <DependentUpon>ObjectAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PeaceAnimatorDialog\PeaceAnimatorDialog.resx">
+      <DependentUpon>PeaceAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\PizaroAnimatorDialog.resx">
+      <DependentUpon>PizaroAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeInAndShow_UserControl.resx">
+      <DependentUpon>Pizaro_FadeInAndShow_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeIn_UserControl.resx">
+      <DependentUpon>Pizaro_FadeIn_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeOutandHide_UserControl.resx">
+      <DependentUpon>Pizaro_FadeOutandHide_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_FadeOut_UserControl.resx">
+      <DependentUpon>Pizaro_FadeOut_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Fade_UserControl.resx">
+      <DependentUpon>Pizaro_Fade_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_ResizeHeight_UserControl.resx">
+      <DependentUpon>Pizaro_ResizeHeight_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_ResizeWidth_UserControl.resx">
+      <DependentUpon>Pizaro_ResizeWidth_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Resize_UserControl.resx">
+      <DependentUpon>Pizaro_Resize_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_SlideFrom_UserControl.resx">
+      <DependentUpon>Pizaro_SlideFrom_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\PizaroAnimatorDialog\UserControls\Pizaro_Slide_UserControl.resx">
+      <DependentUpon>Pizaro_Slide_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\BottomAnchoredHeightEffect_UserControl.resx">
+      <DependentUpon>BottomAnchoredHeightEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ColorChannelShiftEffect_UserControl.resx">
+      <DependentUpon>ColorChannelShiftEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ColorShiftEffect_UserControl.resx">
+      <DependentUpon>ColorShiftEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ControlFadeEffect2_UserControl.resx">
+      <DependentUpon>ControlFadeEffect2_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\ControlFadeEffect_UserControl.resx">
+      <DependentUpon>ControlFadeEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FoldEffect_UserControl.resx">
+      <DependentUpon>FoldEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FontSizeEffect_UserControl.resx">
+      <DependentUpon>FontSizeEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\FormFadeEffect_UserControl.resx">
+      <DependentUpon>FormFadeEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\HorizontalFoldEffect_UserControl.resx">
+      <DependentUpon>HorizontalFoldEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\LeftAnchoredWidthEffect_UserControl.resx">
+      <DependentUpon>LeftAnchoredWidthEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\RightAnchoredWidthEffect_UserControl.resx">
+      <DependentUpon>RightAnchoredWidthEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\TopAnchoredHeightEffect_UserControl.resx">
+      <DependentUpon>TopAnchoredHeightEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\VerticalFoldEffect_UserControl.resx">
+      <DependentUpon>VerticalFoldEffect_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\XLocation_UserControl.resx">
+      <DependentUpon>XLocation_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\YLocation_UserControl.resx">
+      <DependentUpon>YLocation_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\VisualEffectsAnimatorDialog\VisualEffectsAnimatorDialog.resx">
+      <DependentUpon>VisualEffectsAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Custom_UserControl.resx">
+      <DependentUpon>Custom_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Rotate_UserControl.resx">
+      <DependentUpon>Rotate_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizSlide_UserControl.resx">
+      <DependentUpon>HorizSlide_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\ScaleAndHorizSlide_UserControl.resx">
+      <DependentUpon>ScaleAndHorizSlide_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Scale_UserControl.resx">
+      <DependentUpon>Scale_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\VertSlide_UserControl.resx">
+      <DependentUpon>VertSlide_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\ScaleAndRotate_UserControl.resx">
+      <DependentUpon>ScaleAndRotate_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizSlideAndRotate_UserControl.resx">
+      <DependentUpon>HorizSlideAndRotate_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Transparent_UserControl.resx">
+      <DependentUpon>Transparent_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Leaf_UserControl.resx">
+      <DependentUpon>Leaf_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Mosaic_UserControl.resx">
+      <DependentUpon>Mosaic_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\Particles_UserControl.resx">
+      <DependentUpon>Particles_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\VertBlind_UserControl.resx">
+      <DependentUpon>VertBlind_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\UserControls\HorizBlind_UserControl.resx">
+      <DependentUpon>HorizBlind_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_AnimatorDialog\ZeroitAnimateAnimatorDialog.resx">
+      <DependentUpon>ZeroitAnimateAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\ZeroitAnimate_Transition_Google_AnimatorDialog\ZeroitAnimateTransitionDialog.resx">
+      <DependentUpon>ZeroitAnimateTransitionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Zeroit.Framework.Transitions.nuspec" />
+    <None Include="ZeroitStrongKeys.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visualEffectsAnimator_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visualEffectsAnimator_Icon_48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visualEffectsAnimator_Collage_Icon_48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knob_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knob_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zeroitAnimate_Icon 32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zeroitAnimate_Icon 48x48.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

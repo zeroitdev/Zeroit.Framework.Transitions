@@ -7,7 +7,23 @@
 // Last Modified On : 12-04-2018
 // ***********************************************************************
 // <copyright file="FormAnimations.cs" company="Zeroit Dev Technologies">
-//     Copyright © Zeroit Dev Technologies  2017. All Rights Reserved.
+//    This program is for creating components to aid in Animating controls.
+//    Copyright Â©  2017  Zeroit Dev Technologies
+//
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+//    You can contact me at zeroitdevnet@gmail.com or zeroitdev@outlook.com
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
@@ -19,7 +35,7 @@ using System.Drawing;
 namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 {
     /// <summary>
-    /// Descripción breve de FormAnimations.
+    /// Descripciï¿½n breve de FormAnimations.
     /// </summary>
     public class FormAnimations
 	{
@@ -74,7 +90,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 		}
 
 
-        #region Métodos Left2Right
+        #region Mï¿½todos Left2Right
         // Left2Right methods allow you to move the specified form from Left to Right.
         // 3 Methods are available.
 
@@ -130,7 +146,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos Right2Left
+        #region Mï¿½todos Right2Left
         // Right2Left methods allow you to move the specified form from Right to Left.
         // 3 Methods are available.
 
@@ -181,7 +197,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos Top2Bottom
+        #region Mï¿½todos Top2Bottom
         // Top2Bottom methods allow you to move the specified form from Top to Bottom.
         // 3 Methods are available.	
 
@@ -239,7 +255,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos Bottom2Top
+        #region Mï¿½todos Bottom2Top
         // Bottom2Top methods allow you to move the specified form from Bottom to Top.
         // 3 Methods are available.
 
@@ -289,7 +305,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos FadeIn
+        #region Mï¿½todos FadeIn
         // FadeIn methods show a (semi)transparent form turning to opaque.
         // This method could also be known as Transparent2Opaque
         // 2 Methods are available.
@@ -328,7 +344,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos FadeOut
+        #region Mï¿½todos FadeOut
         // FadeOut methods show an opaque form turning transparent.
         // This method could also be known as Opaque2Transparent.
         // 2 Methods are available.
@@ -367,7 +383,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos HideControls
+        #region Mï¿½todos HideControls
         // HideControls methods allow you to hide each form control.
         // Static methods hide all the form's controls.
         // <remarks>
@@ -445,7 +461,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos ShowControls
+        #region Mï¿½todos ShowControls
         // ShowControls methods allow you to show each form control.
         // The form controls should be hidden first.
         // Static methods show all the form's controls.
@@ -630,7 +646,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos GrowVertical
+        #region Mï¿½todos GrowVertical
         /// <summary>
         /// GrowVertical methods stretch the form in the Y-axis.
         /// 6 methods are available.
@@ -732,7 +748,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos ShrinkHorizontal
+        #region Mï¿½todos ShrinkHorizontal
         /// <summary>
         /// ShrinkHorizontal methods shrink the form in the X-axis.
         /// 3 methods are available.
@@ -784,7 +800,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos ShrinkVertical
+        #region Mï¿½todos ShrinkVertical
         /// <summary>
         /// ShrinkVertical methods shrink the form in the Y-axis.
         /// 3 methods are available.
@@ -837,7 +853,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos GrowXY
+        #region Mï¿½todos GrowXY
         /// <summary>
         /// Grows the xy.
         /// </summary>
@@ -964,7 +980,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos ShrinkXY
+        #region Mï¿½todos ShrinkXY
         /// <summary>
         /// Shrinks the xy.
         /// </summary>
@@ -1022,7 +1038,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos GrowMoveXY
+        #region Mï¿½todos GrowMoveXY
         /// <summary>
         /// Grows the move xy.
         /// </summary>
@@ -1112,7 +1128,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos ShrinkMoveXY
+        #region Mï¿½todos ShrinkMoveXY
         /// <summary>
         /// Shrinks the move xy.
         /// </summary>
@@ -1249,7 +1265,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos Move
+        #region Mï¿½todos Move
         /// <summary>
         /// Move methods move the form from one point to another.
         /// </summary>
@@ -1363,7 +1379,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos ShakeIt
+        #region Mï¿½todos ShakeIt
         // ShakeIt methods shake the form.
         // 3 methods are available.
 
@@ -1439,7 +1455,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
         #endregion
 
-        #region Métodos DeterminarPos
+        #region Mï¿½todos DeterminarPos
         /// <summary>
         /// DeterminarPos method receives a constant declared by the Constantes enum,
         /// and it returns its true position in the screen.

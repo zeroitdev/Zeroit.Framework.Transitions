@@ -43,7 +43,7 @@ namespace Zeroit.Framework.Transitions
     /// Class VerticalFoldEffect.
     /// </summary>
     /// <seealso cref="Zeroit.Framework.Transitions.IEffect" />
-    public class VerticalFoldEffect : IEffect
+    public class HorizontalFoldEffect : IEffect
     {
         /// <summary>
         /// Gets the current value.

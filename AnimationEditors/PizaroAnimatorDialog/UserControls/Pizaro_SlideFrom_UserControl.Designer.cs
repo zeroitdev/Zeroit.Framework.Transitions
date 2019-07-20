@@ -72,7 +72,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label3 = new System.Windows.Forms.Label();
             this.slideFrom_StartX_Numeric = new System.Windows.Forms.NumericUpDown();
             this.slideFrom_Preview_btn = new System.Windows.Forms.Button();
-            this.slideFrom_Rotating_Cube = new Transitions._HelpingControls.Rotating3DCube.RotatingCube();
+            this.slideFrom_Rotating_Cube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.slideFrom_Animator = new Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slideFrom_EndY_Numeric)).BeginInit();
@@ -178,7 +178,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 21);
             this.label1.TabIndex = 40;
-            this.label1.Text = "End - Y";
+            this.label1.Text = "End - X";
             // 
             // slideFrom_EndX_Numeric
             // 

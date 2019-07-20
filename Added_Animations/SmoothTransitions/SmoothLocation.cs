@@ -35,57 +35,11 @@ using System.Windows.Forms;
 namespace Zeroit.Framework.Transitions.SmoothTransitions
 {
 
-    /// <summary>
-    /// Enum AnimationTypes
-    /// </summary>
-    public enum AnimationTypes
-    {
-        /// <summary>
-        /// The none
-        /// </summary>
-        None,
-        MoveHorizontal,
-
-        MoveVertical,
-        /// <summary>
-        /// The resize horiz
-        /// </summary>
-        ResizeHoriz,
-        /// <summary>
-        /// The resize vert
-        /// </summary>
-        ResizeVert,
-        /// <summary>
-        /// The fade in
-        /// </summary>
-        FadeIn,
-        /// <summary>
-        /// The fade out
-        /// </summary>
-        FadeOut,
-        /// <summary>
-        /// The callback
-        /// </summary>
-        Callback
-    }
-
-    /// <summary>
-    /// Delegate AnimationFinishedHandler
-    /// </summary>
-    /// <param name="target">The target.</param>
-    public delegate void AnimationFinishedHandler(object target);
-
-    /// <summary>
-    /// Delegate AnimationCallback
-    /// </summary>
-    /// <param name="target">The target.</param>
-    /// <param name="value">The value.</param>
-    public delegate void AnimationCallback(object target, int value);
-
+    
     /// <summary>
     /// Class Animation.
     /// </summary>
-    public class Animation
+    public class LocationAnimation
     {
         /// <summary>
         /// The type
@@ -154,7 +108,7 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// <param name="target">The target.</param>
         /// <param name="offset">The offset.</param>
         /// <param name="handler">The handler.</param>
-        public Animation(AnimationTypes type, object target, float offset, AnimationFinishedHandler handler)
+        public LocationAnimation(AnimationTypes type, object target, float offset, AnimationFinishedHandler handler)
             : this(type, target, offset, handler, 0, null, 0, 10, 0, 0, 0)
         {
         }
@@ -167,7 +121,7 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// <param name="offset">The offset.</param>
         /// <param name="handler">The handler.</param>
         /// <param name="duration">The duration.</param>
-        public Animation(AnimationTypes type, object target, float offset, AnimationFinishedHandler handler, int duration)
+        public LocationAnimation(AnimationTypes type, object target, float offset, AnimationFinishedHandler handler, int duration)
             : this(type, target, offset, handler, 0, null, 0, 10,0,0,0)
         {
         }
@@ -186,7 +140,7 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// <param name="timePassed">The time passed.</param>
         /// <param name="reversed_duration">Duration of the reversed.</param>
         /// <param name="reversed_timePassed">The reversed time passed.</param>
-        public Animation(AnimationTypes type, object target, float offset, AnimationFinishedHandler handler, int duration, AnimationCallback callback, int startValue, int timerInterval, int timePassed, int reversed_duration, int reversed_timePassed)
+        public LocationAnimation(AnimationTypes type, object target, float offset, AnimationFinishedHandler handler, int duration, AnimationCallback callback, int startValue, int timerInterval, int timePassed, int reversed_duration, int reversed_timePassed)
         {
             this.type = type;
             this.target = target;
@@ -205,37 +159,23 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
 
             switch (type)
             {
-                case AnimationTypes.ResizeHoriz:
+                case AnimationTypes.MoveHorizontal:
                     c = target as Control;
                     if (c == null) return;
-                    start = c.Width;
+                    start = c.Location.X;
                     end = start + offset;
                     if (this.duration == 0) this.duration = 150;
 
                     break;
 
-                case AnimationTypes.ResizeVert:
+                case AnimationTypes.MoveVertical:
                     c = target as Control;
                     if (c == null) return;
-                    start = c.Height;
+                    start = c.Location.Y;
                     end = start + offset;
                     if (this.duration == 0) this.duration = 150;
                     break;
-
-                case AnimationTypes.FadeIn:
-                    f = target as System.Windows.Forms.Form;
-                    if (f == null) return;
-                    start = (float)(f.Opacity * 100);
-                    //end = start + (float)offset/100;
-                    //if (this.duration == 0) this.duration = 250;
-                    break;
-                case AnimationTypes.FadeOut:
-                    f = target as System.Windows.Forms.Form;
-                    if (f == null) return;
-                    start = (float)(f.Opacity * 100);
-                    //end = start + (float)offset/100;
-                    //if (this.duration == 0) this.duration = 2000;
-                    break;
+                                    
                 case AnimationTypes.Callback:
                     if (callback == null) return;
                     start = startValue;
@@ -302,31 +242,39 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
                 Rectangle wa;
                 switch (type)
                 {
-                    case AnimationTypes.ResizeVert:
+                    case AnimationTypes.MoveVertical:
                         c = target as Control;
-                        c.Height = (int)start + (int)((end - start) * MakeCurve());
+                        c.Location = new Point(c.Location.X,(int)start + (int)((end - start) * MakeCurve()));
                         wa = Screen.FromControl(c).WorkingArea;
-                        if (c is System.Windows.Forms.Form && c.Bottom > wa.Bottom)
+                        if (c is System.Windows.Forms.Form && c.Location.Y > wa.Y)
                         {
-                            c.Top -= c.Bottom - wa.Bottom;
-                            if (c.Top < wa.Top)
-                            {
-                                c.Top = wa.Top;
-                            }
+                            
+                            //int Y = c.Location.Y;
+                            int Y = (int)start + (int)((end - start) * MakeCurve());
+                            Y -= c.Location.Y - wa.Y;
+                            //c.Location= new Point(c.Location.X, Y) ;
+                            //if (c.Top < wa.Top)
+                            //{
+                            //    c.Top = wa.Top;
+                            //}
                         }
                         break;
                     
-                    case AnimationTypes.ResizeHoriz:
+                    case AnimationTypes.MoveHorizontal:
                         c = target as Control;
-                        c.Width = (int)start + (int)((end - start) * MakeCurve());
+                        c.Location = new Point((int)start + (int)((end - start) * MakeCurve()),c.Location.Y);
                         wa = Screen.FromControl(c).WorkingArea;
-                        if (c is System.Windows.Forms.Form && c.Right > wa.Right)
+                        if (c is System.Windows.Forms.Form && c.Location.X > wa.X)
                         {
-                            c.Left -= c.Right - wa.Right;
-                            if (c.Left < wa.Left)
-                            {
-                                c.Left = wa.Left ;
-                            }
+                            //int X = c.Location.X;
+                            int X = (int)start + (int)((end - start) * MakeCurve());
+                            X -= c.Location.X - wa.X;
+
+                            //c.Location = new Point(X, c.Location.Y);
+                            //if (c.Left < wa.Left)
+                            //{
+                            //    c.Left = wa.Left ;
+                            //}
                         }
                         break;
                     
@@ -372,30 +320,40 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
                 Rectangle wa;
                 switch (type)
                 {
-                    case AnimationTypes.ResizeVert:
-                        c = target as Control;
-                        c.Height = (int)end + (int)((start - end) * MakeCurve());
+                    case AnimationTypes.MoveVertical:
+                        c = target as Control;   
+                        c.Location = new Point(c.Location.X, (int)start + (int)((end - start) * MakeCurve()));
                         wa = Screen.FromControl(c).WorkingArea;
                         if (c is System.Windows.Forms.Form && c.Bottom < wa.Bottom)
                         {
-                            c.Top += c.Bottom + wa.Bottom;
-                            if (c.Top > wa.Top)
-                            {
-                                c.Top = wa.Top;
-                            }
+                            //int Y = c.Location.Y;
+                            int Y = (int)start + (int)((end - start) * MakeCurve());
+                            Y += c.Location.Y + wa.Y;
+                            //c.Location = new Point(c.Location.X, Y);
+                            
+                            //if (c.Top > wa.Top)
+                            //{
+                            //    c.Top = wa.Top;
+                            //}
+                                                       
+
                         }
                         break;
-                    case AnimationTypes.ResizeHoriz:
-                        c = target as Control;
-                        c.Width = (int)end + (int)((start - end) * MakeCurve());
+                    case AnimationTypes.MoveHorizontal:
+                        c = target as Control; 
+                        c.Location = new Point((int)start + (int)((end - start) * MakeCurve()), c.Location.Y);
                         wa = Screen.FromControl(c).WorkingArea;
                         if (c is System.Windows.Forms.Form && c.Right < wa.Right)
                         {
-                            c.Left += c.Right + wa.Right;
-                            if (c.Left > wa.Left)
-                            {
-                                c.Left = wa.Left;
-                            }
+                            //int X = c.Location.X;
+                            int X = (int)start + (int)((end - start) * MakeCurve());
+                            X += c.Location.X + wa.X;
+
+                            //c.Location = new Point(X, c.Location.Y);
+                            //if (c.Left > wa.Left)
+                            //{
+                            //    c.Left = wa.Left;
+                            //}
                         }
                         break;
                     case AnimationTypes.FadeIn:

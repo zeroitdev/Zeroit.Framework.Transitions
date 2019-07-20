@@ -27,6 +27,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -81,6 +82,11 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// The animation
         /// </summary>
         private Animation animation;
+
+        /// <summary>
+        /// The animation
+        /// </summary>
+        private LocationAnimation locationAnimation;
 
         /// <summary>
         /// The control size
@@ -264,16 +270,31 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// </summary>
         public void Start()
         {
+            //locationAnimation
             if (allowCallBack)
             {
                 if (animationTypes == AnimationTypes.ResizeHoriz)
                 {
                     animation = new Animation(animationTypes, control, offset - control.Width, AnimationFinished, duration, Animation_CallBack,
                         startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+
                 }
                 else if (animationTypes == AnimationTypes.ResizeVert)
                 {
                     animation = new Animation(animationTypes, control, offset - control.Height, AnimationFinished, duration,
+                        Animation_CallBack,
+                        startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                }
+                else if (animationTypes == AnimationTypes.MoveHorizontal)
+                {
+                    
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.X, AnimationFinished, duration, Animation_CallBack,
+                        startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+
+                }
+                else if (animationTypes == AnimationTypes.MoveVertical)
+                {
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.Y, AnimationFinished, duration,
                         Animation_CallBack,
                         startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
                 }
@@ -296,6 +317,18 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
                 else if (animationTypes == AnimationTypes.ResizeVert)
                 {
                     animation = new Animation(animationTypes, control, offset - control.Height, AnimationFinished, duration);
+
+                }
+
+                else if (animationTypes == AnimationTypes.MoveHorizontal)
+                {
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.X, AnimationFinished, duration);
+
+                }
+
+                else if (animationTypes == AnimationTypes.MoveVertical)
+                {
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.Y, AnimationFinished, duration);
 
                 }
 
@@ -335,6 +368,9 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         {
             if(reverse)
                 animation.Reversed();
+
+            if (reverse)
+                locationAnimation.Reversed();
         }
 
         /// <summary>
@@ -355,9 +391,15 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
                     }
                     else
                     {
+                        //-----------WORKING-----------//
+
                         animation = new Animation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/)/* - control.Width*/, AnimationContinued,
                             duration, Animation_CallBack, startValue,
                             timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+
+                        //-----------WORKING-----------//
+
+
                     }
 
                 }
@@ -379,7 +421,45 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
 
                 }
 
+                else if (animationTypes == AnimationTypes.MoveHorizontal)
+                {
+                    if (control.GetType() == typeof(System.Windows.Forms.Form))
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2)) /*- control.Width*/, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                    }
+                    else
+                    {
+                        //-----------WORKING-----------//
 
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/)/* - control.Width*/, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+
+                        //-----------WORKING-----------//
+
+
+                    }
+
+                }
+
+                else if (animationTypes == AnimationTypes.MoveVertical)
+                {
+                    if (control.GetType() == typeof(System.Windows.Forms.Form))
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2))/* - control.Height*/, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                    }
+                    else
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/) /*- control.Height*/, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                    }
+
+                }
 
                 else
                 {

@@ -79,6 +79,11 @@
     <Compile Include="Added_Animations\MatAnimation\AnimationDirection.cs" />
     <Compile Include="Added_Animations\MatAnimation\AnimationManager.cs" />
     <Compile Include="Added_Animations\MatAnimation\Animations.cs" />
+    <Compile Include="Added_Animations\SmoothTransitions\SmoothAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\SmoothTransitions\SmoothLocation.cs" />
+    <Compile Include="Added_Animations\SmoothTransitions\SmoothTransition.cs" />
     <Compile Include="Added_Animations\SpecAnimator\AnimatorBase.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -574,10 +579,6 @@
     <Compile Include="PizaroAnimator\SlideFrom.cs" />
     <Compile Include="Added_Animations\DBTweener\DBTweener.cs" />
     <Compile Include="Added_Animations\SmoothTransitions\DelayedCall.cs" />
-    <Compile Include="Added_Animations\SmoothTransitions\SmoothAnimator.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Added_Animations\SmoothTransitions\SmoothTransition.cs" />
     <Compile Include="Added_Animations\TweenerAnimator\Ease.cs" />
     <Compile Include="Added_Animations\TweenerAnimator\Tween.cs" />
     <Compile Include="Added_Animations\TweenerAnimator\Tweener.cs" />

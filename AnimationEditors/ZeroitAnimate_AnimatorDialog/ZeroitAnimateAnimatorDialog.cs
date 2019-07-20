@@ -2145,6 +2145,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            DialogResult = DialogResult.Cancel;
         }
 
         /// <summary>

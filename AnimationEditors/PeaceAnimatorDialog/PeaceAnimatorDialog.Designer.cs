@@ -1295,9 +1295,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Delay2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Delay2_Label.Location = new System.Drawing.Point(212, 200);
             this.twoD_Delay2_Label.Name = "twoD_Delay2_Label";
-            this.twoD_Delay2_Label.Size = new System.Drawing.Size(67, 13);
+            this.twoD_Delay2_Label.Size = new System.Drawing.Size(73, 13);
             this.twoD_Delay2_Label.TabIndex = 57;
-            this.twoD_Delay2_Label.Text = "Delay 2 (ms)";
+            this.twoD_Delay2_Label.Text = "Height Delay";
             // 
             // twoD_Delay2_Numeric
             // 
@@ -1323,9 +1323,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Duration2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Duration2_Label.Location = new System.Drawing.Point(212, 144);
             this.twoD_Duration2_Label.Name = "twoD_Duration2_Label";
-            this.twoD_Duration2_Label.Size = new System.Drawing.Size(85, 13);
+            this.twoD_Duration2_Label.Size = new System.Drawing.Size(91, 13);
             this.twoD_Duration2_Label.TabIndex = 55;
-            this.twoD_Duration2_Label.Text = "Duration 2 (ms)";
+            this.twoD_Duration2_Label.Text = "Height Duration";
             // 
             // twoD_Duration2_Numeric
             // 
@@ -1356,9 +1356,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_End2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_End2_Label.Location = new System.Drawing.Point(212, 88);
             this.twoD_End2_Label.Name = "twoD_End2_Label";
-            this.twoD_End2_Label.Size = new System.Drawing.Size(59, 13);
+            this.twoD_End2_Label.Size = new System.Drawing.Size(65, 13);
             this.twoD_End2_Label.TabIndex = 53;
-            this.twoD_End2_Label.Text = "End 2 (ms)";
+            this.twoD_End2_Label.Text = "Height End";
             // 
             // twoD_End2_Numeric
             // 
@@ -1389,9 +1389,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Start2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Start2_Label.Location = new System.Drawing.Point(212, 32);
             this.twoD_Start2_Label.Name = "twoD_Start2_Label";
-            this.twoD_Start2_Label.Size = new System.Drawing.Size(63, 13);
+            this.twoD_Start2_Label.Size = new System.Drawing.Size(69, 13);
             this.twoD_Start2_Label.TabIndex = 51;
-            this.twoD_Start2_Label.Text = "Start 2 (ms)";
+            this.twoD_Start2_Label.Text = "Height Start";
             // 
             // twoD_Start2_Numeric
             // 
@@ -1422,9 +1422,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_Delay2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Continued_Delay2_Label.Location = new System.Drawing.Point(395, 196);
             this.twoD_Continued_Delay2_Label.Name = "twoD_Continued_Delay2_Label";
-            this.twoD_Continued_Delay2_Label.Size = new System.Drawing.Size(67, 26);
+            this.twoD_Continued_Delay2_Label.Size = new System.Drawing.Size(73, 26);
             this.twoD_Continued_Delay2_Label.TabIndex = 49;
-            this.twoD_Continued_Delay2_Label.Text = "Continued \r\nDelay 2 (ms)";
+            this.twoD_Continued_Delay2_Label.Text = "Continued \r\nHeight Delay";
             // 
             // twoD_Continued_Delay2_Numeric
             // 
@@ -1457,7 +1457,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_End2_Label.Name = "twoD_Continued_End2_Label";
             this.twoD_Continued_End2_Label.Size = new System.Drawing.Size(65, 26);
             this.twoD_Continued_End2_Label.TabIndex = 47;
-            this.twoD_Continued_End2_Label.Text = "Continued \r\nEnd 2 (ms)";
+            this.twoD_Continued_End2_Label.Text = "Continued \r\nHeight End";
             // 
             // twoD_Continued_End2_Numeric
             // 
@@ -1488,9 +1488,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_Duration2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Continued_Duration2_Label.Location = new System.Drawing.Point(395, 140);
             this.twoD_Continued_Duration2_Label.Name = "twoD_Continued_Duration2_Label";
-            this.twoD_Continued_Duration2_Label.Size = new System.Drawing.Size(85, 26);
+            this.twoD_Continued_Duration2_Label.Size = new System.Drawing.Size(91, 26);
             this.twoD_Continued_Duration2_Label.TabIndex = 45;
-            this.twoD_Continued_Duration2_Label.Text = "Continued \r\nDuration 2 (ms)";
+            this.twoD_Continued_Duration2_Label.Text = "Continued \r\nHeight Duration";
             // 
             // twoD_Continued_Duration2_Numeric
             // 
@@ -1521,9 +1521,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_Start2_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Continued_Start2_Label.Location = new System.Drawing.Point(395, 28);
             this.twoD_Continued_Start2_Label.Name = "twoD_Continued_Start2_Label";
-            this.twoD_Continued_Start2_Label.Size = new System.Drawing.Size(65, 26);
+            this.twoD_Continued_Start2_Label.Size = new System.Drawing.Size(69, 26);
             this.twoD_Continued_Start2_Label.TabIndex = 43;
-            this.twoD_Continued_Start2_Label.Text = "Continued \r\nStart 2 (ms)";
+            this.twoD_Continued_Start2_Label.Text = "Continued  \r\nHeight Start";
             // 
             // twoD_Continued_Start2_Numeric
             // 
@@ -1554,9 +1554,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_Delay1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Continued_Delay1_Label.Location = new System.Drawing.Point(395, 308);
             this.twoD_Continued_Delay1_Label.Name = "twoD_Continued_Delay1_Label";
-            this.twoD_Continued_Delay1_Label.Size = new System.Drawing.Size(67, 26);
+            this.twoD_Continued_Delay1_Label.Size = new System.Drawing.Size(70, 26);
             this.twoD_Continued_Delay1_Label.TabIndex = 41;
-            this.twoD_Continued_Delay1_Label.Text = "Continued \r\nDelay 1 (ms)";
+            this.twoD_Continued_Delay1_Label.Text = "Continued \r\nWidth Delay";
             // 
             // twoD_Continued_Delay1_Numeric
             // 
@@ -1587,9 +1587,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_Duration1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Continued_Duration1_Label.Location = new System.Drawing.Point(395, 252);
             this.twoD_Continued_Duration1_Label.Name = "twoD_Continued_Duration1_Label";
-            this.twoD_Continued_Duration1_Label.Size = new System.Drawing.Size(85, 26);
+            this.twoD_Continued_Duration1_Label.Size = new System.Drawing.Size(88, 26);
             this.twoD_Continued_Duration1_Label.TabIndex = 39;
-            this.twoD_Continued_Duration1_Label.Text = "Continued \r\nDuration 1 (ms)";
+            this.twoD_Continued_Duration1_Label.Text = "Continued \r\nWidth Duration";
             // 
             // twoD_Continued_Duration1_Numeric
             // 
@@ -1622,7 +1622,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_End1_Label.Name = "twoD_Continued_End1_Label";
             this.twoD_Continued_End1_Label.Size = new System.Drawing.Size(65, 26);
             this.twoD_Continued_End1_Label.TabIndex = 37;
-            this.twoD_Continued_End1_Label.Text = "Continued \r\nEnd 1 (ms)";
+            this.twoD_Continued_End1_Label.Text = "Continued \r\nWidth End";
             // 
             // twoD_Continued_End1_Numeric
             // 
@@ -1653,9 +1653,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Continued_Start1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Continued_Start1_Label.Location = new System.Drawing.Point(212, 249);
             this.twoD_Continued_Start1_Label.Name = "twoD_Continued_Start1_Label";
-            this.twoD_Continued_Start1_Label.Size = new System.Drawing.Size(65, 26);
+            this.twoD_Continued_Start1_Label.Size = new System.Drawing.Size(66, 26);
             this.twoD_Continued_Start1_Label.TabIndex = 35;
-            this.twoD_Continued_Start1_Label.Text = "Continued \r\nStart 1 (ms)";
+            this.twoD_Continued_Start1_Label.Text = "Continued \r\nWidth Start";
             // 
             // twoD_Continued_Start1_Numeric
             // 
@@ -1743,9 +1743,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Delay1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Delay1_Label.Location = new System.Drawing.Point(6, 314);
             this.twoD_Delay1_Label.Name = "twoD_Delay1_Label";
-            this.twoD_Delay1_Label.Size = new System.Drawing.Size(67, 13);
+            this.twoD_Delay1_Label.Size = new System.Drawing.Size(70, 13);
             this.twoD_Delay1_Label.TabIndex = 32;
-            this.twoD_Delay1_Label.Text = "Delay 1 (ms)";
+            this.twoD_Delay1_Label.Text = "Width Delay";
             // 
             // twoD_Delay1_Numeric
             // 
@@ -1771,9 +1771,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Duration1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Duration1_Label.Location = new System.Drawing.Point(7, 267);
             this.twoD_Duration1_Label.Name = "twoD_Duration1_Label";
-            this.twoD_Duration1_Label.Size = new System.Drawing.Size(85, 13);
+            this.twoD_Duration1_Label.Size = new System.Drawing.Size(88, 13);
             this.twoD_Duration1_Label.TabIndex = 30;
-            this.twoD_Duration1_Label.Text = "Duration 1 (ms)";
+            this.twoD_Duration1_Label.Text = "Width Duration";
             // 
             // twoD_Duration1_Numeric
             // 
@@ -1804,9 +1804,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_End1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_End1_Label.Location = new System.Drawing.Point(7, 220);
             this.twoD_End1_Label.Name = "twoD_End1_Label";
-            this.twoD_End1_Label.Size = new System.Drawing.Size(59, 13);
+            this.twoD_End1_Label.Size = new System.Drawing.Size(62, 13);
             this.twoD_End1_Label.TabIndex = 28;
-            this.twoD_End1_Label.Text = "End 1 (ms)";
+            this.twoD_End1_Label.Text = "Width End";
             // 
             // twoD_End1_Numeric
             // 
@@ -1869,9 +1869,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_Start1_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.twoD_Start1_Label.Location = new System.Drawing.Point(7, 173);
             this.twoD_Start1_Label.Name = "twoD_Start1_Label";
-            this.twoD_Start1_Label.Size = new System.Drawing.Size(63, 13);
+            this.twoD_Start1_Label.Size = new System.Drawing.Size(66, 13);
             this.twoD_Start1_Label.TabIndex = 22;
-            this.twoD_Start1_Label.Text = "Start 1 (ms)";
+            this.twoD_Start1_Label.Text = "Width Start";
             // 
             // twoD_Start1_Numeric
             // 
@@ -2067,9 +2067,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label11.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label11.Location = new System.Drawing.Point(211, 87);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 13);
+            this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 28;
-            this.label11.Text = "End (ms)";
+            this.label11.Text = "End";
             // 
             // oneD_End_Numeric
             // 
@@ -2136,9 +2136,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label9.Location = new System.Drawing.Point(211, 34);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 22;
-            this.label9.Text = "Start (ms)";
+            this.label9.Text = "Start";
             // 
             // oneD_Start_Numeric
             // 

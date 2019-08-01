@@ -46,8 +46,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
     {
 
         #region Imported Code
-
-
+        
         #region Private Fields
 
         /// <summary>
@@ -67,63 +66,63 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The accelerate
         /// </summary>
-        private double accelerate = 0.7;
+        private float accelerate = 0.7f;
         /// <summary>
         /// The fadebegin
         /// </summary>
-        private double fadebegin = 0;
+        private float fadebegin = 0;
         /// <summary>
         /// The fadelimit
         /// </summary>
-        private double fadelimit = 1;
+        private float fadelimit = 1;
 
         /// <summary>
         /// The resizeheightbegin
         /// </summary>
-        private double resizeheightbegin = 10;
+        private float resizeheightbegin = 10;
         /// <summary>
         /// The resizeheightlimit
         /// </summary>
-        private double resizeheightlimit = 50;
+        private float resizeheightlimit = 50;
 
         /// <summary>
         /// The resizewidthbegin
         /// </summary>
-        private double resizewidthbegin = 10;
+        private float resizewidthbegin = 10;
         /// <summary>
         /// The resizewidthlimit
         /// </summary>
-        private double resizewidthlimit = 50;
+        private float resizewidthlimit = 50;
 
         /// <summary>
         /// The cordinate start x
         /// </summary>
-        public double cordinateStart_X = 10;
+        public float cordinateStart_X = 10;
         /// <summary>
         /// The cordinate start y
         /// </summary>
-        public double cordinateStart_Y = 10;
+        public float cordinateStart_Y = 10;
         /// <summary>
         /// The cordinate end x
         /// </summary>
-        public double cordinateEnd_X = 50;
+        public float cordinateEnd_X = 50;
         /// <summary>
         /// The cordinate end y
         /// </summary>
-        public double cordinateEnd_Y = 50;
+        public float cordinateEnd_Y = 50;
 
         /// <summary>
         /// The easingstart
         /// </summary>
-        private double easingstart = 0.2;
+        private float easingstart = 0.2f;
         /// <summary>
         /// The easingend
         /// </summary>
-        private double easingend = 1;
+        private float easingend = 1;
         /// <summary>
         /// The accel
         /// </summary>
-        private double accel;
+        private float accel;
 
         /// <summary>
         /// The animation type
@@ -209,7 +208,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The easing start.</value>
 
-        public double EasingStart
+        public float EasingStart
         {
             get { return easingstart; }
             set
@@ -225,7 +224,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The easing end.</value>
 
-        public double EasingEnd
+        public float EasingEnd
         {
             get { return easingend; }
             set
@@ -241,7 +240,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The fade begin.</value>
 
-        public double Fade_Begin
+        public float Fade_Begin
         {
             get { return fadebegin; }
             set
@@ -260,7 +259,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The fade limit.</value>
 
-        public double Fade_Limit
+        public float Fade_Limit
         {
             get { return fadelimit; }
             set
@@ -279,7 +278,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The resize height begin.</value>
 
-        public double ResizeHeight_Begin
+        public float ResizeHeight_Begin
         {
             get { return resizeheightbegin; }
             set
@@ -295,7 +294,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The resize height limit.</value>
 
-        public double ResizeHeight_Limit
+        public float ResizeHeight_Limit
         {
             get { return resizeheightlimit; }
             set
@@ -311,7 +310,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The resize width begin.</value>
 
-        public double ResizeWidth_Begin
+        public float ResizeWidth_Begin
         {
             get { return resizewidthbegin; }
             set
@@ -327,7 +326,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         /// <value>The resize width limit.</value>
 
-        public double ResizeWidth_Limit
+        public float ResizeWidth_Limit
         {
             get { return resizewidthlimit; }
             set
@@ -343,7 +342,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// Gets or sets the cordinate start x.
         /// </summary>
         /// <value>The cordinate start x.</value>
-        public double CordinateStart_X
+        public float CordinateStart_X
         {
             get { return cordinateStart_X; }
             set
@@ -358,7 +357,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// Gets or sets the cordinate start y.
         /// </summary>
         /// <value>The cordinate start y.</value>
-        public double CordinateStart_Y
+        public float CordinateStart_Y
         {
             get { return cordinateStart_Y; }
             set
@@ -373,7 +372,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// Gets or sets the cordinate end x.
         /// </summary>
         /// <value>The cordinate end x.</value>
-        public double CordinateEnd_X
+        public float CordinateEnd_X
         {
             get { return cordinateEnd_X; }
             set
@@ -388,7 +387,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// Gets or sets the cordinate end y.
         /// </summary>
         /// <value>The cordinate end y.</value>
-        public double CordinateEnd_Y
+        public float CordinateEnd_Y
         {
             get { return cordinateEnd_Y; }
             set
@@ -529,7 +528,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// Gets or sets the acceleration.
         /// </summary>
         /// <value>The acceleration.</value>
-        public double Acceleration
+        public float Acceleration
         {
             get { return accelerate; }
             set
@@ -583,8 +582,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
 
         #endregion
-
-
+        
         #endregion
 
         #region Constructor
@@ -613,19 +611,19 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                 
                 animationType _animationType,
                 int duration_para,
-                double accelerate_para,
-                double fadebegin_para,
-                double fadelimit_para,
-                double resizeheightbegin_para,
-                double resizeheightlimit_para,
-                double resizewidthbegin_para,
-                double resizewidthlimit_para,
-                double cordinateStart_X_para,
-                double cordinateStart_Y_para,
-                double cordinateEnd_X_para,
-                double cordinateEnd_Y_para,
-                double easingstart_para,
-                double easingend_para
+                float accelerate_para,
+                float fadebegin_para,
+                float fadelimit_para,
+                float resizeheightbegin_para,
+                float resizeheightlimit_para,
+                float resizewidthbegin_para,
+                float resizewidthlimit_para,
+                float cordinateStart_X_para,
+                float cordinateStart_Y_para,
+                float cordinateEnd_X_para,
+                float cordinateEnd_Y_para,
+                float easingstart_para,
+                float easingend_para
                 
 
             )
@@ -657,7 +655,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             (
                 animationType.None,
                 1000,
-                0.7,
+                0.7f,
                 0,
                 1,
                 10,
@@ -668,7 +666,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                 10,
                 50,
                 50,
-                0.2,
+                0.2f,
                 1
             )
         {
@@ -684,7 +682,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             (
             animationType.None,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -695,7 +693,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
             )
         {
@@ -716,13 +714,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType resize, double cordinateStart_X, double cordinateStart_Y, double cordinateEnd_X, double cordinateEnd_Y, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType resize, float cordinateStart_X, float cordinateStart_Y, float cordinateEnd_X, float cordinateEnd_Y, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.Resize,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -733,7 +731,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
             )
         {
@@ -762,13 +760,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType resizeHeight, bool alwaysTrue, double begin, double limit, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType resizeHeight, bool alwaysTrue, float begin, float limit, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.ResizeHeight,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -779,7 +777,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -806,13 +804,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType resizeWidth, string alwaysTrue, double begin, double limit, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType resizeWidth, string alwaysTrue, float begin, float limit, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.ResizeWidth,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -823,7 +821,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -849,13 +847,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType fade, double fadebegin, double fadelimit, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType fade, float fadebegin, float fadelimit, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.Fade,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -866,7 +864,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -893,13 +891,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType fadeIn, double fadebegin, double fadelimit, bool setTrue1, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType fadeIn, float fadebegin, float fadelimit, bool setTrue1, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.FadeIn,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -910,7 +908,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -938,13 +936,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType fadeInAndShow, double fadebegin, double fadelimit, bool setTrue1, bool setTrue2, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType fadeInAndShow, float fadebegin, float fadelimit, bool setTrue1, bool setTrue2, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.FadeInAndShow,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -955,7 +953,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -982,13 +980,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType fadeOut, double fadebegin, double fadelimit, string dummy1, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType fadeOut, float fadebegin, float fadelimit, string dummy1, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.FadeOut,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -999,7 +997,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -1027,13 +1025,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType fadeOutandHide, double fadebegin, double fadelimit, string dummy1, string dummy2, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType fadeOutandHide, float fadebegin, float fadelimit, string dummy1, string dummy2, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.FadeOutandHide,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -1044,7 +1042,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -1073,13 +1071,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType slide, double cordinateStart_X, double cordinateStart_Y, double cordinateEnd_X, double cordinateEnd_Y, bool alwaysTrue, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType slide, float cordinateStart_X, float cordinateStart_Y, float cordinateEnd_X, float cordinateEnd_Y, bool alwaysTrue, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.Slide,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -1090,7 +1088,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -1121,13 +1119,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="accelerate">The accelerate.</param>
         /// <param name="easingstart">The easingstart.</param>
         /// <param name="easingend">The easingend.</param>
-        public ZeroitPizaroAnimatorInput(animationType slideFrom, double cordinateStart_X, double cordinateStart_Y, double cordinateEnd_X, double cordinateEnd_Y, string dummy, Control control, int duration,
-            double accelerate, double easingstart, double easingend) : this
+        public ZeroitPizaroAnimatorInput(animationType slideFrom, float cordinateStart_X, float cordinateStart_Y, float cordinateEnd_X, float cordinateEnd_Y, string dummy, Control control, int duration,
+            float accelerate, float easingstart, float easingend) : this
 
             (
             animationType.SlideFrom,
             1000,
-            0.7,
+            0.7f,
             0,
             1,
             10,
@@ -1138,7 +1136,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             10,
             50,
             50,
-            0.2,
+            0.2f,
             1
 
             )
@@ -1181,7 +1179,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType resize, double cordinateStart_X, double cordinateStart_Y, double cordinateEnd_X, double cordinateEnd_Y) : this
+        //public ZeroitPizaroAnimatorInput(animationType resize, float cordinateStart_X, float cordinateStart_Y, float cordinateEnd_X, float cordinateEnd_Y) : this
 
         //    (
         //    animationType.Resize,
@@ -1204,7 +1202,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType resizeHeight, bool alwaysTrue, double begin, double limit) : this
+        //public ZeroitPizaroAnimatorInput(animationType resizeHeight, bool alwaysTrue, float begin, float limit) : this
 
         //    (
         //    animationType.ResizeHeight,
@@ -1228,7 +1226,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType resizeWidth, string alwaysTrue, double begin, double limit) : this
+        //public ZeroitPizaroAnimatorInput(animationType resizeWidth, string alwaysTrue, float begin, float limit) : this
 
         //    (
         //    animationType.ResizeWidth,
@@ -1252,7 +1250,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType fade, double fadebegin, double fadelimit) : this
+        //public ZeroitPizaroAnimatorInput(animationType fade, float fadebegin, float fadelimit) : this
 
         //    (
         //    animationType.Fade,
@@ -1276,7 +1274,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType fadeIn, double fadebegin, double fadelimit, bool setTrue1) : this
+        //public ZeroitPizaroAnimatorInput(animationType fadeIn, float fadebegin, float fadelimit, bool setTrue1) : this
 
         //    (
         //    animationType.FadeIn,
@@ -1300,7 +1298,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType fadeInAndShow, double fadebegin, double fadelimit, bool setTrue1, bool setTrue2) : this
+        //public ZeroitPizaroAnimatorInput(animationType fadeInAndShow, float fadebegin, float fadelimit, bool setTrue1, bool setTrue2) : this
 
         //    (
         //    animationType.FadeInAndShow,
@@ -1324,7 +1322,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType fadeOut, double fadebegin, double fadelimit, string dummy1) : this
+        //public ZeroitPizaroAnimatorInput(animationType fadeOut, float fadebegin, float fadelimit, string dummy1) : this
 
         //    (
         //    animationType.FadeOut,
@@ -1348,7 +1346,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType fadeOutandHide, double fadebegin, double fadelimit, string dummy1, string dummy2) : this
+        //public ZeroitPizaroAnimatorInput(animationType fadeOutandHide, float fadebegin, float fadelimit, string dummy1, string dummy2) : this
 
         //    (
         //    animationType.FadeOutandHide,
@@ -1372,7 +1370,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType slide, double cordinateStart_X, double cordinateStart_Y, double cordinateEnd_X, double cordinateEnd_Y, bool alwaysTrue) : this
+        //public ZeroitPizaroAnimatorInput(animationType slide, float cordinateStart_X, float cordinateStart_Y, float cordinateEnd_X, float cordinateEnd_Y, bool alwaysTrue) : this
 
         //    (
         //    animationType.Slide,
@@ -1396,7 +1394,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
         //}
 
-        //public ZeroitPizaroAnimatorInput(animationType slideFrom, double cordinateStart_X, double cordinateStart_Y, double cordinateEnd_X, double cordinateEnd_Y, string dummy) : this
+        //public ZeroitPizaroAnimatorInput(animationType slideFrom, float cordinateStart_X, float cordinateStart_Y, float cordinateEnd_X, float cordinateEnd_Y, string dummy) : this
 
         //    (
         //    animationType.SlideFrom,
@@ -1522,15 +1520,15 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                                 
 
                                 typeof(animationType),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
+                                typeof(float),
+                                typeof(float),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
 
                             });
@@ -1561,9 +1559,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                                 typeof(animationType),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
                             });
                             if (ctor != null)
                             {
@@ -1585,13 +1583,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                                 
                                 typeof(animationType),
                                 typeof(string),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1619,13 +1617,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
                                 typeof(animationType),
                                 typeof(bool),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1653,13 +1651,13 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
                                 
                                 typeof(animationType),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1686,14 +1684,14 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                             ConstructorInfo ctor = typeof(ZeroitPizaroAnimatorInput).GetConstructor(new Type[] {
 
                                 typeof(animationType),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(bool),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1720,15 +1718,15 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                             ConstructorInfo ctor = typeof(ZeroitPizaroAnimatorInput).GetConstructor(new Type[] {
 
                                 typeof(animationType),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(bool),
                                 typeof(bool),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1757,14 +1755,14 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
                                 
                                 typeof(animationType),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(string),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1793,15 +1791,15 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
                                 
                                 typeof(animationType),                                
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
                                 typeof(string),
                                 typeof(string),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1831,16 +1829,16 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
                                 
                                 typeof(animationType),                                
-                                typeof(double),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
+                                typeof(float),
+                                typeof(float),
                                 typeof(bool),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)
@@ -1871,16 +1869,16 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
                                 
                                 typeof(animationType),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double),
+                                typeof(float),
+                                typeof(float),
+                                typeof(float),
+                                typeof(float),
                                 typeof(string),
                                 typeof(Control),
                                 typeof(int),
-                                typeof(double),
-                                typeof(double),
-                                typeof(double)
+                                typeof(float),
+                                typeof(float),
+                                typeof(float)
 
                             });
                             if (ctor != null)

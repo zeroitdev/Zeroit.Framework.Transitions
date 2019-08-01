@@ -99,6 +99,7 @@ namespace Zeroit.Framework.Transitions.FormSpark.GoogleTransition
     /// Class ZeroitPrideAnim.
     /// </summary>
     /// <seealso cref="System.ComponentModel.Component" />
+    [ToolboxItem(false)]
     public class ZeroitPrideAnim : Component
     {
         #region Variables

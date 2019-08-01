@@ -51,8 +51,8 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="end">End opacity.</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public Fade(Control control, double start, double end, int duration, Func<double, double> accelFunc)
-            : base(control, new double[] { start }, new double[] { end }, duration, accelFunc) {
+        public Fade(Control control, float start, float end, int duration, Func<float,float> accelFunc)
+            : base(control, new float[] { start }, new float[] { end }, duration, accelFunc) {
             m_OpacityProperty = control.GetType().GetProperty("Opacity");
         }
 
@@ -63,7 +63,22 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
             if (m_OpacityProperty != null) {
                 m_OpacityProperty.SetValue(m_Control, m_Current[0], null);
             } else {
+
+                
+                //if(m_Current[0] > 1)
+                //{
+                //    m_Current[0] = (float)Math.Pow(m_Current[0], 0);
+                //}
+                //else if(m_Current[0] < 0)
+                //{
+                //    m_Current[0] = 0;
+                //}
+
+                //------------Working-------------//
                 m_Control.BackColor = Color.FromArgb((int)Math.Round(m_Current[0] * Byte.MaxValue), m_Control.BackColor);
+
+                //m_Control.BackColor = Color.FromArgb((int)Math.Round((float)Math.Log((float)Math.Sqrt((float)Math.Pow(m_Current[0], m_Current[0]))) * Byte.MaxValue), m_Control.BackColor);
+
             }
         }
 
@@ -78,7 +93,15 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// Animation event handler that will hide the control.
         /// </summary>
         public void Hide() {
-            m_Control.Hide();
+            try
+            {
+                m_Control.Hide();
+            }
+            catch (Exception)
+            {
+                               
+            }
+            
         }
     }
 }

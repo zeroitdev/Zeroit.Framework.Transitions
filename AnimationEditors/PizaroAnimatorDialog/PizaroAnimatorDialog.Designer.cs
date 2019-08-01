@@ -61,8 +61,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.thematic1501 = new ThemeManagers.Jtheme();
+            this.thematic1501 = new Zeroit.Framework.Transitions.ThemeManagers.Jtheme();
             this.general_Container = new System.Windows.Forms.Panel();
             this.okBtn = new System.Windows.Forms.Button();
             this.fade_preview_Panel = new Zeroit.Framework.Transitions.AnimationEditors.NoFlickerPanel();
@@ -102,6 +101,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.thematic1501.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thematic1501.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.thematic1501.Colors = new Zeroit.Framework.Transitions.ThemeManagers.Bloom[0];
             this.thematic1501.Controls.Add(this.general_Container);
             this.thematic1501.Controls.Add(this.okBtn);
             this.thematic1501.Controls.Add(this.fade_preview_Panel);
@@ -537,113 +537,113 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // fade_Animator
             // 
-            this.fade_Animator.Acceleration = 0.7D;
+            this.fade_Animator.Acceleration = 0.7F;
             this.fade_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.Fade;
             this.fade_Animator.Control = this.fade_preview_Panel;
             this.fade_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.fade_Animator.ControlStylesBool = false;
-            this.fade_Animator.CordinateEnd_X = 50D;
-            this.fade_Animator.CordinateEnd_Y = 50D;
-            this.fade_Animator.CordinateStart_X = 10D;
-            this.fade_Animator.CordinateStart_Y = 10D;
+            this.fade_Animator.CordinateEnd_X = 50F;
+            this.fade_Animator.CordinateEnd_Y = 50F;
+            this.fade_Animator.CordinateStart_X = 10F;
+            this.fade_Animator.CordinateStart_Y = 10F;
             this.fade_Animator.Duration = 1000;
-            this.fade_Animator.EasingEnd = 1D;
+            this.fade_Animator.EasingEnd = 1F;
             this.fade_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.fade_Animator.EasingStart = 0.2D;
-            this.fade_Animator.Fade_Begin = 0D;
-            this.fade_Animator.Fade_Limit = 1D;
-            this.fade_Animator.ResizeHeight_Begin = 10D;
-            this.fade_Animator.ResizeHeight_Limit = 50D;
-            this.fade_Animator.ResizeWidth_Begin = 10D;
-            this.fade_Animator.ResizeWidth_Limit = 50D;
+            this.fade_Animator.EasingStart = 0.2F;
+            this.fade_Animator.Fade_Begin = 0F;
+            this.fade_Animator.Fade_Limit = 1F;
+            this.fade_Animator.ResizeHeight_Begin = 10F;
+            this.fade_Animator.ResizeHeight_Limit = 50F;
+            this.fade_Animator.ResizeWidth_Begin = 10F;
+            this.fade_Animator.ResizeWidth_Limit = 50F;
             // 
             // fadeIn_Animator
             // 
-            this.fadeIn_Animator.Acceleration = 0.7D;
+            this.fadeIn_Animator.Acceleration = 0.7F;
             this.fadeIn_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.FadeIn;
             this.fadeIn_Animator.Control = this.fade_preview_Panel;
             this.fadeIn_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.fadeIn_Animator.ControlStylesBool = false;
-            this.fadeIn_Animator.CordinateEnd_X = 50D;
-            this.fadeIn_Animator.CordinateEnd_Y = 50D;
-            this.fadeIn_Animator.CordinateStart_X = 10D;
-            this.fadeIn_Animator.CordinateStart_Y = 10D;
+            this.fadeIn_Animator.CordinateEnd_X = 50F;
+            this.fadeIn_Animator.CordinateEnd_Y = 50F;
+            this.fadeIn_Animator.CordinateStart_X = 10F;
+            this.fadeIn_Animator.CordinateStart_Y = 10F;
             this.fadeIn_Animator.Duration = 1000;
-            this.fadeIn_Animator.EasingEnd = 1D;
+            this.fadeIn_Animator.EasingEnd = 1F;
             this.fadeIn_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.fadeIn_Animator.EasingStart = 0.2D;
-            this.fadeIn_Animator.Fade_Begin = 0D;
-            this.fadeIn_Animator.Fade_Limit = 1D;
-            this.fadeIn_Animator.ResizeHeight_Begin = 10D;
-            this.fadeIn_Animator.ResizeHeight_Limit = 50D;
-            this.fadeIn_Animator.ResizeWidth_Begin = 10D;
-            this.fadeIn_Animator.ResizeWidth_Limit = 50D;
+            this.fadeIn_Animator.EasingStart = 0.2F;
+            this.fadeIn_Animator.Fade_Begin = 0F;
+            this.fadeIn_Animator.Fade_Limit = 1F;
+            this.fadeIn_Animator.ResizeHeight_Begin = 10F;
+            this.fadeIn_Animator.ResizeHeight_Limit = 50F;
+            this.fadeIn_Animator.ResizeWidth_Begin = 10F;
+            this.fadeIn_Animator.ResizeWidth_Limit = 50F;
             // 
             // fadeInAndShow_Animator
             // 
-            this.fadeInAndShow_Animator.Acceleration = 0.7D;
+            this.fadeInAndShow_Animator.Acceleration = 0.7F;
             this.fadeInAndShow_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.FadeInAndShow;
             this.fadeInAndShow_Animator.Control = this.fade_preview_Panel;
             this.fadeInAndShow_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.fadeInAndShow_Animator.ControlStylesBool = false;
-            this.fadeInAndShow_Animator.CordinateEnd_X = 50D;
-            this.fadeInAndShow_Animator.CordinateEnd_Y = 50D;
-            this.fadeInAndShow_Animator.CordinateStart_X = 10D;
-            this.fadeInAndShow_Animator.CordinateStart_Y = 10D;
+            this.fadeInAndShow_Animator.CordinateEnd_X = 50F;
+            this.fadeInAndShow_Animator.CordinateEnd_Y = 50F;
+            this.fadeInAndShow_Animator.CordinateStart_X = 10F;
+            this.fadeInAndShow_Animator.CordinateStart_Y = 10F;
             this.fadeInAndShow_Animator.Duration = 1000;
-            this.fadeInAndShow_Animator.EasingEnd = 1D;
+            this.fadeInAndShow_Animator.EasingEnd = 1F;
             this.fadeInAndShow_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.fadeInAndShow_Animator.EasingStart = 0.2D;
-            this.fadeInAndShow_Animator.Fade_Begin = 0D;
-            this.fadeInAndShow_Animator.Fade_Limit = 1D;
-            this.fadeInAndShow_Animator.ResizeHeight_Begin = 10D;
-            this.fadeInAndShow_Animator.ResizeHeight_Limit = 50D;
-            this.fadeInAndShow_Animator.ResizeWidth_Begin = 10D;
-            this.fadeInAndShow_Animator.ResizeWidth_Limit = 50D;
+            this.fadeInAndShow_Animator.EasingStart = 0.2F;
+            this.fadeInAndShow_Animator.Fade_Begin = 0F;
+            this.fadeInAndShow_Animator.Fade_Limit = 1F;
+            this.fadeInAndShow_Animator.ResizeHeight_Begin = 10F;
+            this.fadeInAndShow_Animator.ResizeHeight_Limit = 50F;
+            this.fadeInAndShow_Animator.ResizeWidth_Begin = 10F;
+            this.fadeInAndShow_Animator.ResizeWidth_Limit = 50F;
             // 
             // fadeOut_Animator
             // 
-            this.fadeOut_Animator.Acceleration = 0.7D;
+            this.fadeOut_Animator.Acceleration = 0.7F;
             this.fadeOut_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.FadeOut;
             this.fadeOut_Animator.Control = this.fade_preview_Panel;
             this.fadeOut_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.fadeOut_Animator.ControlStylesBool = false;
-            this.fadeOut_Animator.CordinateEnd_X = 50D;
-            this.fadeOut_Animator.CordinateEnd_Y = 50D;
-            this.fadeOut_Animator.CordinateStart_X = 10D;
-            this.fadeOut_Animator.CordinateStart_Y = 10D;
+            this.fadeOut_Animator.CordinateEnd_X = 50F;
+            this.fadeOut_Animator.CordinateEnd_Y = 50F;
+            this.fadeOut_Animator.CordinateStart_X = 10F;
+            this.fadeOut_Animator.CordinateStart_Y = 10F;
             this.fadeOut_Animator.Duration = 1000;
-            this.fadeOut_Animator.EasingEnd = 1D;
+            this.fadeOut_Animator.EasingEnd = 1F;
             this.fadeOut_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.fadeOut_Animator.EasingStart = 0.2D;
-            this.fadeOut_Animator.Fade_Begin = 0D;
-            this.fadeOut_Animator.Fade_Limit = 1D;
-            this.fadeOut_Animator.ResizeHeight_Begin = 10D;
-            this.fadeOut_Animator.ResizeHeight_Limit = 50D;
-            this.fadeOut_Animator.ResizeWidth_Begin = 10D;
-            this.fadeOut_Animator.ResizeWidth_Limit = 50D;
+            this.fadeOut_Animator.EasingStart = 0.2F;
+            this.fadeOut_Animator.Fade_Begin = 0F;
+            this.fadeOut_Animator.Fade_Limit = 1F;
+            this.fadeOut_Animator.ResizeHeight_Begin = 10F;
+            this.fadeOut_Animator.ResizeHeight_Limit = 50F;
+            this.fadeOut_Animator.ResizeWidth_Begin = 10F;
+            this.fadeOut_Animator.ResizeWidth_Limit = 50F;
             // 
             // fadeOutAndHide_Animator
             // 
-            this.fadeOutAndHide_Animator.Acceleration = 0.7D;
+            this.fadeOutAndHide_Animator.Acceleration = 0.7F;
             this.fadeOutAndHide_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.FadeOutandHide;
             this.fadeOutAndHide_Animator.Control = this.fade_preview_Panel;
             this.fadeOutAndHide_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.fadeOutAndHide_Animator.ControlStylesBool = false;
-            this.fadeOutAndHide_Animator.CordinateEnd_X = 50D;
-            this.fadeOutAndHide_Animator.CordinateEnd_Y = 50D;
-            this.fadeOutAndHide_Animator.CordinateStart_X = 10D;
-            this.fadeOutAndHide_Animator.CordinateStart_Y = 10D;
+            this.fadeOutAndHide_Animator.CordinateEnd_X = 50F;
+            this.fadeOutAndHide_Animator.CordinateEnd_Y = 50F;
+            this.fadeOutAndHide_Animator.CordinateStart_X = 10F;
+            this.fadeOutAndHide_Animator.CordinateStart_Y = 10F;
             this.fadeOutAndHide_Animator.Duration = 1000;
-            this.fadeOutAndHide_Animator.EasingEnd = 1D;
+            this.fadeOutAndHide_Animator.EasingEnd = 1F;
             this.fadeOutAndHide_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.fadeOutAndHide_Animator.EasingStart = 0.2D;
-            this.fadeOutAndHide_Animator.Fade_Begin = 0D;
-            this.fadeOutAndHide_Animator.Fade_Limit = 1D;
-            this.fadeOutAndHide_Animator.ResizeHeight_Begin = 10D;
-            this.fadeOutAndHide_Animator.ResizeHeight_Limit = 50D;
-            this.fadeOutAndHide_Animator.ResizeWidth_Begin = 10D;
-            this.fadeOutAndHide_Animator.ResizeWidth_Limit = 50D;
+            this.fadeOutAndHide_Animator.EasingStart = 0.2F;
+            this.fadeOutAndHide_Animator.Fade_Begin = 0F;
+            this.fadeOutAndHide_Animator.Fade_Limit = 1F;
+            this.fadeOutAndHide_Animator.ResizeHeight_Begin = 10F;
+            this.fadeOutAndHide_Animator.ResizeHeight_Limit = 50F;
+            this.fadeOutAndHide_Animator.ResizeWidth_Begin = 10F;
+            this.fadeOutAndHide_Animator.ResizeWidth_Limit = 50F;
             // 
             // ZeroitPizaroAnimatorDialog
             // 
@@ -653,6 +653,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.Controls.Add(this.thematic1501);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ZeroitPizaroAnimatorDialog";
+            this.ShowInTaskbar = false;
             this.Text = "ZeroitPizaroAnimatorDialog";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.thematic1501.ResumeLayout(false);

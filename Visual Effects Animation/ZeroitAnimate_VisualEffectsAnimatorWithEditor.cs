@@ -89,7 +89,7 @@ namespace Zeroit.Framework.Transitions
         /// Gets or sets the visual effects input. This provides an editor for setting the values.
         /// </summary>
         /// <value>The visual effects input.</value>
-        public VisualEffectsInput VisualEffectsInput
+        public VisualEffectsInput Editor
         {
             get { return visualEffectsInput; }
             set

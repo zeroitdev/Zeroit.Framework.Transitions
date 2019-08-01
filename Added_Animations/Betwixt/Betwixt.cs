@@ -372,12 +372,11 @@ namespace Zeroit.Framework.Transitions.Betwixt
             //Get the PropertyInfo object by passing the property name.
             PropertyInfo myPropInfo = myType.GetProperty(control.GetType().GetProperty(propertyName).ToString());
 
-
-
+            
             if (control.GetType().Equals(typeof(int)))
             {
                 // Initialisation
-                Tweener<int> tweener_int = new Tweener<int>((int)start, (int)end, duration, EasingFuction());
+                Tweener<int> tweener_int = new Tweener<int>((int)start, (int)end, duration, Ease.Bounce.In);
 
                 // Update
                 tweener_int.Update(deltaTime);
@@ -388,10 +387,10 @@ namespace Zeroit.Framework.Transitions.Betwixt
                 //myPropInfo.GetValue(tweener_int.Value);
             }
             //myPropInfo.PropertyType == typeof(double)
-            if (control.GetType().Equals(typeof(double)))
+            else if (control.GetType().Equals(typeof(double)))
             {
                 // Initialisation
-                Tweener<double> tweener_double = new Tweener<double>(start, end, duration, EasingFuction());
+                Tweener<double> tweener_double = new Tweener<double>(start, end, duration, Ease.Bounce.In);
 
                 // Update
                 tweener_double.Update(deltaTime);
@@ -405,7 +404,7 @@ namespace Zeroit.Framework.Transitions.Betwixt
             else if (control.GetType().Equals(typeof(ulong)))
             {
                 // Initialisation
-                Tweener<ulong> tweener_ulong = new Tweener<ulong>((ulong)start, (ulong)end, duration, EasingFuction());
+                Tweener<ulong> tweener_ulong = new Tweener<ulong>((ulong)start, (ulong)end, duration, Ease.Bounce.In);
 
                 // Update
                 tweener_ulong.Update(deltaTime);
@@ -440,7 +439,7 @@ namespace Zeroit.Framework.Transitions.Betwixt
 
                 control.GetType().GetProperty(propertyName).SetValue(control, tweener_byte.Value);
 
-
+                
                 //myPropInfo.GetValue(tweener_byte.Value);
             }
 
@@ -475,7 +474,7 @@ namespace Zeroit.Framework.Transitions.Betwixt
             else
             {
                 // Initialisation
-                Tweener<float> tweener_float = new Tweener<float>(start, end, duration, EasingFuction());
+                Tweener<float> tweener_float = new Tweener<float>(start, end, duration, Ease.Bounce.In);
 
                 // Update
                 tweener_float.Update(deltaTime);

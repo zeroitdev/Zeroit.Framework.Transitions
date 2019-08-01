@@ -31,6 +31,7 @@
 using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 {
@@ -325,7 +326,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// <param name="initpercent">Form's initial opacitity</param>
         /// <param name="opacitystep">Steps between transparency to opacity</param>
         /// <remarks>This methods only work in WinXP and Win2000</remarks>
-        public void FadeIn(double initpercent, int opacitystep)
+        public void FadeIn(double initpercent, double opacitystep)
 		{
 			if (initpercent > 95)
 				return;
@@ -364,7 +365,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// <param name="initpercent">Form's initial opacitity</param>
         /// <param name="opacitystep">Steps between opacity to transparency</param>
         /// <remarks>This methods only work in WinXP and Win2000</remarks>
-        public void FadeOut(double initpercent, int opacitystep)
+        public void FadeOut(double initpercent, double opacitystep)
 		{
 			if (initpercent < 5)
 				return;
@@ -1371,10 +1372,18 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// Moves the specified parray.
         /// </summary>
         /// <param name="parray">The parray.</param>
-        public void Move (Point[] parray)
-		{
+  //      public void Move (Point[] parray)
+		//{
 
-		}
+		//}
+
+        public void Move(List<Point> parray, bool direct)
+        {
+            foreach(Point x in parray)
+            {
+                Move(this.formappal.Location, x, direct);
+            }
+        }
 
 
         #endregion

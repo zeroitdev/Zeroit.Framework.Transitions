@@ -94,7 +94,7 @@ namespace Zeroit.Framework.Transitions.Betwixt
         /// <param name="duration">Time (in seconds) to get to the target</param>
         /// <param name="easeFunc">Ease function to use (defaults to linear if unspecified)</param>
         /// <param name="lerpFunc">Lerp function to use (defaults to generic if unspecified)</param>
-        public Tweener(T start, T end, double duration, EaseFunc easeFunc = null, LerpFunc<T> lerpFunc = null)
+        public Tweener(T start, T end, double duration, EaseFunc easeFunc, LerpFunc<T> lerpFunc = null)
         {
             _elapsed = 0.0f;
             _start = start;
@@ -119,7 +119,7 @@ namespace Zeroit.Framework.Transitions.Betwixt
         /// <param name="duration">Time (in seconds) to get to the target</param>
         /// <param name="easeFunc">Ease function to use (defaults to linear if unspecified)</param>
         /// <param name="lerpFunc">Lerp function to use (defaults to generic if unspecified)</param>
-        public Tweener(T start, T end, float duration, EaseFunc easeFunc = null, LerpFunc<T> lerpFunc = null)
+        public Tweener(T start, T end, float duration, EaseFunc easeFunc, LerpFunc<T> lerpFunc = null)
             : this(start, end, (double)duration, easeFunc, lerpFunc)
         {
         }
@@ -132,7 +132,7 @@ namespace Zeroit.Framework.Transitions.Betwixt
         /// <param name="duration">How long to get to the target</param>
         /// <param name="easeFunc">Ease function to use (defaults to linear if unspecified)</param>
         /// <param name="lerpFunc">Lerp function to use (defaults to generic if unspecified)</param>
-        public Tweener(T start, T end, TimeSpan duration, EaseFunc easeFunc = null, LerpFunc<T> lerpFunc = null)
+        public Tweener(T start, T end, TimeSpan duration, EaseFunc easeFunc, LerpFunc<T> lerpFunc = null)
             : this(start, end, duration.TotalSeconds, easeFunc, lerpFunc)
         {
         }

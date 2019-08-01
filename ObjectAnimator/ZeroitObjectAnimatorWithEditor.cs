@@ -181,7 +181,7 @@ namespace Zeroit.Framework.Transitions
         /// Gets or sets the values to use in the animation editor.
         /// </summary>
         /// <value>The object animator input.</value>
-        public ObjectAnimatorInput ObjectAnimatorInput
+        public ObjectAnimatorInput Editor
         {
             get { return objectAnimatorInput; }
             set

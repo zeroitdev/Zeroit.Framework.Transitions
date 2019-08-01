@@ -47,7 +47,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="end">2D array for end co-ordinates (x, y).</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public Slide(Control control, double[] start, double[] end, int duration, Func<double, double> accelFunc)
+        public Slide(Control control, float[] start, float[] end, int duration, Func<float, float,float, float, float> accelFunc)
             : base(control, start, end, duration, accelFunc) {
             if (start.Length != 2 || end.Length != 2) {
                 throw new AnimationException("Start and end points must be 2D");

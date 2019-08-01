@@ -823,8 +823,6 @@ namespace Zeroit.Framework.Transitions.WinFormAnimation
         public static float LinearTween(float t, float b, float c, float d)
         {
             
-            
-            
             return (c * t) / (d + b);
         }
         #endregion
@@ -889,6 +887,7 @@ namespace Zeroit.Framework.Transitions.WinFormAnimation
 
         }
         #endregion
+        
         #endregion
 
         #region Cubic Easing Functions
@@ -1549,5 +1548,6 @@ namespace Zeroit.Framework.Transitions.WinFormAnimation
         #endregion
 
         #endregion
+
     }
 }

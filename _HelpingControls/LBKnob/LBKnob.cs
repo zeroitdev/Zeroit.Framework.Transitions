@@ -1046,6 +1046,7 @@ namespace Zeroit.Framework.Transitions._HelpingControls.LBKnob
         [System.ComponentModel.EditorBrowsableAttribute()]
         protected override void OnPaint(PaintEventArgs e)
         {
+            
             // Rectangle of the control
             RectangleF _rc = new RectangleF(0, 0, this.Width, this.Height);
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -1060,6 +1061,12 @@ namespace Zeroit.Framework.Transitions._HelpingControls.LBKnob
 
             // Draw with the user renderer
             this.Renderer.Draw(e.Graphics);
+
+            if (AllowTransparency)
+            {
+                MakeTransparent(this, e.Graphics);
+            }
+
         }
         #endregion
 
@@ -1087,6 +1094,86 @@ namespace Zeroit.Framework.Transitions._HelpingControls.LBKnob
             this.Invalidate();
         }
         #endregion
+
+
+
+
+
+        #region Transparency
+
+
+        #region Include in Paint
+
+        private void TransInPaint(Graphics g)
+        {
+            if (AllowTransparency)
+            {
+                MakeTransparent(this, g);
+            }
+        }
+
+        #endregion
+
+        #region Include in Private Field
+
+        private bool allowTransparency = true;
+
+        #endregion
+
+        #region Include in Public Properties
+
+        public bool AllowTransparency
+        {
+            get { return allowTransparency; }
+            set
+            {
+                allowTransparency = value;
+
+                Invalidate();
+            }
+        }
+
+        #endregion
+
+        #region Method
+
+        //-----------------------------Include in Paint--------------------------//
+        //
+        // if(AllowTransparency)
+        //  {
+        //    MakeTransparent(this,g);
+        //  }
+        //
+        //-----------------------------Include in Paint--------------------------//
+
+        private static void MakeTransparent(Control control, Graphics g)
+        {
+            var parent = control.Parent;
+            if (parent == null) return;
+            var bounds = control.Bounds;
+            var siblings = parent.Controls;
+            int index = siblings.IndexOf(control);
+            Bitmap behind = null;
+            for (int i = siblings.Count - 1; i > index; i--)
+            {
+                var c = siblings[i];
+                if (!c.Bounds.IntersectsWith(bounds)) continue;
+                if (behind == null)
+                    behind = new Bitmap(control.Parent.ClientSize.Width, control.Parent.ClientSize.Height);
+                c.DrawToBitmap(behind, c.Bounds);
+            }
+            if (behind == null) return;
+            g.DrawImage(behind, control.ClientRectangle, bounds, GraphicsUnit.Pixel);
+            behind.Dispose();
+        }
+
+        #endregion
+
+
+        #endregion
+
+
+
     }
 
     /// <summary>

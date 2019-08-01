@@ -188,7 +188,7 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
         /// </summary>
         /// <value>The atomic animator input.</value>
         /// <remarks>This opens up an editor that sets the values and provides preview functionalities for the animation selected.</remarks>
-        public AtomicAnimatorInput AtomicAnimatorInput
+        public AtomicAnimatorInput Editor
         {
             get
             {

@@ -44,9 +44,14 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// The none
         /// </summary>
         None,
-        MoveHorizontal,
 
-        MoveVertical,
+        MoveLeft,
+
+        MoveRight,
+
+        MoveDown,
+
+        MoveUp,
         /// <summary>
         /// The resize horiz
         /// </summary>
@@ -82,6 +87,7 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
     /// <param name="value">The value.</param>
     public delegate void AnimationCallback(object target, int value);
 
+    
     /// <summary>
     /// Class Animation.
     /// </summary>

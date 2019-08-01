@@ -65,107 +65,107 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.thematic1501 = new Zeroit.Framework.Transitions.ThemeManagers.SpicyLips();
             this.closeBtn = new System.Windows.Forms.Button();
             this.location_GroupBox = new System.Windows.Forms.GroupBox();
-            this.label42 = new System.Windows.Forms.Label();
+            this.location_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
+            this.label42 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Y_Cordinate_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label43 = new System.Windows.Forms.Label();
+            this.label43 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_X_Cordinate_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label33 = new System.Windows.Forms.Label();
+            this.label33 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point4_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label34 = new System.Windows.Forms.Label();
+            this.label34 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point4_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label35 = new System.Windows.Forms.Label();
+            this.label35 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point3_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label36 = new System.Windows.Forms.Label();
+            this.label36 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point3_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label37 = new System.Windows.Forms.Label();
+            this.label37 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point2_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
+            this.label38 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point2_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label39 = new System.Windows.Forms.Label();
+            this.label39 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point1_Y_Numeric = new System.Windows.Forms.NumericUpDown();
             this.location_Preview_btn = new System.Windows.Forms.Button();
-            this.label40 = new System.Windows.Forms.Label();
+            this.label40 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.location_Point1_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.location_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.size_GroupBox = new System.Windows.Forms.GroupBox();
-            this.label41 = new System.Windows.Forms.Label();
+            this.size_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
+            this.label41 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Height_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label32 = new System.Windows.Forms.Label();
+            this.label32 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Width_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label24 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point4_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label25 = new System.Windows.Forms.Label();
+            this.label25 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point4_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label26 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point3_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
+            this.label27 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point3_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
+            this.label28 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point2_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
+            this.label29 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point2_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label30 = new System.Windows.Forms.Label();
+            this.label30 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point1_Y_Numeric = new System.Windows.Forms.NumericUpDown();
             this.size_Preview_btn = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
+            this.label31 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.size_Point1_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.size_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.foreColor_GroupBox = new System.Windows.Forms.GroupBox();
+            this.foreColor_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.foreColor_Color_btn = new System.Windows.Forms.Button();
-            this.color_Label = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.color_Label = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
+            this.label15 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point4_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label16 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point4_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label17 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point3_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
+            this.label18 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point3_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
+            this.label19 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point2_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label20 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point2_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label21 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point1_Y_Numeric = new System.Windows.Forms.NumericUpDown();
             this.foreColor_Preview_btn = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
+            this.label22 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.foreColor_Point1_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.foreColor_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.backColor_GroupBox = new System.Windows.Forms.GroupBox();
+            this.backColor_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.backColor_Color_btn = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
+            this.label11 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point4_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point4_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label8 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point3_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label10 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point3_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point2_Y_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point2_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point1_Y_Numeric = new System.Windows.Forms.NumericUpDown();
             this.backColor_Preview_btn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label9 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.backColor_Point1_X_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.backColor_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.general_Container = new System.Windows.Forms.Panel();
             this.zeroitSimpleLine21 = new Zeroit.Framework.Transitions._HelpingControls.LineSimple2();
             this.okBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.general_GroupBox = new System.Windows.Forms.GroupBox();
             this.mainControl_Duration_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label23 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
+            this.label2 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.mainControl_Control_ComboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.mainControl_Transition_ComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.mainControl_animationProperty_Combo = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6 = new Zeroit.Framework.Transitions.AnimationEditors.TransparentText();
             this.mainControl_Reverse_ComboBox = new System.Windows.Forms.ComboBox();
             this.backColor_Animator = new Zeroit.Framework.Transitions.AtomicAnimator.ZeroitAtom();
             this.foreColor_Animator = new Zeroit.Framework.Transitions.AtomicAnimator.ZeroitAtom();
@@ -270,6 +270,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.location_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.location_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.location_GroupBox.Controls.Add(this.location_RotatingCube);
             this.location_GroupBox.Controls.Add(this.label42);
             this.location_GroupBox.Controls.Add(this.location_Y_Cordinate_Numeric);
             this.location_GroupBox.Controls.Add(this.label43);
@@ -291,7 +292,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.location_GroupBox.Controls.Add(this.location_Preview_btn);
             this.location_GroupBox.Controls.Add(this.label40);
             this.location_GroupBox.Controls.Add(this.location_Point1_X_Numeric);
-            this.location_GroupBox.Controls.Add(this.location_RotatingCube);
             this.location_GroupBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.location_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.location_GroupBox.Location = new System.Drawing.Point(287, 677);
@@ -302,9 +302,29 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.location_GroupBox.Text = "Location";
             this.location_GroupBox.Visible = false;
             // 
+            // location_RotatingCube
+            // 
+            this.location_RotatingCube.AllowTransparency = true;
+            this.location_RotatingCube.AutoAnimate = true;
+            this.location_RotatingCube.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.BlueViolet,
+        System.Drawing.Color.Cyan,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Violet,
+        System.Drawing.Color.LightSkyBlue};
+            this.location_RotatingCube.Location = new System.Drawing.Point(607, 71);
+            this.location_RotatingCube.Name = "location_RotatingCube";
+            this.location_RotatingCube.Shrink = 4;
+            this.location_RotatingCube.Size = new System.Drawing.Size(86, 84);
+            this.location_RotatingCube.SpeedAdjust = 15;
+            this.location_RotatingCube.TabIndex = 0;
+            this.location_RotatingCube.Text = "rotatingCube1";
+            // 
             // label42
             // 
-            this.label42.AutoSize = true;
+            this.label42.AllowTransparency = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label42.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label42.Location = new System.Drawing.Point(381, 86);
@@ -332,7 +352,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
+            this.label43.AllowTransparency = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label43.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label43.Location = new System.Drawing.Point(381, 24);
@@ -360,7 +381,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
+            this.label33.AllowTransparency = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label33.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label33.Location = new System.Drawing.Point(186, 192);
@@ -394,7 +416,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
+            this.label34.AllowTransparency = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label34.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label34.Location = new System.Drawing.Point(19, 186);
@@ -428,7 +451,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label35
             // 
-            this.label35.AutoSize = true;
+            this.label35.AllowTransparency = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label35.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label35.Location = new System.Drawing.Point(186, 139);
@@ -462,7 +486,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label36
             // 
-            this.label36.AutoSize = true;
+            this.label36.AllowTransparency = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label36.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label36.Location = new System.Drawing.Point(19, 135);
@@ -496,7 +521,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
+            this.label37.AllowTransparency = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label37.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label37.Location = new System.Drawing.Point(186, 84);
@@ -530,7 +556,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label38
             // 
-            this.label38.AutoSize = true;
+            this.label38.AllowTransparency = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label38.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label38.Location = new System.Drawing.Point(19, 80);
@@ -564,7 +591,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label39
             // 
-            this.label39.AutoSize = true;
+            this.label39.AllowTransparency = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label39.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label39.Location = new System.Drawing.Point(186, 30);
@@ -615,7 +643,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label40
             // 
-            this.label40.AutoSize = true;
+            this.label40.AllowTransparency = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label40.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label40.Location = new System.Drawing.Point(19, 26);
@@ -647,28 +676,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.location_Point1_X_Numeric.TabIndex = 21;
             this.location_Point1_X_Numeric.ValueChanged += new System.EventHandler(this.location_Point1_X_Numeric_ValueChanged);
             // 
-            // location_RotatingCube
-            // 
-            this.location_RotatingCube.AutoAnimate = true;
-            this.location_RotatingCube.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.BlueViolet,
-        System.Drawing.Color.Cyan,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Violet,
-        System.Drawing.Color.LightSkyBlue};
-            this.location_RotatingCube.Location = new System.Drawing.Point(607, 71);
-            this.location_RotatingCube.Name = "location_RotatingCube";
-            this.location_RotatingCube.Shrink = 4;
-            this.location_RotatingCube.Size = new System.Drawing.Size(86, 84);
-            this.location_RotatingCube.SpeedAdjust = 15;
-            this.location_RotatingCube.TabIndex = 0;
-            this.location_RotatingCube.Text = "rotatingCube1";
-            // 
             // size_GroupBox
             // 
             this.size_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.size_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.size_GroupBox.Controls.Add(this.size_RotatingCube);
             this.size_GroupBox.Controls.Add(this.label41);
             this.size_GroupBox.Controls.Add(this.size_Height_Numeric);
             this.size_GroupBox.Controls.Add(this.label32);
@@ -690,7 +702,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.size_GroupBox.Controls.Add(this.size_Preview_btn);
             this.size_GroupBox.Controls.Add(this.label31);
             this.size_GroupBox.Controls.Add(this.size_Point1_X_Numeric);
-            this.size_GroupBox.Controls.Add(this.size_RotatingCube);
             this.size_GroupBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.size_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.size_GroupBox.Location = new System.Drawing.Point(287, 430);
@@ -701,9 +712,29 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.size_GroupBox.Text = "Size";
             this.size_GroupBox.Visible = false;
             // 
+            // size_RotatingCube
+            // 
+            this.size_RotatingCube.AllowTransparency = true;
+            this.size_RotatingCube.AutoAnimate = true;
+            this.size_RotatingCube.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.BlueViolet,
+        System.Drawing.Color.Cyan,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Violet,
+        System.Drawing.Color.LightSkyBlue};
+            this.size_RotatingCube.Location = new System.Drawing.Point(607, 80);
+            this.size_RotatingCube.Name = "size_RotatingCube";
+            this.size_RotatingCube.Shrink = 4;
+            this.size_RotatingCube.Size = new System.Drawing.Size(86, 84);
+            this.size_RotatingCube.SpeedAdjust = 15;
+            this.size_RotatingCube.TabIndex = 0;
+            this.size_RotatingCube.Text = "rotatingCube1";
+            // 
             // label41
             // 
-            this.label41.AutoSize = true;
+            this.label41.AllowTransparency = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
             this.label41.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label41.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label41.Location = new System.Drawing.Point(381, 84);
@@ -731,7 +762,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
+            this.label32.AllowTransparency = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label32.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label32.Location = new System.Drawing.Point(381, 30);
@@ -759,7 +791,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
+            this.label24.AllowTransparency = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label24.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label24.Location = new System.Drawing.Point(185, 200);
@@ -793,7 +826,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
+            this.label25.AllowTransparency = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label25.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label25.Location = new System.Drawing.Point(19, 200);
@@ -827,7 +861,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
+            this.label26.AllowTransparency = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label26.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label26.Location = new System.Drawing.Point(186, 145);
@@ -861,7 +896,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
+            this.label27.AllowTransparency = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label27.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label27.Location = new System.Drawing.Point(19, 145);
@@ -895,7 +931,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label28
             // 
-            this.label28.AutoSize = true;
+            this.label28.AllowTransparency = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label28.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label28.Location = new System.Drawing.Point(186, 86);
@@ -929,7 +966,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
+            this.label29.AllowTransparency = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label29.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label29.Location = new System.Drawing.Point(19, 86);
@@ -963,7 +1001,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
+            this.label30.AllowTransparency = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label30.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label30.Location = new System.Drawing.Point(186, 32);
@@ -1014,7 +1053,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
+            this.label31.AllowTransparency = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label31.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label31.Location = new System.Drawing.Point(19, 32);
@@ -1046,28 +1086,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.size_Point1_X_Numeric.TabIndex = 21;
             this.size_Point1_X_Numeric.ValueChanged += new System.EventHandler(this.size_Point1_X_Numeric_ValueChanged);
             // 
-            // size_RotatingCube
-            // 
-            this.size_RotatingCube.AutoAnimate = true;
-            this.size_RotatingCube.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.BlueViolet,
-        System.Drawing.Color.Cyan,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Violet,
-        System.Drawing.Color.LightSkyBlue};
-            this.size_RotatingCube.Location = new System.Drawing.Point(607, 80);
-            this.size_RotatingCube.Name = "size_RotatingCube";
-            this.size_RotatingCube.Shrink = 4;
-            this.size_RotatingCube.Size = new System.Drawing.Size(86, 84);
-            this.size_RotatingCube.SpeedAdjust = 15;
-            this.size_RotatingCube.TabIndex = 0;
-            this.size_RotatingCube.Text = "rotatingCube1";
-            // 
             // foreColor_GroupBox
             // 
             this.foreColor_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.foreColor_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.foreColor_GroupBox.Controls.Add(this.foreColor_RotatingCube);
             this.foreColor_GroupBox.Controls.Add(this.foreColor_Color_btn);
             this.foreColor_GroupBox.Controls.Add(this.color_Label);
             this.foreColor_GroupBox.Controls.Add(this.label15);
@@ -1087,7 +1110,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.foreColor_GroupBox.Controls.Add(this.foreColor_Preview_btn);
             this.foreColor_GroupBox.Controls.Add(this.label22);
             this.foreColor_GroupBox.Controls.Add(this.foreColor_Point1_X_Numeric);
-            this.foreColor_GroupBox.Controls.Add(this.foreColor_RotatingCube);
             this.foreColor_GroupBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.foreColor_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.foreColor_GroupBox.Location = new System.Drawing.Point(287, 232);
@@ -1097,6 +1119,25 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.foreColor_GroupBox.TabStop = false;
             this.foreColor_GroupBox.Text = "ForeColor";
             this.foreColor_GroupBox.Visible = false;
+            // 
+            // foreColor_RotatingCube
+            // 
+            this.foreColor_RotatingCube.AllowTransparency = true;
+            this.foreColor_RotatingCube.AutoAnimate = true;
+            this.foreColor_RotatingCube.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.BlueViolet,
+        System.Drawing.Color.Cyan,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Violet,
+        System.Drawing.Color.LightSkyBlue};
+            this.foreColor_RotatingCube.Location = new System.Drawing.Point(607, 85);
+            this.foreColor_RotatingCube.Name = "foreColor_RotatingCube";
+            this.foreColor_RotatingCube.Shrink = 4;
+            this.foreColor_RotatingCube.Size = new System.Drawing.Size(86, 84);
+            this.foreColor_RotatingCube.SpeedAdjust = 15;
+            this.foreColor_RotatingCube.TabIndex = 0;
+            this.foreColor_RotatingCube.Text = "rotatingCube1";
             // 
             // foreColor_Color_btn
             // 
@@ -1114,7 +1155,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // color_Label
             // 
-            this.color_Label.AutoSize = true;
+            this.color_Label.AllowTransparency = true;
+            this.color_Label.BackColor = System.Drawing.Color.Transparent;
             this.color_Label.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.color_Label.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.color_Label.Location = new System.Drawing.Point(380, 149);
@@ -1125,7 +1167,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
+            this.label15.AllowTransparency = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label15.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label15.Location = new System.Drawing.Point(380, 86);
@@ -1159,7 +1202,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
+            this.label16.AllowTransparency = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label16.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label16.Location = new System.Drawing.Point(380, 30);
@@ -1193,7 +1237,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
+            this.label17.AllowTransparency = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label17.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label17.Location = new System.Drawing.Point(186, 147);
@@ -1227,7 +1272,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
+            this.label18.AllowTransparency = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label18.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label18.Location = new System.Drawing.Point(19, 149);
@@ -1261,7 +1307,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
+            this.label19.AllowTransparency = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label19.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label19.Location = new System.Drawing.Point(186, 84);
@@ -1295,7 +1342,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
+            this.label20.AllowTransparency = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label20.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label20.Location = new System.Drawing.Point(19, 86);
@@ -1329,7 +1377,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
+            this.label21.AllowTransparency = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label21.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label21.Location = new System.Drawing.Point(186, 30);
@@ -1380,7 +1429,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
+            this.label22.AllowTransparency = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label22.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label22.Location = new System.Drawing.Point(19, 32);
@@ -1412,28 +1462,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.foreColor_Point1_X_Numeric.TabIndex = 21;
             this.foreColor_Point1_X_Numeric.ValueChanged += new System.EventHandler(this.foreColor_Point1_X_Numeric_ValueChanged);
             // 
-            // foreColor_RotatingCube
-            // 
-            this.foreColor_RotatingCube.AutoAnimate = true;
-            this.foreColor_RotatingCube.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.BlueViolet,
-        System.Drawing.Color.Cyan,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Violet,
-        System.Drawing.Color.LightSkyBlue};
-            this.foreColor_RotatingCube.Location = new System.Drawing.Point(607, 85);
-            this.foreColor_RotatingCube.Name = "foreColor_RotatingCube";
-            this.foreColor_RotatingCube.Shrink = 4;
-            this.foreColor_RotatingCube.Size = new System.Drawing.Size(86, 84);
-            this.foreColor_RotatingCube.SpeedAdjust = 15;
-            this.foreColor_RotatingCube.TabIndex = 0;
-            this.foreColor_RotatingCube.Text = "rotatingCube1";
-            // 
             // backColor_GroupBox
             // 
             this.backColor_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.backColor_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.backColor_GroupBox.Controls.Add(this.backColor_RotatingCube);
             this.backColor_GroupBox.Controls.Add(this.backColor_Color_btn);
             this.backColor_GroupBox.Controls.Add(this.label14);
             this.backColor_GroupBox.Controls.Add(this.label11);
@@ -1453,7 +1486,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.backColor_GroupBox.Controls.Add(this.backColor_Preview_btn);
             this.backColor_GroupBox.Controls.Add(this.label9);
             this.backColor_GroupBox.Controls.Add(this.backColor_Point1_X_Numeric);
-            this.backColor_GroupBox.Controls.Add(this.backColor_RotatingCube);
             this.backColor_GroupBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.backColor_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.backColor_GroupBox.Location = new System.Drawing.Point(287, 34);
@@ -1463,6 +1495,25 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.backColor_GroupBox.TabStop = false;
             this.backColor_GroupBox.Text = "BackColor";
             this.backColor_GroupBox.Visible = false;
+            // 
+            // backColor_RotatingCube
+            // 
+            this.backColor_RotatingCube.AllowTransparency = true;
+            this.backColor_RotatingCube.AutoAnimate = true;
+            this.backColor_RotatingCube.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.BlueViolet,
+        System.Drawing.Color.Cyan,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Violet,
+        System.Drawing.Color.LightSkyBlue};
+            this.backColor_RotatingCube.Location = new System.Drawing.Point(616, 81);
+            this.backColor_RotatingCube.Name = "backColor_RotatingCube";
+            this.backColor_RotatingCube.Shrink = 4;
+            this.backColor_RotatingCube.Size = new System.Drawing.Size(86, 84);
+            this.backColor_RotatingCube.SpeedAdjust = 15;
+            this.backColor_RotatingCube.TabIndex = 0;
+            this.backColor_RotatingCube.Text = "rotatingCube1";
             // 
             // backColor_Color_btn
             // 
@@ -1479,7 +1530,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
+            this.label14.AllowTransparency = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label14.Location = new System.Drawing.Point(379, 149);
@@ -1490,7 +1542,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
+            this.label11.AllowTransparency = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label11.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label11.Location = new System.Drawing.Point(379, 86);
@@ -1523,7 +1576,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
+            this.label12.AllowTransparency = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label12.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label12.Location = new System.Drawing.Point(379, 30);
@@ -1556,7 +1610,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
+            this.label8.AllowTransparency = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label8.Location = new System.Drawing.Point(186, 149);
@@ -1589,7 +1644,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
+            this.label10.AllowTransparency = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label10.Location = new System.Drawing.Point(19, 149);
@@ -1622,7 +1678,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            this.label4.AllowTransparency = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label4.Location = new System.Drawing.Point(186, 86);
@@ -1655,7 +1712,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            this.label5.AllowTransparency = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Location = new System.Drawing.Point(19, 86);
@@ -1688,7 +1746,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            this.label3.AllowTransparency = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(186, 32);
@@ -1738,7 +1797,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
+            this.label9.AllowTransparency = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label9.Location = new System.Drawing.Point(19, 32);
@@ -1769,24 +1829,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.backColor_Point1_X_Numeric.TabIndex = 21;
             this.backColor_Point1_X_Numeric.ValueChanged += new System.EventHandler(this.backColor_Point1_X_Numeric_ValueChanged);
             // 
-            // backColor_RotatingCube
-            // 
-            this.backColor_RotatingCube.AutoAnimate = true;
-            this.backColor_RotatingCube.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.BlueViolet,
-        System.Drawing.Color.Cyan,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Violet,
-        System.Drawing.Color.LightSkyBlue};
-            this.backColor_RotatingCube.Location = new System.Drawing.Point(616, 81);
-            this.backColor_RotatingCube.Name = "backColor_RotatingCube";
-            this.backColor_RotatingCube.Shrink = 4;
-            this.backColor_RotatingCube.Size = new System.Drawing.Size(86, 84);
-            this.backColor_RotatingCube.SpeedAdjust = 15;
-            this.backColor_RotatingCube.TabIndex = 0;
-            this.backColor_RotatingCube.Text = "rotatingCube1";
-            // 
             // general_Container
             // 
             this.general_Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
@@ -1801,7 +1843,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // zeroitSimpleLine21
             // 
-            this.zeroitSimpleLine21.Angle = 0F;
+            this.zeroitSimpleLine21.Angle = 30F;
             this.zeroitSimpleLine21.AngleIncrement = 10F;
             this.zeroitSimpleLine21.AngleLimit = 360F;
             this.zeroitSimpleLine21.AutoAnimate = true;
@@ -1901,7 +1943,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
+            this.label23.AllowTransparency = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label23.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label23.Location = new System.Drawing.Point(6, 187);
@@ -1912,7 +1954,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            this.label2.AllowTransparency = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(6, 240);
@@ -1936,7 +1978,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            this.label7.AllowTransparency = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Location = new System.Drawing.Point(6, 134);
@@ -1970,7 +2012,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.AllowTransparency = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(6, 28);
@@ -2001,7 +2043,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.AllowTransparency = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label6.Location = new System.Drawing.Point(6, 81);
@@ -2119,11 +2161,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.Controls.Add(this.thematic1501);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AtomicAnimatorDialog";
+            this.ShowInTaskbar = false;
             this.Text = "AtomicAnimatorDialog";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.thematic1501.ResumeLayout(false);
             this.location_GroupBox.ResumeLayout(false);
-            this.location_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.location_Y_Cordinate_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.location_X_Cordinate_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.location_Point4_Y_Numeric)).EndInit();
@@ -2135,7 +2177,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.location_Point1_Y_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.location_Point1_X_Numeric)).EndInit();
             this.size_GroupBox.ResumeLayout(false);
-            this.size_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.size_Height_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.size_Width_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.size_Point4_Y_Numeric)).EndInit();
@@ -2147,7 +2188,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.size_Point1_Y_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.size_Point1_X_Numeric)).EndInit();
             this.foreColor_GroupBox.ResumeLayout(false);
-            this.foreColor_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foreColor_Point4_Y_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foreColor_Point4_X_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foreColor_Point3_Y_Numeric)).EndInit();
@@ -2157,7 +2197,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.foreColor_Point1_Y_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foreColor_Point1_X_Numeric)).EndInit();
             this.backColor_GroupBox.ResumeLayout(false);
-            this.backColor_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backColor_Point4_Y_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backColor_Point4_X_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backColor_Point3_Y_Numeric)).EndInit();
@@ -2168,7 +2207,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.backColor_Point1_X_Numeric)).EndInit();
             this.general_Container.ResumeLayout(false);
             this.general_GroupBox.ResumeLayout(false);
-            this.general_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainControl_Duration_Numeric)).EndInit();
             this.ResumeLayout(false);
 
@@ -2189,10 +2227,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// </summary>
         private _HelpingControls.LineSimple2 zeroitSimpleLine21;
         /// <summary>
-        /// The ok BTN
-        /// </summary>
-        public System.Windows.Forms.Button okBtn;
-        /// <summary>
         /// The cancel BTN
         /// </summary>
         public System.Windows.Forms.Button cancelBtn;
@@ -2203,7 +2237,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label7
         /// </summary>
-        private System.Windows.Forms.Label label7;
+        private TransparentText label7;
         /// <summary>
         /// The main control transition ComboBox
         /// </summary>
@@ -2211,7 +2245,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label1
         /// </summary>
-        private System.Windows.Forms.Label label1;
+        private TransparentText label1;
         /// <summary>
         /// The main control animation property combo
         /// </summary>
@@ -2219,7 +2253,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label6
         /// </summary>
-        private System.Windows.Forms.Label label6;
+        private TransparentText label6;
         /// <summary>
         /// The main control reverse ComboBox
         /// </summary>
@@ -2235,7 +2269,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label9
         /// </summary>
-        private System.Windows.Forms.Label label9;
+        private TransparentText label9;
         /// <summary>
         /// The back color point1 x numeric
         /// </summary>
@@ -2247,7 +2281,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label2
         /// </summary>
-        private System.Windows.Forms.Label label2;
+        private TransparentText label2;
         /// <summary>
         /// The main control control ComboBox
         /// </summary>
@@ -2259,7 +2293,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label33
         /// </summary>
-        private System.Windows.Forms.Label label33;
+        private TransparentText label33;
         /// <summary>
         /// The location point4 y numeric
         /// </summary>
@@ -2267,7 +2301,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label34
         /// </summary>
-        private System.Windows.Forms.Label label34;
+        private TransparentText label34;
         /// <summary>
         /// The location point4 x numeric
         /// </summary>
@@ -2275,7 +2309,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label35
         /// </summary>
-        private System.Windows.Forms.Label label35;
+        private TransparentText label35;
         /// <summary>
         /// The location point3 y numeric
         /// </summary>
@@ -2283,7 +2317,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label36
         /// </summary>
-        private System.Windows.Forms.Label label36;
+        private TransparentText label36;
         /// <summary>
         /// The location point3 x numeric
         /// </summary>
@@ -2291,7 +2325,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label37
         /// </summary>
-        private System.Windows.Forms.Label label37;
+        private TransparentText label37;
         /// <summary>
         /// The location point2 y numeric
         /// </summary>
@@ -2299,7 +2333,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label38
         /// </summary>
-        private System.Windows.Forms.Label label38;
+        private TransparentText label38;
         /// <summary>
         /// The location point2 x numeric
         /// </summary>
@@ -2307,7 +2341,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label39
         /// </summary>
-        private System.Windows.Forms.Label label39;
+        private TransparentText label39;
         /// <summary>
         /// The location point1 y numeric
         /// </summary>
@@ -2319,7 +2353,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label40
         /// </summary>
-        private System.Windows.Forms.Label label40;
+        private TransparentText label40;
         /// <summary>
         /// The location point1 x numeric
         /// </summary>
@@ -2335,7 +2369,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label24
         /// </summary>
-        private System.Windows.Forms.Label label24;
+        private TransparentText label24;
         /// <summary>
         /// The size point4 y numeric
         /// </summary>
@@ -2343,7 +2377,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label25
         /// </summary>
-        private System.Windows.Forms.Label label25;
+        private TransparentText label25;
         /// <summary>
         /// The size point4 x numeric
         /// </summary>
@@ -2351,7 +2385,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label26
         /// </summary>
-        private System.Windows.Forms.Label label26;
+        private TransparentText label26;
         /// <summary>
         /// The size point3 y numeric
         /// </summary>
@@ -2359,7 +2393,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label27
         /// </summary>
-        private System.Windows.Forms.Label label27;
+        private TransparentText label27;
         /// <summary>
         /// The size point3 x numeric
         /// </summary>
@@ -2367,7 +2401,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label28
         /// </summary>
-        private System.Windows.Forms.Label label28;
+        private TransparentText label28;
         /// <summary>
         /// The size point2 y numeric
         /// </summary>
@@ -2375,7 +2409,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label29
         /// </summary>
-        private System.Windows.Forms.Label label29;
+        private TransparentText label29;
         /// <summary>
         /// The size point2 x numeric
         /// </summary>
@@ -2383,7 +2417,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label30
         /// </summary>
-        private System.Windows.Forms.Label label30;
+        private TransparentText label30;
         /// <summary>
         /// The size point1 y numeric
         /// </summary>
@@ -2395,7 +2429,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label31
         /// </summary>
-        private System.Windows.Forms.Label label31;
+        private TransparentText label31;
         /// <summary>
         /// The size point1 x numeric
         /// </summary>
@@ -2415,11 +2449,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The color label
         /// </summary>
-        private System.Windows.Forms.Label color_Label;
+        private TransparentText color_Label;
         /// <summary>
         /// The label15
         /// </summary>
-        private System.Windows.Forms.Label label15;
+        private TransparentText label15;
         /// <summary>
         /// The fore color point4 y numeric
         /// </summary>
@@ -2427,7 +2461,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label16
         /// </summary>
-        private System.Windows.Forms.Label label16;
+        private TransparentText label16;
         /// <summary>
         /// The fore color point4 x numeric
         /// </summary>
@@ -2435,7 +2469,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label17
         /// </summary>
-        private System.Windows.Forms.Label label17;
+        private TransparentText label17;
         /// <summary>
         /// The fore color point3 y numeric
         /// </summary>
@@ -2443,7 +2477,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label18
         /// </summary>
-        private System.Windows.Forms.Label label18;
+        private TransparentText label18;
         /// <summary>
         /// The fore color point3 x numeric
         /// </summary>
@@ -2451,7 +2485,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label19
         /// </summary>
-        private System.Windows.Forms.Label label19;
+        private TransparentText label19;
         /// <summary>
         /// The fore color point2 y numeric
         /// </summary>
@@ -2459,7 +2493,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label20
         /// </summary>
-        private System.Windows.Forms.Label label20;
+        private TransparentText label20;
         /// <summary>
         /// The fore color point2 x numeric
         /// </summary>
@@ -2467,7 +2501,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label21
         /// </summary>
-        private System.Windows.Forms.Label label21;
+        private TransparentText label21;
         /// <summary>
         /// The fore color point1 y numeric
         /// </summary>
@@ -2479,7 +2513,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label22
         /// </summary>
-        private System.Windows.Forms.Label label22;
+        private TransparentText label22;
         /// <summary>
         /// The fore color point1 x numeric
         /// </summary>
@@ -2495,11 +2529,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label14
         /// </summary>
-        private System.Windows.Forms.Label label14;
+        private TransparentText label14;
         /// <summary>
         /// The label11
         /// </summary>
-        private System.Windows.Forms.Label label11;
+        private TransparentText label11;
         /// <summary>
         /// The back color point4 y numeric
         /// </summary>
@@ -2507,7 +2541,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label12
         /// </summary>
-        private System.Windows.Forms.Label label12;
+        private TransparentText label12;
         /// <summary>
         /// The back color point4 x numeric
         /// </summary>
@@ -2515,7 +2549,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label8
         /// </summary>
-        private System.Windows.Forms.Label label8;
+        private TransparentText label8;
         /// <summary>
         /// The back color point3 y numeric
         /// </summary>
@@ -2523,7 +2557,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label10
         /// </summary>
-        private System.Windows.Forms.Label label10;
+        private TransparentText label10;
         /// <summary>
         /// The back color point3 x numeric
         /// </summary>
@@ -2531,7 +2565,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label4
         /// </summary>
-        private System.Windows.Forms.Label label4;
+        private TransparentText label4;
         /// <summary>
         /// The back color point2 y numeric
         /// </summary>
@@ -2539,7 +2573,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label5
         /// </summary>
-        private System.Windows.Forms.Label label5;
+        private TransparentText label5;
         /// <summary>
         /// The back color point2 x numeric
         /// </summary>
@@ -2547,7 +2581,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label3
         /// </summary>
-        private System.Windows.Forms.Label label3;
+        private TransparentText label3;
         /// <summary>
         /// The back color point1 y numeric
         /// </summary>
@@ -2583,7 +2617,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label23
         /// </summary>
-        private System.Windows.Forms.Label label23;
+        private TransparentText label23;
         /// <summary>
         /// The location y cordinate numeric
         /// </summary>
@@ -2591,7 +2625,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label43
         /// </summary>
-        private System.Windows.Forms.Label label43;
+        private TransparentText label43;
         /// <summary>
         /// The location x cordinate numeric
         /// </summary>
@@ -2599,7 +2633,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label41
         /// </summary>
-        private System.Windows.Forms.Label label41;
+        private TransparentText label41;
         /// <summary>
         /// The size height numeric
         /// </summary>
@@ -2607,7 +2641,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label32
         /// </summary>
-        private System.Windows.Forms.Label label32;
+        private TransparentText label32;
         /// <summary>
         /// The size width numeric
         /// </summary>
@@ -2615,6 +2649,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <summary>
         /// The label42
         /// </summary>
-        private System.Windows.Forms.Label label42;
+        private TransparentText label42;
+        public System.Windows.Forms.Button okBtn;
     }
 }

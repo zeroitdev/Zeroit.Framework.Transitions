@@ -282,6 +282,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // oneD_RotatingCube
             // 
+            this.oneD_RotatingCube.AllowTransparency = true;
             this.oneD_RotatingCube.AutoAnimate = true;
             this.oneD_RotatingCube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -435,6 +436,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // threeD_RotatingCube
             // 
+            this.threeD_RotatingCube.AllowTransparency = true;
             this.threeD_RotatingCube.AutoAnimate = true;
             this.threeD_RotatingCube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -454,6 +456,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // twoD_RotatingCube
             // 
+            this.twoD_RotatingCube.AllowTransparency = true;
             this.twoD_RotatingCube.AutoAnimate = true;
             this.twoD_RotatingCube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -663,7 +666,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // zeroitSimpleLine21
             // 
-            this.zeroitSimpleLine21.Angle = 100F;
+            this.zeroitSimpleLine21.Angle = 70F;
             this.zeroitSimpleLine21.AngleIncrement = 10F;
             this.zeroitSimpleLine21.AngleLimit = 360F;
             this.zeroitSimpleLine21.AutoAnimate = true;
@@ -876,6 +879,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.threeD_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.threeD_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.threeD_GroupBox.Controls.Add(this.threeD_RotatingCube);
             this.threeD_GroupBox.Controls.Add(this.threeD_Preview);
             this.threeD_GroupBox.Controls.Add(this.threeD_Easing_ComboBox);
             this.threeD_GroupBox.Controls.Add(this.label22);
@@ -891,7 +895,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.threeD_GroupBox.Controls.Add(this.label28);
             this.threeD_GroupBox.Controls.Add(this.threeD_Color_Property_Name_TextBox);
             this.threeD_GroupBox.Controls.Add(this.label29);
-            this.threeD_GroupBox.Controls.Add(this.threeD_RotatingCube);
             this.threeD_GroupBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.threeD_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.threeD_GroupBox.Location = new System.Drawing.Point(232, 638);
@@ -1144,6 +1147,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.twoD_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.twoD_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.twoD_GroupBox.Controls.Add(this.twoD_RotatingCube);
             this.twoD_GroupBox.Controls.Add(this.twoD_Preview);
             this.twoD_GroupBox.Controls.Add(this.twoD_Reset_btn);
             this.twoD_GroupBox.Controls.Add(this.twoD_Easing_ComboBox);
@@ -1184,7 +1188,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.twoD_GroupBox.Controls.Add(this.twoD_Property_Label);
             this.twoD_GroupBox.Controls.Add(this.twoD_Start1_Label);
             this.twoD_GroupBox.Controls.Add(this.twoD_Start1_Numeric);
-            this.twoD_GroupBox.Controls.Add(this.twoD_RotatingCube);
             this.twoD_GroupBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.twoD_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.twoD_GroupBox.Location = new System.Drawing.Point(232, 274);
@@ -1899,6 +1902,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.oneD_GroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.oneD_GroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.oneD_GroupBox.Controls.Add(this.oneD_RotatingCube);
             this.oneD_GroupBox.Controls.Add(this.oneD_Preview);
             this.oneD_GroupBox.Controls.Add(this.oneD_Easing_ComboBox);
             this.oneD_GroupBox.Controls.Add(this.label21);
@@ -1914,7 +1918,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.oneD_GroupBox.Controls.Add(this.oneD_Start_Numeric);
             this.oneD_GroupBox.Controls.Add(this.oneD_Custom_Property_Name_TextBox);
             this.oneD_GroupBox.Controls.Add(this.label4);
-            this.oneD_GroupBox.Controls.Add(this.oneD_RotatingCube);
             this.oneD_GroupBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.oneD_GroupBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.oneD_GroupBox.Location = new System.Drawing.Point(232, 37);
@@ -2191,6 +2194,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.Controls.Add(this.thematic1501);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ZeroitPeaceAnimatorDialog";
+            this.ShowInTaskbar = false;
             this.Text = "ZeroitPeaceAnimatorDialog";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.thematic1501.ResumeLayout(false);

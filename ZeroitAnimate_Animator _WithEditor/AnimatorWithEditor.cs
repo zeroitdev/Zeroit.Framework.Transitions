@@ -115,7 +115,7 @@ namespace Zeroit.Framework.Transitions.AnimatorWithEditor
         /// Gets or sets the animate input.
         /// </summary>
         /// <value>The animate input.</value>
-        public AnimateInput AnimateInput
+        public AnimateInput Editor
         {
             get { return animateInput; }
             set

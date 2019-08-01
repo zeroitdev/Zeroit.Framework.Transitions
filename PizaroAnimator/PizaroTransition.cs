@@ -58,68 +58,68 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <summary>
         /// The accelerate
         /// </summary>
-        private double accelerate = 0.7;
+        private float accelerate = 0.7f;
         /// <summary>
         /// The fadebegin
         /// </summary>
-        double fadebegin = 0;
+        float fadebegin = 0;
         /// <summary>
         /// The fadelimit
         /// </summary>
-        double fadelimit = 1;
+        float fadelimit = 1;
 
         /// <summary>
         /// The resizeheightbegin
         /// </summary>
-        double resizeheightbegin = 10;
+        float resizeheightbegin = 10;
         /// <summary>
         /// The resizeheightlimit
         /// </summary>
-        double resizeheightlimit = 50;
+        float resizeheightlimit = 50;
 
         /// <summary>
         /// The resizewidthbegin
         /// </summary>
-        double resizewidthbegin = 10;
+        float resizewidthbegin = 10;
         /// <summary>
         /// The resizewidthlimit
         /// </summary>
-        double resizewidthlimit = 50;
+        float resizewidthlimit = 50;
 
         /// <summary>
         /// The cordinate start x
         /// </summary>
-        double cordinateStart_X = 10;
+        float cordinateStart_X = 10;
         /// <summary>
         /// The cordinate start y
         /// </summary>
-        double cordinateStart_Y = 10;
+        float cordinateStart_Y = 10;
         /// <summary>
         /// The cordinate end x
         /// </summary>
-        double cordinateEnd_X = 50;
+        float cordinateEnd_X = 50;
         /// <summary>
         /// The cordinate end y
         /// </summary>
-        double cordinateEnd_Y = 50;
+        float cordinateEnd_Y = 50;
 
         /// <summary>
         /// The easingstart
         /// </summary>
-        double easingstart = 0.2;
+        float easingstart = 0.2f;
         /// <summary>
         /// The easingend
         /// </summary>
-        double easingend = 1;
+        float easingend = 1;
         /// <summary>
         /// The accel
         /// </summary>
-        public double accel;
+        public float accel;
 
         /// <summary>
         /// The function
         /// </summary>
-        Func<double, double> func = num => num;
+        //Func<float,float,float, float, float> func = num => num;
 
         /// <summary>
         /// Sets the animation type for the <c><see cref="ZeroitPizaroAnim" /></c> animator.
@@ -187,159 +187,72 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         public enum easingNames
         {
-            /// <summary>
-            /// The linear
-            /// </summary>
-            Linear,
-            /// <summary>
-            /// The ease in
-            /// </summary>
-            EaseIn,
-            /// <summary>
-            /// The ease out
-            /// </summary>
-            EaseOut,
-            /// <summary>
-            /// The ease in and out
-            /// </summary>
-            EaseInAndOut,
-            /// <summary>
-            /// The linear tween
-            /// </summary>
-            LinearTween,
-            /// <summary>
-            /// The ease in quad
-            /// </summary>
-            EaseInQuad,
-            /// <summary>
-            /// The ease out quad
-            /// </summary>
-            EaseOutQuad,
-            /// <summary>
-            /// The ease in out quad
-            /// </summary>
-            EaseInOutQuad,
-            /// <summary>
-            /// The ease in cubic
-            /// </summary>
-            EaseInCubic,
-            /// <summary>
-            /// The ease out cubic
-            /// </summary>
-            EaseOutCubic,
-            /// <summary>
-            /// The ease in out cubic
-            /// </summary>
-            EaseInOutCubic,
-            /// <summary>
-            /// The ease in quart
-            /// </summary>
-            EaseInQuart,
-            /// <summary>
-            /// The ease out quart
-            /// </summary>
-            EaseOutQuart,
-            /// <summary>
-            /// The ease in out quart
-            /// </summary>
-            EaseInOutQuart,
-            /// <summary>
-            /// The ease in quint
-            /// </summary>
-            EaseInQuint,
-            /// <summary>
-            /// The ease out quint
-            /// </summary>
-            EaseOutQuint,
-            /// <summary>
-            /// The ease in out quint
-            /// </summary>
-            EaseInOutQuint,
-            /// <summary>
-            /// The ease in sine
-            /// </summary>
-            EaseInSine,
-            /// <summary>
-            /// The ease out sine
-            /// </summary>
-            EaseOutSine,
-            /// <summary>
-            /// The ease in out sine
-            /// </summary>
-            EaseInOutSine,
-            /// <summary>
-            /// The ease in expo
-            /// </summary>
-            EaseInExpo,
-            /// <summary>
-            /// The ease out expo
-            /// </summary>
-            EaseOutExpo,
-            /// <summary>
-            /// The ease in out expo
-            /// </summary>
-            EaseInOutExpo,
-            /// <summary>
-            /// The ease in circ
-            /// </summary>
-            EaseInCirc,
-            /// <summary>
-            /// The ease out circ
-            /// </summary>
-            EaseOutCirc,
-            /// <summary>
-            /// The ease in out circ
-            /// </summary>
-            EaseInOutCirc,
-            /// <summary>
-            /// The elastic ease out
-            /// </summary>
-            ElasticEaseOut,
-            /// <summary>
-            /// The elastic ease in
-            /// </summary>
-            ElasticEaseIn,
-            /// <summary>
-            /// The elastic ease in out
-            /// </summary>
-            ElasticEaseInOut,
-            /// <summary>
-            /// The elastic ease out in
-            /// </summary>
-            ElasticEaseOutIn,
-            /// <summary>
-            /// The bounce ease out
-            /// </summary>
-            BounceEaseOut,
-            /// <summary>
-            /// The bounce ease in
-            /// </summary>
-            BounceEaseIn,
-            /// <summary>
-            /// The bounce ease in out
-            /// </summary>
-            BounceEaseInOut,
-            /// <summary>
-            /// The bounce ease out in
-            /// </summary>
-            BounceEaseOutIn,
-            /// <summary>
-            /// The back ease out
-            /// </summary>
-            BackEaseOut,
-            /// <summary>
-            /// The back ease in
-            /// </summary>
-            BackEaseIn,
-            /// <summary>
-            /// The back ease in out
-            /// </summary>
-            BackEaseInOut,
-            /// <summary>
-            /// The back ease out in
-            /// </summary>
-            BackEaseOutIn
 
+            None,
+            BackEaseIn,
+            BackEaseInOut,
+            BackEaseOut,
+            BackEaseOutIn,
+            BounceEaseIn,
+            BounceEaseInOut,
+            BounceEaseInOutV2,
+            BounceEaseInV2,
+            BounceEaseOut,
+            BounceEaseOutIn,
+            BounceEaseOutInV2,
+            BounceEaseOutV2,
+            CircularEaseIn,
+            CircularEaseInOut,
+            CircularEaseOut,
+            CubicEaseIn,
+            CubicEaseInOut,
+            CubicEaseOut,
+            EaseIn,
+            EaseInAndOut,
+            EaseInCirc,
+            EaseInCubic,
+            EaseInExpo,
+            EaseInOutCirc,
+            EaseInOutCubic,
+            EaseInOutExpo,
+            EaseInOutQuad,
+            EaseInOutQuart,
+            EaseInOutQuint,
+            EaseInOutSine,
+            EaseInQuad,
+            EaseInQuart,
+            EaseInQuint,
+            EaseInSine,
+            EaseOut,
+            EaseOutCirc,
+            EaseOutCubic,
+            EaseOutExpo,
+            EaseOutQuad,
+            EaseOutQuart,
+            EaseOutQuint,
+            EaseOutSine,
+            ElasticEaseIn,
+            ElasticEaseInOut,
+            ElasticEaseOut,
+            ElasticEaseOutIn,
+            ExponentialEaseIn,
+            ExponentialEaseInOut,
+            ExponentialEaseOut,
+            Linear,
+            LinearTween,
+            Liner,
+            QuadraticEaseIn,
+            QuadraticEaseInOut,
+            QuadraticEaseOut,
+            QuarticEaseIn,
+            QuarticEaseInOut,
+            QuarticEaseOut,
+            QuinticEaseIn,
+            QuinticEaseInOut,
+            QuinticEaseOut,
+            SinusoidalEaseIn,
+            SinusoidalEaseInOut,
+            SinusoidalEaseOut,
 
         }
 
@@ -373,7 +286,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The easing start.</value>
         [Browsable(true), Category("Easing Parameters")]
-        public double EasingStart
+        public float EasingStart
         {
             get { return easingstart; }
             set
@@ -388,7 +301,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The easing end.</value>
         [Browsable(true), Category("Easing Parameters")]
-        public double EasingEnd
+        public float EasingEnd
         {
             get { return easingend; }
             set
@@ -403,7 +316,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The fade begin.</value>
         [Browsable(true), Category("Fade Animation")]
-        public double Fade_Begin
+        public float Fade_Begin
         {
             get { return fadebegin; }
             set
@@ -422,7 +335,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The fade limit.</value>
         [Browsable(true), Category("Fade Animation")]
-        public double Fade_Limit
+        public float Fade_Limit
         {
             get { return fadelimit; }
             set
@@ -441,7 +354,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The resize height begin.</value>
         [Browsable(true), Category("ResizeHeight Animation")]
-        public double ResizeHeight_Begin
+        public float ResizeHeight_Begin
         {
             get { return resizeheightbegin; }
             set
@@ -457,7 +370,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The resize height limit.</value>
         [Browsable(true), Category("ResizeHeight Animation")]
-        public double ResizeHeight_Limit
+        public float ResizeHeight_Limit
         {
             get { return resizeheightlimit; }
             set
@@ -473,7 +386,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The resize width begin.</value>
         [Browsable(true), Category("ResizeWidth Animation")]
-        public double ResizeWidth_Begin
+        public float ResizeWidth_Begin
         {
             get { return resizewidthbegin; }
             set
@@ -489,7 +402,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The resize width limit.</value>
         [Browsable(true), Category("ResizeWidth Animation")]
-        public double ResizeWidth_Limit
+        public float ResizeWidth_Limit
         {
             get { return resizewidthlimit; }
             set
@@ -505,7 +418,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The cordinate start x.</value>
         [Browsable(true), Category("Resize/Slide/SlideFrom Animation")]
-        public double CordinateStart_X
+        public float CordinateStart_X
         {
             get { return cordinateStart_X; }
             set
@@ -520,7 +433,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The cordinate start y.</value>
         [Browsable(true), Category("Resize/Slide/SlideFrom Animation")]
-        public double CordinateStart_Y
+        public float CordinateStart_Y
         {
             get { return cordinateStart_Y; }
             set
@@ -535,7 +448,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The cordinate end x.</value>
         [Browsable(true), Category("Resize/Slide/SlideFrom Animation")]
-        public double CordinateEnd_X
+        public float CordinateEnd_X
         {
             get { return cordinateEnd_X; }
             set
@@ -550,7 +463,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// </summary>
         /// <value>The cordinate end y.</value>
         [Browsable(true), Category("Resize/Slide/SlideFrom Animation")]
-        public double CordinateEnd_Y
+        public float CordinateEnd_Y
         {
             get { return cordinateEnd_Y; }
             set
@@ -579,7 +492,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// Gets or sets the acceleration.
         /// </summary>
         /// <value>The acceleration.</value>
-        public double Acceleration
+        public float Acceleration
         {
             get { return accelerate; }
             set
@@ -758,7 +671,688 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
 
         #endregion
 
+        #region NewlyAdded
+
+        Fade fade;
+
+        FadeIn fadeIn;
+
+        FadeInAndShow fadeInAndShow;
+
+        FadeOut fadeOut;
+
+        FadeOutAndHide fadeOutandHide;
+
+        Resize resize;
+
+        ResizeHeight resizeHeight;
+
+        ResizeWidth resizeWidth;
+
+        Slide slide;
+
+        SlideFrom slideFrom;
+
+        #endregion
+
         #region Activate
+
+        public float AcceptAll(float var1, float var2, float var3, float var4)
+        {
+
+            #region Working
+            //switch (EasingNames)
+            //{
+            //    case easingNames.Linear:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseIn:
+            //        return Easing.EaseIn(var1);
+            //        break;
+            //    case easingNames.EaseOut:
+            //        return Easing.EaseOut(var1);
+            //        break;
+            //    case easingNames.EaseInAndOut:
+            //        return Easing.EaseInAndOut(var1);
+            //        break;
+            //    case easingNames.LinearTween:
+            //        return Easing.LinearTween(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInQuad:
+            //        return Easing.EaseInQuad(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutQuad:
+            //        return Easing.EaseOutQuad(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutQuad:
+            //        return Easing.EaseInOutQuad(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInCubic:
+            //        return Easing.EaseInCubic(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutCubic:
+            //        return Easing.EaseOutCubic(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutCubic:
+            //        return Easing.EaseInOutCubic(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInQuart:
+            //        return Easing.EaseInQuart(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutQuart:
+            //        return Easing.EaseOutQuart(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutQuart:
+            //        return Easing.EaseInOutQuart(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInQuint:
+            //        return Easing.EaseInQuint(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutQuint:
+            //        return Easing.EaseOutQuint(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutQuint:
+            //        return Easing.EaseInOutQuint(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInSine:
+            //        return Easing.EaseInSine(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutSine:
+            //        return Easing.EaseOutSine(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutSine:
+            //        return Easing.EaseInOutSine(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInExpo:
+            //        return Easing.EaseInExpo(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutExpo:
+            //        return Easing.EaseOutExpo(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutExpo:
+            //        return Easing.EaseInOutExpo(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInCirc:
+            //        return Easing.EaseInCirc(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseOutCirc:
+            //        return Easing.EaseOutCirc(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.EaseInOutCirc:
+            //        return Easing.EaseInOutCirc(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.ElasticEaseOut:
+            //        return Easing.ElasticEaseOut(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.ElasticEaseIn:
+            //        return Easing.ElasticEaseIn(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.ElasticEaseInOut:
+            //        return Easing.ElasticEaseInOut(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.ElasticEaseOutIn:
+            //        return Easing.ElasticEaseOutIn(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BounceEaseOut:
+            //        return Easing.BounceEaseOut(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BounceEaseIn:
+            //        return Easing.BounceEaseIn(var1, var2, var3, var4);
+            //        break;                    
+            //    case easingNames.BounceEaseInOut:
+            //        return Easing.BounceEaseInOut(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BounceEaseOutIn:
+            //        return Easing.BounceEaseOutIn(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BackEaseOut:
+            //        return Easing.BackEaseOut(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BackEaseIn:
+            //        return Easing.BackEaseIn(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BackEaseInOut:
+            //        return Easing.BackEaseInOut(var1, var2, var3, var4);
+            //        break;
+            //    case easingNames.BackEaseOutIn:
+            //        return Easing.BackEaseOutIn(var1, var2, var3, var4);
+            //        break;
+            //    default:
+            //        break;
+            //} 
+            #endregion
+
+            switch (EasingNames)
+            {
+                case easingNames.Linear:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseIn:
+                    return Easing.EaseIn(var1);
+                    break;
+                case easingNames.EaseOut:
+                    return Easing.EaseOut(var1);
+                    break;
+                case easingNames.EaseInAndOut:
+                    return Easing.EaseInAndOut(var1);
+                    break;
+                case easingNames.None:
+                    
+                    break;
+                case easingNames.BounceEaseOut:
+                    return Easing.BounceEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseIn:
+                    return Easing.BounceEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseInOut:
+                    return Easing.BounceEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseOutIn:
+                    return Easing.BounceEaseOutIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.CubicEaseIn:
+                    return Easing.CubicEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.CubicEaseInOut:
+                    return Easing.CubicEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.CubicEaseOut:
+                    return Easing.CubicEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.Liner:
+                    return Easing.Liner(var1, var2, var3, var4);
+                    break;
+                case easingNames.CircularEaseInOut:
+                    return Easing.CircularEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.CircularEaseIn:
+                    return Easing.CircularEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.CircularEaseOut:
+                    return Easing.CircularEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuadraticEaseIn:
+                    return Easing.QuadraticEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuadraticEaseOut:
+                    return Easing.QuadraticEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuadraticEaseInOut:
+                    return Easing.QuadraticEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuarticEaseIn:
+                    return Easing.QuarticEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuarticEaseOut:
+                    return Easing.QuarticEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuarticEaseInOut:
+                    return Easing.QuarticEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuinticEaseInOut:
+                    return Easing.QuinticEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuinticEaseIn:
+                    return Easing.QuinticEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.QuinticEaseOut:
+                    return Easing.QuinticEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.SinusoidalEaseIn:
+                    return Easing.SinusoidalEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.SinusoidalEaseOut:
+                    return Easing.SinusoidalEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.SinusoidalEaseInOut:
+                    return Easing.SinusoidalEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.ExponentialEaseIn:
+                    return Easing.ExponentialEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.ExponentialEaseOut:
+                    return Easing.ExponentialEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.ExponentialEaseInOut:
+                    return Easing.ExponentialEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.LinearTween:
+                    return Easing.LinearTween(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInQuad:
+                    return Easing.EaseInQuad(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutQuad:
+                    return Easing.EaseOutQuad(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutQuad:
+                    return Easing.EaseInOutQuad(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInCubic:
+                    return Easing.EaseInCubic(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutCubic:
+                    return Easing.EaseOutCubic(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutCubic:
+                    return Easing.EaseInOutCubic(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInQuart:
+                    return Easing.EaseInQuart(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutQuart:
+                    return Easing.EaseOutQuart(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutQuart:
+                    return Easing.EaseInOutQuart(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInQuint:
+                    return Easing.EaseInQuint(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutQuint:
+                    return Easing.EaseOutQuint(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutQuint:
+                    return Easing.EaseInOutQuint(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInSine:
+                    return Easing.EaseInSine(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutSine:
+                    return Easing.EaseOutSine(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutSine:
+                    return Easing.EaseInOutSine(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInExpo:
+                    return Easing.EaseInExpo(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutExpo:
+                    return Easing.EaseOutExpo(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutExpo:
+                    return Easing.EaseInOutExpo(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInCirc:
+                    return Easing.EaseInCirc(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseOutCirc:
+                    return Easing.EaseOutCirc(var1, var2, var3, var4);
+                    break;
+                case easingNames.EaseInOutCirc:
+                    return Easing.EaseInOutCirc(var1, var2, var3, var4);
+                    break;
+                case easingNames.ElasticEaseOut:
+                    return Easing.ElasticEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.ElasticEaseIn:
+                    return Easing.ElasticEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.ElasticEaseInOut:
+                    return Easing.ElasticEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.ElasticEaseOutIn:
+                    return Easing.ElasticEaseOutIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseOutV2:
+                    return Easing.BounceEaseOutV2(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseInV2:
+                    return Easing.BounceEaseInV2(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseInOutV2:
+                    return Easing.BounceEaseInOutV2(var1, var2, var3, var4);
+                    break;
+                case easingNames.BounceEaseOutInV2:
+                    return Easing.BounceEaseOutInV2(var1, var2, var3, var4);
+                    break;
+                case easingNames.BackEaseOut:
+                    return Easing.BackEaseOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.BackEaseIn:
+                    return Easing.BackEaseIn(var1, var2, var3, var4);
+                    break;
+                case easingNames.BackEaseInOut:
+                    return Easing.BackEaseInOut(var1, var2, var3, var4);
+                    break;
+                case easingNames.BackEaseOutIn:
+                    return Easing.BackEaseOutIn(var1, var2, var3, var4);
+                    break;
+                default:
+                    break;
+            }
+
+            return AcceptAll(var1,var2,var3,var4);
+        }
+
+        public float FadeAll(float var1)
+        {
+            #region Working
+            //switch (EasingNames)
+            //{
+            //    case easingNames.Linear:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseIn:
+            //        return Easing.EaseIn(var1);
+            //        break;
+            //    case easingNames.EaseOut:
+            //        return Easing.EaseOut(var1);
+            //        break;
+            //    case easingNames.EaseInAndOut:
+            //        return Easing.EaseInAndOut(var1);
+            //        break;
+            //    case easingNames.LinearTween:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInQuad:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutQuad:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutQuad:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInCubic:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutCubic:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutCubic:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInQuart:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutQuart:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutQuart:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInQuint:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutQuint:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutQuint:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInSine:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutSine:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutSine:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInExpo:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutExpo:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutExpo:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInCirc:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseOutCirc:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.EaseInOutCirc:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.ElasticEaseOut:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.ElasticEaseIn:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.ElasticEaseInOut:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.ElasticEaseOutIn:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BounceEaseOut:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BounceEaseIn:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BounceEaseInOut:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BounceEaseOutIn:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BackEaseOut:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BackEaseIn:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BackEaseInOut:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    case easingNames.BackEaseOutIn:
+            //        return Easing.Linear(var1);
+            //        break;
+            //    default:
+            //        break;
+            //} 
+            #endregion
+
+            switch (EasingNames)
+            {
+                case easingNames.Linear:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseIn:
+                    return Easing.EaseIn(var1);
+                    break;
+                case easingNames.EaseOut:
+                    return Easing.EaseOut(var1);
+                    break;
+                case easingNames.EaseInAndOut:
+                    return Easing.EaseInAndOut(var1);
+                    break;
+                case easingNames.None:
+                    break;
+                case easingNames.BounceEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseOutIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.CubicEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.CubicEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.CubicEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.Liner:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.CircularEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.CircularEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.CircularEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuadraticEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuadraticEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuadraticEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuarticEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuarticEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuarticEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuinticEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuinticEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.QuinticEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.SinusoidalEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.SinusoidalEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.SinusoidalEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ExponentialEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ExponentialEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ExponentialEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.LinearTween:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInQuad:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutQuad:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutQuad:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInCubic:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutCubic:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutCubic:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInQuart:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutQuart:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutQuart:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInQuint:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutQuint:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutQuint:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInSine:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutSine:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutSine:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInExpo:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutExpo:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutExpo:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInCirc:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseOutCirc:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.EaseInOutCirc:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ElasticEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ElasticEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ElasticEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.ElasticEaseOutIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseOutV2:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseInV2:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseInOutV2:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BounceEaseOutInV2:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BackEaseOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BackEaseIn:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BackEaseInOut:
+                    return Easing.Linear(var1);
+                    break;
+                case easingNames.BackEaseOutIn:
+                    return Easing.Linear(var1);
+                    break;
+                default:
+                    break;
+            }
+
+
+            return FadeAll(var1);
+        }
 
 
         /// <summary>
@@ -767,213 +1361,55 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         public void Activate()
         {
 
-            double[] start = new double[] { cordinateStart_X, cordinateStart_Y };
+            float[] start = new float[] { cordinateStart_X, cordinateStart_Y };
 
-            double[] end = new double[] { cordinateEnd_X, cordinateEnd_Y };
+            float[] end = new float[] { cordinateEnd_X, cordinateEnd_Y };
 
-            
-            switch (_easingNames)
-            {
-                case easingNames.Linear:
-                    double accel = Easing.Linear(DateTime.Now.Millisecond);
-                    func(accel * accelerate);
-                    break;
-                case easingNames.EaseIn:
-                    double accel1 = Easing.EaseIn(DateTime.Now.Millisecond);
-                    func(accel1 * accelerate);
-                    break;
-                case easingNames.EaseOut:
-                    double accel2 = Easing.EaseOut(DateTime.Now.Millisecond);
-                    func(accel2 * accelerate);
-                    break;
-                case easingNames.EaseInAndOut:
-                    double accel3 = Easing.EaseInAndOut(DateTime.Now.Millisecond);
-                    func(accel3 * accelerate);
-                    break;
-                case easingNames.LinearTween:
-                    double accel4 = Easing.LinearTween(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel4 * accelerate);
-                    break;
-                case easingNames.EaseInQuad:
-                    double accel5 = Easing.EaseInQuad(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel5 * accelerate);
-                    break;
-                case easingNames.EaseOutQuad:
-                    double accel6 = Easing.EaseOutQuad(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel6 * accelerate);
-                    break;
-                case easingNames.EaseInOutQuad:
-                    double accel7 = Easing.EaseInOutQuad(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel7 * accelerate);
-                    break;
-                case easingNames.EaseInCubic:
-                    double accel8 = Easing.EaseInCubic(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel8 * accelerate);
-                    break;
-                case easingNames.EaseOutCubic:
-                    double accel9 = Easing.EaseOutCubic(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel9 * accelerate);
-                    break;
-                case easingNames.EaseInOutCubic:
-                    double accel10 = Easing.EaseInOutCubic(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel10 * accelerate);
-                    break;
-                case easingNames.EaseInQuart:
-                    double accel11 = Easing.EaseInQuart(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel11 * accelerate);
-                    break;
-                case easingNames.EaseOutQuart:
-                    double accel12 = Easing.EaseOutQuart(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel12 * accelerate);
-                    break;
-                case easingNames.EaseInOutQuart:
-                    double accel13 = Easing.EaseInOutQuart(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel13 * accelerate);
-                    break;
-                case easingNames.EaseInQuint:
-                    double accel14 = Easing.EaseInQuint(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel14 * accelerate);
-                    break;
-                case easingNames.EaseOutQuint:
-                    double accel15 = Easing.EaseOutQuint(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel15 * accelerate);
-                    break;
-                case easingNames.EaseInOutQuint:
-                    double accel16 = Easing.EaseInOutQuint(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel16 * accelerate);
-                    break;
-                case easingNames.EaseInSine:
-                    double accel17 = Easing.EaseInSine(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel17 * accelerate);
-                    break;
-                case easingNames.EaseOutSine:
-                    double accel18 = Easing.EaseOutSine(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel18 * accelerate);
-                    break;
-                case easingNames.EaseInOutSine:
-                    double accel19 = Easing.EaseInOutSine(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel19 * accelerate);
-                    break;
-                case easingNames.EaseInExpo:
-                    double accel20 = Easing.EaseInExpo(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel20 * accelerate);
-                    break;
-                case easingNames.EaseOutExpo:
-                    double accel21 = Easing.EaseOutExpo(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel21 * accelerate);
-                    break;
-                case easingNames.EaseInOutExpo:
-                    double accel22 = Easing.EaseInOutExpo(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel22 * accelerate);
-                    break;
-                case easingNames.EaseInCirc:
-                    double accel23 = Easing.EaseInCirc(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel23 * accelerate);
-                    break;
-                case easingNames.EaseOutCirc:
-                    double accel24 = Easing.EaseOutCirc(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel24 * accelerate);
-                    break;
-                case easingNames.EaseInOutCirc:
-                    double accel25 = Easing.EaseInOutCirc(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel25 * accelerate);
-                    break;
-                case easingNames.ElasticEaseOut:
-                    double accel26 = Easing.ElasticEaseOut(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel26 * accelerate);
-                    break;
-                case easingNames.ElasticEaseIn:
-                    double accel27 = Easing.ElasticEaseIn(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel27 * accelerate);
-                    break;
-                case easingNames.ElasticEaseInOut:
-                    double accel28 = Easing.ElasticEaseInOut(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel28 * accelerate);
-                    break;
-                case easingNames.ElasticEaseOutIn:
-                    double accel29 = Easing.ElasticEaseOutIn(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel29 * accelerate);
-                    break;
-                case easingNames.BounceEaseOut:
-                    double accel30 = Easing.BounceEaseOut(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel30 * accelerate);
-                    break;
-                case easingNames.BounceEaseIn:
-                    double accel31 = Easing.BounceEaseIn(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel31 * accelerate);
-                    break;
-                case easingNames.BounceEaseInOut:
-                    double accel32 = Easing.BounceEaseInOut(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel32 * accelerate);
-                    break;
-                case easingNames.BounceEaseOutIn:
-                    double accel33 = Easing.BounceEaseOutIn(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel33 * accelerate);
-                    break;
-                case easingNames.BackEaseOut:
-                    double accel34 = Easing.BackEaseOut(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel34 * accelerate);
-                    break;
-                case easingNames.BackEaseIn:
-                    double accel35 = Easing.BackEaseIn(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel35 * accelerate);
-                    break;
-                case easingNames.BackEaseInOut:
-                    double accel36 = Easing.BackEaseInOut(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel36 * accelerate);
-                    break;
-                case easingNames.BackEaseOutIn:
-                    double accel37 = Easing.BackEaseOutIn(DateTime.Now.Millisecond, easingstart, easingend, duration);
-                    func(accel37 * accelerate);
-                    break;
-                default:
-                    break;
-            }
+            Func<float, float, float, float, float> func = new Func<float, float, float, float, float>(AcceptAll);
 
-            
-            //func(accelerate);
-            //func(accel);
+            Func<float, float> fadeAll = new Func<float, float>(FadeAll);
 
-            switch (_animationType)
+
+            switch (AnimationType)
             {
                 case animationType.Fade:
-                    Fade fade = new Fade(control, fadebegin, fadelimit, duration, func);
+                    fade = new Fade(control, fadebegin, fadelimit, duration, fadeAll);
                     fade.Play();
                     break;
                 case animationType.FadeIn:
-                    FadeIn fadeIn = new FadeIn(control, duration, func);
+                    fadeIn = new FadeIn(control, duration, fadeAll);
                     fadeIn.Play();
                     break;
                 case animationType.FadeInAndShow:
-                    FadeInAndShow fadeInAndShow = new FadeInAndShow(control, duration, func);
+                    fadeInAndShow = new FadeInAndShow(control, duration, fadeAll);
                     fadeInAndShow.Play();
                     break;
                 case animationType.FadeOut:
-                    FadeOut fadeOut = new FadeOut(control, duration, func);
+                    fadeOut = new FadeOut(control, duration, fadeAll);
                     fadeOut.Play();
                     break;
                 case animationType.FadeOutandHide:
-                    FadeOutAndHide fadeOutandHide = new FadeOutAndHide(control, duration, func);
+                    fadeOutandHide = new FadeOutAndHide(control, duration, fadeAll);
                     fadeOutandHide.Play();
                     break;
                 case animationType.Resize:
-                    Resize resize = new Resize(control, start, end, duration, func);
+                    resize = new Resize(control, start, end, duration, func);
                     resize.Play();
                     break;
                 case animationType.ResizeHeight:
-                    ResizeHeight resizeHeight = new ResizeHeight(control, resizeheightbegin, resizeheightlimit, duration, func);
+                    resizeHeight = new ResizeHeight(control, resizeheightbegin, resizeheightlimit, duration, func);
                     resizeHeight.Play();
                     break;
                 case animationType.ResizeWidth:
-                    ResizeWidth resizeWidth = new ResizeWidth(control, resizewidthbegin, resizewidthlimit, duration, func);
+                    resizeWidth = new ResizeWidth(control, resizewidthbegin, resizewidthlimit, duration, func);
                     resizeWidth.Play();
                     break;
                 case animationType.Slide:
-                    Slide slide = new Slide(control, start, end, duration, func);
+                    slide = new Slide(control, start, end, duration, func);
                     slide.Play();
                     break;
                 case animationType.SlideFrom:
-                    SlideFrom slideFrom = new SlideFrom(control, end, duration, func);
+                    slideFrom = new SlideFrom(control, end, duration, func);
                     slideFrom.Play();
                     break;
                 default:
@@ -982,6 +1418,129 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
 
             
 
+        }
+
+        public void Stop()
+        {
+            switch (AnimationType)
+            {
+                case animationType.None:
+                    break;
+                case animationType.Fade:
+                    fade.Stop(false);
+                    break;
+                case animationType.FadeIn:
+                    fadeIn.Stop(false);
+                    break;
+                case animationType.FadeInAndShow:
+                    fadeInAndShow.Stop(false);
+                    break;
+                case animationType.FadeOut:
+                    fadeOut.Stop(false);
+                    break;
+                case animationType.FadeOutandHide:
+                    fadeOutandHide.Stop(false);
+                    break;
+                case animationType.Resize:
+                    resize.Stop(false);
+                    break;
+                case animationType.ResizeHeight:
+                    resizeHeight.Stop(false);
+                    break;
+                case animationType.ResizeWidth:
+                    resizeWidth.Stop(false);
+                    break;
+                case animationType.Slide:
+                    slide.Stop(false);
+                    break;
+                case animationType.SlideFrom:
+                    slideFrom.Stop(false);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void Pause()
+        {
+            switch (AnimationType)
+            {
+                case animationType.None:
+                    break;
+                case animationType.Fade:
+                    fade.Pause();
+                    break;
+                case animationType.FadeIn:
+                    fadeIn.Pause();
+                    break;
+                case animationType.FadeInAndShow:
+                    fadeInAndShow.Pause();
+                    break;
+                case animationType.FadeOut:
+                    fadeOut.Pause();
+                    break;
+                case animationType.FadeOutandHide:
+                    fadeOutandHide.Pause();
+                    break;
+                case animationType.Resize:
+                    resize.Pause();
+                    break;
+                case animationType.ResizeHeight:
+                    resizeHeight.Pause();
+                    break;
+                case animationType.ResizeWidth:
+                    resizeWidth.Pause();
+                    break;
+                case animationType.Slide:
+                    slide.Pause();
+                    break;
+                case animationType.SlideFrom:
+                    slideFrom.Pause();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void Resume()
+        {
+            switch (AnimationType)
+            {
+                case animationType.None:
+                    break;
+                case animationType.Fade:
+                    fade.Resumes(true);
+                    break;
+                case animationType.FadeIn:
+                    fadeIn.Resumes(true);
+                    break;
+                case animationType.FadeInAndShow:
+                    fadeInAndShow.Resumes(true);
+                    break;
+                case animationType.FadeOut:
+                    fadeOut.Resumes(true);
+                    break;
+                case animationType.FadeOutandHide:
+                    fadeOutandHide.Resumes(true);
+                    break;
+                case animationType.Resize:
+                    resize.Resumes(true);
+                    break;
+                case animationType.ResizeHeight:
+                    resizeHeight.Resumes(true);
+                    break;
+                case animationType.ResizeWidth:
+                    resizeWidth.Resumes(true);
+                    break;
+                case animationType.Slide:
+                    slide.Resumes(true);
+                    break;
+                case animationType.SlideFrom:
+                    slideFrom.Resumes(true);
+                    break;
+                default:
+                    break;
+            }
         }
 
         #endregion

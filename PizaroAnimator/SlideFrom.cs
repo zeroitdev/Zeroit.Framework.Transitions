@@ -44,13 +44,13 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="end">2D array for end co-ordinates (X, Y).</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public SlideFrom(Control control, double[] end, int duration, Func<double, double> accelFunc)
-            : base(control, new double[] { control.Left, control.Top }, end, duration, accelFunc) {
+        public SlideFrom(Control control, float[] end, int duration, Func<float,float,float,float, float> accelFunc)
+            : base(control, new float[] { control.Left, control.Top }, end, duration, accelFunc) {
         }
 
         /// <inheritdoc/>
         protected override void OnBegin() {
-            m_Start = new double[] { m_Control.Left, m_Control.Top };
+            m_Start = new float[] { m_Control.Left, m_Control.Top };
             base.OnBegin();
         }
     }

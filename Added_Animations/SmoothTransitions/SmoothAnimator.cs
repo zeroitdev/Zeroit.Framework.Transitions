@@ -54,6 +54,11 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         private float offset = 10;
 
         /// <summary>
+        /// The offset
+        /// </summary>
+        private float mover = 10;
+
+        /// <summary>
         /// The duration
         /// </summary>
         private int duration = 1000;
@@ -133,6 +138,7 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
             get { return animationTypes; }
             set
             {
+                                
                 animationTypes = value;
                 control.Invalidate();
             }
@@ -162,6 +168,20 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
             set
             {
                 offset = value;
+                control.Invalidate();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the offset.
+        /// </summary>
+        /// <value>The offset.</value>
+        public float Mover
+        {
+            get { return mover; }
+            set
+            {
+                mover = value;
                 control.Invalidate();
             }
         }
@@ -285,19 +305,54 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
                         Animation_CallBack,
                         startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
                 }
-                else if (animationTypes == AnimationTypes.MoveHorizontal)
+                else if (animationTypes == AnimationTypes.MoveLeft)
                 {
                     
-                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.X, AnimationFinished, duration, Animation_CallBack,
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.X,mover, AnimationFinished, duration, Animation_CallBack,
                         startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
 
                 }
-                else if (animationTypes == AnimationTypes.MoveVertical)
+                else if (animationTypes == AnimationTypes.MoveUp)
                 {
-                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.Y, AnimationFinished, duration,
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.Y,mover, AnimationFinished, duration,
                         Animation_CallBack,
                         startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
                 }
+
+                else if (animationTypes == AnimationTypes.FadeIn)
+                {
+                    animation = new Animation(animationTypes, control, offset - control.Height, AnimationFinished, duration,
+                        Animation_CallBack,
+                        startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                }
+
+                else if (animationTypes == AnimationTypes.FadeOut)
+                {
+                    animation = new Animation(animationTypes, control, offset - control.Height, AnimationFinished, duration,
+                        Animation_CallBack,
+                        startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                }
+
+                #region Right and Down
+
+                else if (animationTypes == AnimationTypes.MoveRight)
+                {
+
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset + control.Location.X,mover, AnimationFinished, duration, Animation_CallBack,
+                        startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+
+                }
+                else if (animationTypes == AnimationTypes.MoveDown)
+                {
+                    locationAnimation = new LocationAnimation(animationTypes, control, control.Location.Y + offset, mover, AnimationFinished, duration,
+                        Animation_CallBack,
+                        startValue, timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                }
+
+                #endregion
+
+
+
                 else
                 {
                     animation = new Animation(animationTypes, control, offset, AnimationFinished, duration,
@@ -320,15 +375,65 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
 
                 }
 
-                else if (animationTypes == AnimationTypes.MoveHorizontal)
+                else if (animationTypes == AnimationTypes.MoveLeft)
                 {
-                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.X, AnimationFinished, duration);
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.X,mover, AnimationFinished, duration);
+
+                }
+                               
+
+                else if (animationTypes == AnimationTypes.MoveUp)
+                {
+                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.Y, mover, AnimationFinished, duration);
 
                 }
 
-                else if (animationTypes == AnimationTypes.MoveVertical)
+                #region Right and Down
+
+
+                else if (animationTypes == AnimationTypes.MoveRight)
                 {
-                    locationAnimation = new LocationAnimation(animationTypes, control, offset - control.Location.Y, AnimationFinished, duration);
+                    if (Reverse)
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, -control.Location.X - (float)Math.Pow(offset, offset/ 5), mover, AnimationFinished, duration);
+
+                    }
+                    else
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, control.Location.X + (float)Math.Pow(offset, offset / 5), mover, AnimationFinished, duration);
+
+                    }
+
+                    
+
+                }
+
+                else if (animationTypes == AnimationTypes.MoveDown)
+                {
+                    if(Reverse)
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, -control.Location.Y - (float)Math.Pow(offset, offset / 5), mover, AnimationFinished, duration);
+
+                    }
+                    else
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, control.Location.Y + (float)Math.Pow(offset, offset / 5), mover, AnimationFinished, duration);
+
+                    }
+                    
+                }
+
+                #endregion
+
+                else if (animationTypes == AnimationTypes.FadeIn)
+                {
+                    animation = new Animation(animationTypes, control, offset - control.Height, AnimationFinished, duration);
+
+                }
+
+                else if (animationTypes == AnimationTypes.FadeOut)
+                {
+                    animation = new Animation(animationTypes, control, offset - control.Height, AnimationFinished, duration);
 
                 }
 
@@ -421,11 +526,11 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
 
                 }
 
-                else if (animationTypes == AnimationTypes.MoveHorizontal)
+                else if (animationTypes == AnimationTypes.MoveLeft)
                 {
                     if (control.GetType() == typeof(System.Windows.Forms.Form))
                     {
-                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2)) /*- control.Width*/, AnimationContinued,
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2)) /*- control.Width*/,mover, AnimationContinued,
                             duration, Animation_CallBack, startValue,
                             timerInterval, timerPassed, reversed_duration, reversed_timePassed);
                     }
@@ -433,7 +538,7 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
                     {
                         //-----------WORKING-----------//
 
-                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/)/* - control.Width*/, AnimationContinued,
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/)/* - control.Width*/, mover, AnimationContinued,
                             duration, Animation_CallBack, startValue,
                             timerInterval, timerPassed, reversed_duration, reversed_timePassed);
 
@@ -444,23 +549,67 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
 
                 }
 
-                else if (animationTypes == AnimationTypes.MoveVertical)
+                else if (animationTypes == AnimationTypes.MoveUp)
                 {
                     if (control.GetType() == typeof(System.Windows.Forms.Form))
                     {
-                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2))/* - control.Height*/, AnimationContinued,
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2))/* - control.Height*/, mover, AnimationContinued,
                             duration, Animation_CallBack, startValue,
                             timerInterval, timerPassed, reversed_duration, reversed_timePassed);
                     }
                     else
                     {
-                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/) /*- control.Height*/, AnimationContinued,
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/) /*- control.Height*/, mover, AnimationContinued,
                             duration, Animation_CallBack, startValue,
                             timerInterval, timerPassed, reversed_duration, reversed_timePassed);
                     }
 
                 }
 
+                #region Right and Down
+
+                else if (animationTypes == AnimationTypes.MoveRight)
+                {
+                    if (control.GetType() == typeof(System.Windows.Forms.Form))
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2)) /*- control.Width*/, mover, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                    }
+                    else
+                    {
+                        //-----------WORKING-----------//
+
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/)/* - control.Width*/, mover, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+
+                        //-----------WORKING-----------//
+
+
+                    }
+
+                }
+
+                else if (animationTypes == AnimationTypes.MoveDown)
+                {
+                    if (control.GetType() == typeof(System.Windows.Forms.Form))
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2) + offset - (offset / 2))/* - control.Height*/, mover, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                    }
+                    else
+                    {
+                        locationAnimation = new LocationAnimation(animationTypes, control, offset * ((offset * 2)/* + offset - (offset / 2)*/) /*- control.Height*/, mover, AnimationContinued,
+                            duration, Animation_CallBack, startValue,
+                            timerInterval, timerPassed, reversed_duration, reversed_timePassed);
+                    }
+
+                }
+
+                #endregion
+                
                 else
                 {
                     if (control.GetType() == typeof(System.Windows.Forms.Form))
@@ -503,13 +652,17 @@ namespace Zeroit.Framework.Transitions.SmoothTransitions
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="value">The value.</param>
-        public void Animation_CallBack(object sender, int value)
+
+
+        public void Animation_CallBack(object sender, int e)
         {
+
             sender = this.Control;
-            
         }
 
-        
+
+
+
     }
 
 }

@@ -51,6 +51,10 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         BottomToTop,
         /// <summary>
+        /// The left to right vertical
+        /// </summary>
+        LeftToRightVertical,
+        /// <summary>
         /// The fade in
         /// </summary>
         FadeIn,
@@ -79,6 +83,10 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         GrowXY,
         /// <summary>
+        /// The grow move xy
+        /// </summary>
+        GrowMoveXY,
+        /// <summary>
         /// The shrink horizontal
         /// </summary>
         ShrinkHorizontal,
@@ -91,33 +99,26 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         ShrinkXY,
         /// <summary>
-        /// The move
-        /// </summary>
-        Move,
-        /// <summary>
-        /// The grow move xy
-        /// </summary>
-        GrowMoveXY,
-        /// <summary>
         /// The shrink move xy
         /// </summary>
         ShrinkMoveXY,
         /// <summary>
-        /// The shake
-        /// </summary>
-        Shake,
-        /// <summary>
         /// The shake f out
         /// </summary>
-        ShakeFOut,
+        ShrinkFadeOut,
+        /// <summary>
+        /// The move
+        /// </summary>
+        Move, 
+        /// <summary>
+        /// The shake
+        /// </summary>
+        Shake,        
         /// <summary>
         /// The determiner position
         /// </summary>
         DeterminerPosition,
-        /// <summary>
-        /// The left to right vertical
-        /// </summary>
-        LeftToRightVertical,
+        
 
                 
     }

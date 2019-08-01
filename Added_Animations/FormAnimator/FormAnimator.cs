@@ -28,6 +28,7 @@
 // <summary></summary>
 // ***********************************************************************
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 
@@ -100,6 +101,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The time.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Timer")]
         public Timer Time
         {
             get { return time; }
@@ -114,6 +116,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The positions.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Positions")]
         public Positions Positions
         {
             get { return positions; }
@@ -128,6 +131,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The opacity.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Opacity")]
         public Opacity Opacity
         {
             get { return opacity; }
@@ -142,6 +146,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The grow.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Grow")]
         public Grow Grow
         {
             get { return grow; }
@@ -156,6 +161,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The move.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Move")]
         public Move Move
         {
             get { return move; }
@@ -171,6 +177,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The locations.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Locations")]
         public Locations Locations
         {
             get { return locations; }
@@ -185,6 +192,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// </summary>
         /// <value>The shake.</value>
         [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Category("Shake")]
         public Shake Shake
         {
             get { return shake; }
@@ -198,6 +206,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// Gets or sets the animation.
         /// </summary>
         /// <value>The animation.</value>
+        [Category("Animation")]
         public FormAnimationTypes Animation
         {
             get { return animation; }
@@ -211,9 +220,9 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         /// Gets or sets a value indicating whether [move to point].
         /// </summary>
         /// <value><c>true</c> if [move to point]; otherwise, <c>false</c>.</value>
+        [Category("Move")]
         public bool MoveToPoint { get => moveToPoint; set => moveToPoint = value; }
-
-
+                
         #endregion
 
         #region Constructor
@@ -306,7 +315,7 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
                     if(MoveToPoint)
                     {
-                        formAnimation.Move(Move.RandomLocations.ToArray());
+                        formAnimation.Move(Move.RandomLocations, Move.DirectTrajectory);
                         System.Threading.Thread.Sleep(1000);
                     }
                     else
@@ -346,17 +355,25 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
                     
                     break;
-                case FormAnimationTypes.ShakeFOut:
+                case FormAnimationTypes.ShrinkFadeOut:
                     
-                    System.Threading.Thread shakeFOutt1 = new System.Threading.Thread(new System.Threading.ThreadStart(Shk));
-                    System.Threading.Thread shakeFOutt2 = new System.Threading.Thread(new System.Threading.ThreadStart(FOut));
-                    shakeFOutt1.Start();
-                    shakeFOutt2.Start();
-                    shakeFOutt1.Join();
-                    shakeFOutt2.Join();
+                    //System.Threading.Thread shakeFOutt1 = new System.Threading.Thread(new System.Threading.ThreadStart(Shk));
+                    //System.Threading.Thread shakeFOutt2 = new System.Threading.Thread(new System.Threading.ThreadStart(FOut));
+                    //shakeFOutt1.Start();
+                    //shakeFOutt2.Start();
+                    //shakeFOutt1.Join();
+                    //shakeFOutt2.Join();
+                    //System.Threading.Thread.Sleep(500);
+                    //Form.Opacity = 1;
+
+                    formAnimation = new FormAnimations(Form, 15);
+                    formAnimation.ShrinkXY();
+                    System.Threading.Thread.Sleep(50);
+                    formAnimation = new FormAnimations(Form, 50);
+                    formAnimation.FadeOut(101, 3);
                     System.Threading.Thread.Sleep(500);
                     Form.Opacity = 1;
-                    
+                    System.Threading.Thread.Sleep(1000);
                     break;
                 case FormAnimationTypes.DeterminerPosition:
 
@@ -406,11 +423,14 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
 
                     break;
                 case FormAnimationTypes.LeftToRightVertical:
-                    
-                    System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(L2R));
-                    System.Threading.Thread t2 = new System.Threading.Thread(new System.Threading.ThreadStart(GrowV));
-                    t1.Start();
-                    t2.Start();
+
+                    //System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(L2R));
+                    //System.Threading.Thread t2 = new System.Threading.Thread(new System.Threading.ThreadStart(GrowV));
+                    //t1.Start();
+                    //t2.Start();
+
+                    formAnimation.Left2Right(0, formAnimation.DeterminarPos(Constantes.CenterScreen).X);
+                    formAnimation.GrowVertical(0, form.Height, false);
                     break;
             }
         }
@@ -460,346 +480,6 @@ namespace Zeroit.Framework.Transitions.ZeroitFormAnimator
         #endregion
 
     }
-
-    /// <summary>
-    /// Class Timer.
-    /// </summary>
-    public class Timer
-    {
-        /// <summary>
-        /// The time
-        /// </summary>
-        private int time = 20;
-
-        /// <summary>
-        /// The step x
-        /// </summary>
-        private int stepX = 5;
-
-        /// <summary>
-        /// The step y
-        /// </summary>
-        private int stepY = 5;
-
-        /// <summary>
-        /// Gets or sets the time.
-        /// </summary>
-        /// <value>The time.</value>
-        public int Time
-        {
-            get { return time; }
-            set
-            {
-                time = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the step x.
-        /// </summary>
-        /// <value>The step x.</value>
-        public int StepX
-        {
-            get { return stepX; }
-            set
-            {
-                stepX = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the step y.
-        /// </summary>
-        /// <value>The step y.</value>
-        public int StepY
-        {
-            get { return stepY; }
-            set
-            {
-                stepY = value;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Class Positions.
-    /// </summary>
-    public class Positions
-    {
-        /// <summary>
-        /// The start
-        /// </summary>
-        private int start = 0;
-        /// <summary>
-        /// The end
-        /// </summary>
-        private int end = 100;
-        /// <summary>
-        /// The start point
-        /// </summary>
-        private Point startPoint = new Point(0, 0);
-        /// <summary>
-        /// The end point
-        /// </summary>
-        private Point endPoint = new Point(100, 100);
-
-        /// <summary>
-        /// The size
-        /// </summary>
-        private Size size = new Size(200, 200);
-        /// <summary>
-        /// The recalculate
-        /// </summary>
-        private bool recalculate = true;
-
-        /// <summary>
-        /// Gets or sets the start.
-        /// </summary>
-        /// <value>The start.</value>
-        public int Start { get => start; set => start = value;}
-        /// <summary>
-        /// Gets or sets the end.
-        /// </summary>
-        /// <value>The end.</value>
-        public int End { get => end; set => end = value; }
-        /// <summary>
-        /// Gets or sets the size.
-        /// </summary>
-        /// <value>The size.</value>
-        public Size Size { get => size; set => size = value; }
-        /// <summary>
-        /// Gets or sets the start point.
-        /// </summary>
-        /// <value>The start point.</value>
-        public Point StartPoint { get => startPoint; set => startPoint = value; }
-        /// <summary>
-        /// Gets or sets the end point.
-        /// </summary>
-        /// <value>The end point.</value>
-        public Point EndPoint { get => endPoint; set => endPoint = value; }
-        /// <summary>
-        /// Gets or sets a value indicating whether [shrink to center].
-        /// </summary>
-        /// <value><c>true</c> if [shrink to center]; otherwise, <c>false</c>.</value>
-        public bool ShrinkToCenter { get => recalculate; set => recalculate = value; }
-    }
-
-    /// <summary>
-    /// Class Opacity.
-    /// </summary>
-    public class Opacity
-    {
-        /// <summary>
-        /// The start
-        /// </summary>
-        double start = 0.5;
-
-        /// <summary>
-        /// The step
-        /// </summary>
-        int step = 1;
-
-        /// <summary>
-        /// Gets or sets the start.
-        /// </summary>
-        /// <value>The start.</value>
-        public double Start
-        {
-            get { return start; }
-            set
-            {
-                if(value > 100)
-                {
-                    value = 100;
-                }
-                start = value;
-            }
-        }
-        /// <summary>
-        /// Gets or sets the step.
-        /// </summary>
-        /// <value>The step.</value>
-        public int Step { get => step; set => step = value; }
-    }
-
-    /// <summary>
-    /// Class Grow.
-    /// </summary>
-    public class Grow
-    {
-        /// <summary>
-        /// The start
-        /// </summary>
-        private int start = 0;
-        /// <summary>
-        /// The end
-        /// </summary>
-        private int end = 100;
-
-        /// <summary>
-        /// The start point
-        /// </summary>
-        private Point startPoint = new Point(0,0);
-        /// <summary>
-        /// The end point
-        /// </summary>
-        private Point endPoint = new Point(100,100);
-
-        /// <summary>
-        /// The size
-        /// </summary>
-        private Size size = new Size(100, 00);
-        /// <summary>
-        /// The recalculate
-        /// </summary>
-        private bool recalculate = true;
-
-        /// <summary>
-        /// The fix window when grown
-        /// </summary>
-        private bool fixWindowWhenGrown = true;
-
-        /// <summary>
-        /// Gets or sets the start.
-        /// </summary>
-        /// <value>The start.</value>
-        public int Start { get => start; set => start = value; }
-        /// <summary>
-        /// Gets or sets the end.
-        /// </summary>
-        /// <value>The end.</value>
-        public int End { get => end; set => end = value; }
-        /// <summary>
-        /// Gets or sets a value indicating whether [fix window when grown].
-        /// </summary>
-        /// <value><c>true</c> if [fix window when grown]; otherwise, <c>false</c>.</value>
-        public bool FixWindowWhenGrown { get => fixWindowWhenGrown; set => fixWindowWhenGrown = value; }
-        /// <summary>
-        /// Gets or sets the start point.
-        /// </summary>
-        /// <value>The start point.</value>
-        public Point StartPoint { get => startPoint; set => startPoint = value; }
-        /// <summary>
-        /// Gets or sets the end point.
-        /// </summary>
-        /// <value>The end point.</value>
-        public Point EndPoint { get => endPoint; set => endPoint = value; }
-        /// <summary>
-        /// Gets or sets the size.
-        /// </summary>
-        /// <value>The size.</value>
-        public Size Size { get => size; set => size = value; }
-        /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Grow"/> is recalculate.
-        /// </summary>
-        /// <value><c>true</c> if recalculate; otherwise, <c>false</c>.</value>
-        public bool Recalculate { get => recalculate; set => recalculate = value; }
-    }
-
-    /// <summary>
-    /// Class Move.
-    /// </summary>
-    public class Move
-    {
-        /// <summary>
-        /// The random locations
-        /// </summary>
-        private List<Point> randomLocations = new List<Point>()
-        {
-            new Point(10, 10),
-            new Point(50,50),
-            new Point(100, 100),
-            new Point(50, 50),
-            new Point(10, 10)
-
-        };
-
-        /// <summary>
-        /// The start point
-        /// </summary>
-        private Point startPoint = new Point(0, 0);
-        /// <summary>
-        /// The end point
-        /// </summary>
-        private Point endPoint = new Point(100, 100);
-        /// <summary>
-        /// The direct trajectory
-        /// </summary>
-        private bool directTrajectory = true;
-
-
-        /// <summary>
-        /// Gets or sets the random locations.
-        /// </summary>
-        /// <value>The random locations.</value>
-        public List<Point> RandomLocations { get => randomLocations; set => randomLocations = value; }
-        /// <summary>
-        /// Gets or sets the start point.
-        /// </summary>
-        /// <value>The start point.</value>
-        public Point StartPoint { get => startPoint; set => startPoint = value; }
-        /// <summary>
-        /// Gets or sets the end point.
-        /// </summary>
-        /// <value>The end point.</value>
-        public Point EndPoint { get => endPoint; set => endPoint = value; }
-        /// <summary>
-        /// Gets or sets a value indicating whether [direct trajectory].
-        /// </summary>
-        /// <value><c>true</c> if [direct trajectory]; otherwise, <c>false</c>.</value>
-        public bool DirectTrajectory { get => directTrajectory; set => directTrajectory = value; }
-    }
-
-    /// <summary>
-    /// Class Locations.
-    /// </summary>
-    public class Locations
-    {
-        /// <summary>
-        /// The form locations
-        /// </summary>
-        private FormLocations formLocations = FormLocations.TopLeft;
-
-        /// <summary>
-        /// Gets or sets the form locations.
-        /// </summary>
-        /// <value>The form locations.</value>
-        public FormLocations FormLocations { get => formLocations; set => formLocations = value; }
-    }
-
-    /// <summary>
-    /// Class Shake.
-    /// </summary>
-    public class Shake
-    {
-        /// <summary>
-        /// The shake distance
-        /// </summary>
-        private int shakeDistance = 30;
-        /// <summary>
-        /// The shake speed
-        /// </summary>
-        private int shakeSpeed = 20;
-        /// <summary>
-        /// The shake type
-        /// </summary>
-        private ShakeType shakeType = ShakeType.Horizontal;
-
-        /// <summary>
-        /// Gets or sets the shake distance.
-        /// </summary>
-        /// <value>The shake distance.</value>
-        public int ShakeDistance { get => shakeDistance; set => shakeDistance = value; }
-        /// <summary>
-        /// Gets or sets the shake speed.
-        /// </summary>
-        /// <value>The shake speed.</value>
-        public int ShakeSpeed { get => shakeSpeed; set => shakeSpeed = value; }
-        /// <summary>
-        /// Gets or sets the type of the shake.
-        /// </summary>
-        /// <value>The type of the shake.</value>
-        public ShakeType ShakeType { get => shakeType; set => shakeType = value; }
-    }
+    
 
 }

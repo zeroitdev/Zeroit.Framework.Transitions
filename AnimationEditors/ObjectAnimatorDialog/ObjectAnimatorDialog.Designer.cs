@@ -72,11 +72,12 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.form_Animation_ComboBox = new System.Windows.Forms.ComboBox();
             this.form_Rotating_Cube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.color_GroupBox = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.color_Yes_RadioBtn = new System.Windows.Forms.RadioButton();
+            this.color_No_RadioBtn = new System.Windows.Forms.RadioButton();
             this.color_Rotating_Cube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.color_Preview_Panel = new System.Windows.Forms.Panel();
             this.color_Preview_btn = new System.Windows.Forms.Button();
-            this.color_No_RadioBtn = new System.Windows.Forms.RadioButton();
-            this.color_Yes_RadioBtn = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.color_Color_btn = new System.Windows.Forms.Button();
@@ -117,11 +118,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.color_Animator = new Zeroit.Framework.Transitions.ZeroitOJAnim();
             this.form_Animator = new Zeroit.Framework.Transitions.ZeroitOJAnim();
             this.standard_Animator = new Zeroit.Framework.Transitions.ZeroitOJAnim();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.thematic1501.SuspendLayout();
             this.form_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.form_Delay_Numeric)).BeginInit();
             this.color_GroupBox.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.color_Delay_Numeric)).BeginInit();
             this.general_Container.SuspendLayout();
             this.general_GroupBox.SuspendLayout();
@@ -134,7 +135,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.standard_ShootDelay_Numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.standard_SlideDelay_Numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.standard_HopDelay_Numeric)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // thematic1501
@@ -282,6 +282,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // form_Rotating_Cube
             // 
+            this.form_Rotating_Cube.AllowTransparency = true;
             this.form_Rotating_Cube.AutoAnimate = true;
             this.form_Rotating_Cube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -320,8 +321,46 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.color_GroupBox.TabStop = false;
             this.color_GroupBox.Text = "Color Animation";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.color_Yes_RadioBtn);
+            this.panel1.Controls.Add(this.color_No_RadioBtn);
+            this.panel1.Location = new System.Drawing.Point(386, 115);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(61, 45);
+            this.panel1.TabIndex = 38;
+            // 
+            // color_Yes_RadioBtn
+            // 
+            this.color_Yes_RadioBtn.AutoSize = true;
+            this.color_Yes_RadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.color_Yes_RadioBtn.Font = new System.Drawing.Font("Verdana", 8F);
+            this.color_Yes_RadioBtn.Location = new System.Drawing.Point(3, 3);
+            this.color_Yes_RadioBtn.Name = "color_Yes_RadioBtn";
+            this.color_Yes_RadioBtn.Size = new System.Drawing.Size(44, 17);
+            this.color_Yes_RadioBtn.TabIndex = 33;
+            this.color_Yes_RadioBtn.TabStop = true;
+            this.color_Yes_RadioBtn.Text = "Yes";
+            this.color_Yes_RadioBtn.UseVisualStyleBackColor = false;
+            this.color_Yes_RadioBtn.CheckedChanged += new System.EventHandler(this.color_Yes_RadioBtn_CheckedChanged);
+            // 
+            // color_No_RadioBtn
+            // 
+            this.color_No_RadioBtn.AutoSize = true;
+            this.color_No_RadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.color_No_RadioBtn.Font = new System.Drawing.Font("Verdana", 8F);
+            this.color_No_RadioBtn.Location = new System.Drawing.Point(3, 25);
+            this.color_No_RadioBtn.Name = "color_No_RadioBtn";
+            this.color_No_RadioBtn.Size = new System.Drawing.Size(40, 17);
+            this.color_No_RadioBtn.TabIndex = 34;
+            this.color_No_RadioBtn.TabStop = true;
+            this.color_No_RadioBtn.Text = "No";
+            this.color_No_RadioBtn.UseVisualStyleBackColor = false;
+            this.color_No_RadioBtn.CheckedChanged += new System.EventHandler(this.color_No_RadioBtn_CheckedChanged);
+            // 
             // color_Rotating_Cube
             // 
+            this.color_Rotating_Cube.AllowTransparency = true;
             this.color_Rotating_Cube.AutoAnimate = true;
             this.color_Rotating_Cube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -361,34 +400,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.color_Preview_btn.Click += new System.EventHandler(this.color_Preview_btn_Click);
             this.color_Preview_btn.MouseEnter += new System.EventHandler(this.color_Preview_btn_MouseEnter);
             this.color_Preview_btn.MouseLeave += new System.EventHandler(this.color_Preview_btn_MouseLeave);
-            // 
-            // color_No_RadioBtn
-            // 
-            this.color_No_RadioBtn.AutoSize = true;
-            this.color_No_RadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.color_No_RadioBtn.Font = new System.Drawing.Font("Verdana", 8F);
-            this.color_No_RadioBtn.Location = new System.Drawing.Point(3, 25);
-            this.color_No_RadioBtn.Name = "color_No_RadioBtn";
-            this.color_No_RadioBtn.Size = new System.Drawing.Size(40, 17);
-            this.color_No_RadioBtn.TabIndex = 34;
-            this.color_No_RadioBtn.TabStop = true;
-            this.color_No_RadioBtn.Text = "No";
-            this.color_No_RadioBtn.UseVisualStyleBackColor = false;
-            this.color_No_RadioBtn.CheckedChanged += new System.EventHandler(this.color_No_RadioBtn_CheckedChanged);
-            // 
-            // color_Yes_RadioBtn
-            // 
-            this.color_Yes_RadioBtn.AutoSize = true;
-            this.color_Yes_RadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.color_Yes_RadioBtn.Font = new System.Drawing.Font("Verdana", 8F);
-            this.color_Yes_RadioBtn.Location = new System.Drawing.Point(3, 3);
-            this.color_Yes_RadioBtn.Name = "color_Yes_RadioBtn";
-            this.color_Yes_RadioBtn.Size = new System.Drawing.Size(44, 17);
-            this.color_Yes_RadioBtn.TabIndex = 33;
-            this.color_Yes_RadioBtn.TabStop = true;
-            this.color_Yes_RadioBtn.Text = "Yes";
-            this.color_Yes_RadioBtn.UseVisualStyleBackColor = false;
-            this.color_Yes_RadioBtn.CheckedChanged += new System.EventHandler(this.color_Yes_RadioBtn_CheckedChanged);
             // 
             // label10
             // 
@@ -733,6 +744,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // standard_Rotating_Cube
             // 
+            this.standard_Rotating_Cube.AllowTransparency = true;
             this.standard_Rotating_Cube.AutoAnimate = true;
             this.standard_Rotating_Cube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -1047,15 +1059,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         50};
             this.standard_Animator.UpperSpeedLimit = 10;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.color_Yes_RadioBtn);
-            this.panel1.Controls.Add(this.color_No_RadioBtn);
-            this.panel1.Location = new System.Drawing.Point(386, 115);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(61, 45);
-            this.panel1.TabIndex = 38;
-            // 
             // ObjectAnimatorDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1065,6 +1068,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.Controls.Add(this.thematic1501);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ObjectAnimatorDialog";
+            this.ShowInTaskbar = false;
             this.Text = "ObjectAnimatorDialog";
             this.thematic1501.ResumeLayout(false);
             this.form_GroupBox.ResumeLayout(false);
@@ -1072,6 +1076,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.form_Delay_Numeric)).EndInit();
             this.color_GroupBox.ResumeLayout(false);
             this.color_GroupBox.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.color_Delay_Numeric)).EndInit();
             this.general_Container.ResumeLayout(false);
             this.general_GroupBox.ResumeLayout(false);
@@ -1086,8 +1092,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             ((System.ComponentModel.ISupportInitialize)(this.standard_ShootDelay_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.standard_SlideDelay_Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.standard_HopDelay_Numeric)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

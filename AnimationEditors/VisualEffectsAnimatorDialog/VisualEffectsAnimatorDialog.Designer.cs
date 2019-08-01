@@ -63,6 +63,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             Zeroit.Framework.Transitions.FoldSizes foldSizes1 = new Zeroit.Framework.Transitions.FoldSizes();
             this.info = new System.Windows.Forms.ToolTip(this.components);
             this.thematic1501 = new Zeroit.Framework.Transitions.ThemeManagers.Hacker();
+            this.zeroitLBKnob1 = new Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob();
             this.animationName_Label = new System.Windows.Forms.Label();
             this.mainControl_Reverse_No_RadioBtn = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.okBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
-            this.zeroitLBKnob1 = new Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob();
             this.foldAnimator = new Zeroit.Framework.Transitions.ZeroitVisAnim();
             this.thematic1501.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainControl_ValueToReach_Numeric)).BeginInit();
@@ -109,6 +109,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.thematic1501.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.thematic1501.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.thematic1501.Colors = new Zeroit.Framework.Transitions.ThemeManagers.Bloom[0];
+            this.thematic1501.Controls.Add(this.zeroitLBKnob1);
             this.thematic1501.Controls.Add(this.animationName_Label);
             this.thematic1501.Controls.Add(this.mainControl_Reverse_No_RadioBtn);
             this.thematic1501.Controls.Add(this.label8);
@@ -134,7 +135,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.thematic1501.Controls.Add(this.okBtn);
             this.thematic1501.Controls.Add(this.cancelBtn);
             this.thematic1501.Controls.Add(this.closeBtn);
-            this.thematic1501.Controls.Add(this.zeroitLBKnob1);
             this.thematic1501.Customization = "";
             this.thematic1501.Dock = System.Windows.Forms.DockStyle.Fill;
             this.thematic1501.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -154,9 +154,31 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.thematic1501.Transparent = false;
             this.thematic1501.Click += new System.EventHandler(this.thematic1501_Click);
             // 
+            // zeroitLBKnob1
+            // 
+            this.zeroitLBKnob1.AllowTransparency = false;
+            this.zeroitLBKnob1.BackColor = System.Drawing.Color.Transparent;
+            this.zeroitLBKnob1.DrawRatio = 0.59F;
+            this.zeroitLBKnob1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.zeroitLBKnob1.IndicatorOffset = 10F;
+            this.zeroitLBKnob1.KnobCenter = ((System.Drawing.PointF)(resources.GetObject("zeroitLBKnob1.KnobCenter")));
+            this.zeroitLBKnob1.KnobColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.zeroitLBKnob1.KnobRect = ((System.Drawing.RectangleF)(resources.GetObject("zeroitLBKnob1.KnobRect")));
+            this.zeroitLBKnob1.Location = new System.Drawing.Point(991, 293);
+            this.zeroitLBKnob1.MaxValue = 100F;
+            this.zeroitLBKnob1.MinValue = 0F;
+            this.zeroitLBKnob1.Name = "zeroitLBKnob1";
+            this.zeroitLBKnob1.Renderer = null;
+            this.zeroitLBKnob1.ScaleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.zeroitLBKnob1.Size = new System.Drawing.Size(118, 121);
+            this.zeroitLBKnob1.StepValue = 0.1F;
+            this.zeroitLBKnob1.Style = Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob.KnobStyle.Circular;
+            this.zeroitLBKnob1.TabIndex = 63;
+            this.zeroitLBKnob1.Value = 0F;
+            this.zeroitLBKnob1.Visible = false;
+            // 
             // animationName_Label
             // 
-            this.animationName_Label.AutoSize = true;
             this.animationName_Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.animationName_Label.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.animationName_Label.ForeColor = System.Drawing.SystemColors.GrayText;
@@ -168,7 +190,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // mainControl_Reverse_No_RadioBtn
             // 
             this.mainControl_Reverse_No_RadioBtn.AutoSize = true;
-            this.mainControl_Reverse_No_RadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.mainControl_Reverse_No_RadioBtn.BackColor = System.Drawing.Color.Transparent;
             this.mainControl_Reverse_No_RadioBtn.Checked = true;
             this.mainControl_Reverse_No_RadioBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.mainControl_Reverse_No_RadioBtn.Location = new System.Drawing.Point(274, 376);
@@ -182,8 +204,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label8.Location = new System.Drawing.Point(23, 376);
@@ -195,7 +216,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // mainControl_Reverse_Yes_RadioBtn
             // 
             this.mainControl_Reverse_Yes_RadioBtn.AutoSize = true;
-            this.mainControl_Reverse_Yes_RadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.mainControl_Reverse_Yes_RadioBtn.BackColor = System.Drawing.Color.Transparent;
             this.mainControl_Reverse_Yes_RadioBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.mainControl_Reverse_Yes_RadioBtn.Location = new System.Drawing.Point(221, 376);
             this.mainControl_Reverse_Yes_RadioBtn.Name = "mainControl_Reverse_Yes_RadioBtn";
@@ -208,7 +229,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // showKnob4_ValueToReach_Btn
             // 
-            this.showKnob4_ValueToReach_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.showKnob4_ValueToReach_Btn.BackColor = System.Drawing.Color.Transparent;
             this.showKnob4_ValueToReach_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showKnob4_ValueToReach_Btn.FlatAppearance.BorderSize = 0;
             this.showKnob4_ValueToReach_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,7 +246,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // showKnob3_Loops_Btn
             // 
-            this.showKnob3_Loops_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.showKnob3_Loops_Btn.BackColor = System.Drawing.Color.Transparent;
             this.showKnob3_Loops_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showKnob3_Loops_Btn.FlatAppearance.BorderSize = 0;
             this.showKnob3_Loops_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -242,7 +263,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // showKnob2_Delay_Btn
             // 
-            this.showKnob2_Delay_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.showKnob2_Delay_Btn.BackColor = System.Drawing.Color.Transparent;
             this.showKnob2_Delay_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showKnob2_Delay_Btn.FlatAppearance.BorderSize = 0;
             this.showKnob2_Delay_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,8 +280,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Location = new System.Drawing.Point(21, 324);
@@ -295,8 +315,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label6.Location = new System.Drawing.Point(21, 272);
@@ -332,8 +351,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Location = new System.Drawing.Point(21, 220);
@@ -368,8 +386,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label4.Location = new System.Drawing.Point(21, 116);
@@ -395,8 +412,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(21, 168);
@@ -407,7 +423,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // showKnob1_Duration_Btn
             // 
-            this.showKnob1_Duration_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.showKnob1_Duration_Btn.BackColor = System.Drawing.Color.Transparent;
             this.showKnob1_Duration_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showKnob1_Duration_Btn.FlatAppearance.BorderSize = 0;
             this.showKnob1_Duration_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -448,8 +464,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(21, 64);
@@ -475,8 +490,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(21, 428);
@@ -548,28 +562,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.closeBtn.MouseEnter += new System.EventHandler(this.closeBtn_MouseEnter);
             this.closeBtn.MouseLeave += new System.EventHandler(this.closeBtn_MouseLeave);
             // 
-            // zeroitLBKnob1
-            // 
-            this.zeroitLBKnob1.BackColor = System.Drawing.Color.Transparent;
-            this.zeroitLBKnob1.DrawRatio = 0.59F;
-            this.zeroitLBKnob1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.zeroitLBKnob1.IndicatorOffset = 10F;
-            this.zeroitLBKnob1.KnobCenter = ((System.Drawing.PointF)(resources.GetObject("zeroitLBKnob1.KnobCenter")));
-            this.zeroitLBKnob1.KnobColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.zeroitLBKnob1.KnobRect = ((System.Drawing.RectangleF)(resources.GetObject("zeroitLBKnob1.KnobRect")));
-            this.zeroitLBKnob1.Location = new System.Drawing.Point(991, 293);
-            this.zeroitLBKnob1.MaxValue = 100F;
-            this.zeroitLBKnob1.MinValue = 0F;
-            this.zeroitLBKnob1.Name = "zeroitLBKnob1";
-            this.zeroitLBKnob1.Renderer = null;
-            this.zeroitLBKnob1.ScaleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.zeroitLBKnob1.Size = new System.Drawing.Size(118, 121);
-            this.zeroitLBKnob1.StepValue = 0.1F;
-            this.zeroitLBKnob1.Style = Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob.KnobStyle.Circular;
-            this.zeroitLBKnob1.TabIndex = 63;
-            this.zeroitLBKnob1.Value = 0F;
-            this.zeroitLBKnob1.Visible = false;
-            // 
             // foldAnimator
             // 
             this.foldAnimator.AnimationType = Zeroit.Framework.Transitions.ZeroitVisAnim.GetAnimationType.FoldEffect;
@@ -595,6 +587,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VisualEffectsAnimatorDialog";
+            this.ShowInTaskbar = false;
             this.Text = "VisualEffectsAnimatorDialog";
             this.thematic1501.ResumeLayout(false);
             this.thematic1501.PerformLayout();

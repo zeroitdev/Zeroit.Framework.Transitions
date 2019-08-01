@@ -68,7 +68,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label3 = new System.Windows.Forms.Label();
             this.resizeWidth_Begin_Numeric = new System.Windows.Forms.NumericUpDown();
             this.resizeWidth_Preview_btn = new System.Windows.Forms.Button();
-            this.resizeWidth_Rotating_Cube = new Transitions._HelpingControls.Rotating3DCube.RotatingCube();
+            this.resizeWidth_Rotating_Cube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.resizeWidth_Animator = new Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resizeWidth_Limit_Numeric)).BeginInit();
@@ -77,12 +77,12 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.resizeWidth_Rotating_Cube);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.resizeWidth_Limit_Numeric);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.resizeWidth_Begin_Numeric);
             this.groupBox1.Controls.Add(this.resizeWidth_Preview_btn);
-            this.groupBox1.Controls.Add(this.resizeWidth_Rotating_Cube);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -178,6 +178,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // resizeWidth_Rotating_Cube
             // 
+            this.resizeWidth_Rotating_Cube.AllowTransparency = true;
             this.resizeWidth_Rotating_Cube.AutoAnimate = true;
             this.resizeWidth_Rotating_Cube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -196,25 +197,25 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // resizeWidth_Animator
             // 
-            this.resizeWidth_Animator.Acceleration = 0.7D;
+            this.resizeWidth_Animator.Acceleration = 0.7F;
             this.resizeWidth_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.ResizeWidth;
             this.resizeWidth_Animator.Control = this.resizeWidth_Rotating_Cube;
             this.resizeWidth_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.resizeWidth_Animator.ControlStylesBool = false;
-            this.resizeWidth_Animator.CordinateEnd_X = 50D;
-            this.resizeWidth_Animator.CordinateEnd_Y = 50D;
-            this.resizeWidth_Animator.CordinateStart_X = 10D;
-            this.resizeWidth_Animator.CordinateStart_Y = 10D;
+            this.resizeWidth_Animator.CordinateEnd_X = 50F;
+            this.resizeWidth_Animator.CordinateEnd_Y = 50F;
+            this.resizeWidth_Animator.CordinateStart_X = 10F;
+            this.resizeWidth_Animator.CordinateStart_Y = 10F;
             this.resizeWidth_Animator.Duration = 1000;
-            this.resizeWidth_Animator.EasingEnd = 1D;
+            this.resizeWidth_Animator.EasingEnd = 1F;
             this.resizeWidth_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.resizeWidth_Animator.EasingStart = 0.2D;
-            this.resizeWidth_Animator.Fade_Begin = 0D;
-            this.resizeWidth_Animator.Fade_Limit = 1D;
-            this.resizeWidth_Animator.ResizeHeight_Begin = 10D;
-            this.resizeWidth_Animator.ResizeHeight_Limit = 50D;
-            this.resizeWidth_Animator.ResizeWidth_Begin = 10D;
-            this.resizeWidth_Animator.ResizeWidth_Limit = 86D;
+            this.resizeWidth_Animator.EasingStart = 0.2F;
+            this.resizeWidth_Animator.Fade_Begin = 0F;
+            this.resizeWidth_Animator.Fade_Limit = 1F;
+            this.resizeWidth_Animator.ResizeHeight_Begin = 10F;
+            this.resizeWidth_Animator.ResizeHeight_Limit = 50F;
+            this.resizeWidth_Animator.ResizeWidth_Begin = 10F;
+            this.resizeWidth_Animator.ResizeWidth_Limit = 86F;
             // 
             // Pizaro_ResizeWidth_UserControl
             // 

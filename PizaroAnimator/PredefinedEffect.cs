@@ -51,8 +51,14 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="end">Array of end co-ordinates.</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public PredefinedEffect(Control control, double[] start, double[] end, int duration, Func<double, double> accelFunc)
+        public PredefinedEffect(Control control, float[] start, float[] end, int duration, Func<float,float,float,float, float> accelFunc)
             : base(start, end, duration, accelFunc) {
+            m_Control = control;
+        }
+
+        public PredefinedEffect(Control control, float[] start, float[] end, int duration, Func<float, float> accelFunc)
+            : base(start, end, duration, accelFunc)
+        {
             m_Control = control;
         }
 

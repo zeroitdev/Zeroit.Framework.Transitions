@@ -597,6 +597,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         {
             showKnob1_Duration_Btn.FlatAppearance.BorderSize = 1;
             showKnob1_Duration_Btn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255);
+            
         }
 
         /// <summary>
@@ -608,6 +609,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         {
             showKnob1_Duration_Btn.FlatAppearance.BorderSize = 0;
             showKnob1_Duration_Btn.FlatAppearance.BorderColor = Color.FromArgb(31, 31, 31);
+                        
         }
 
         /// <summary>

@@ -28,6 +28,7 @@
 // <summary></summary>
 // ***********************************************************************
 
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -41,6 +42,7 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
     /// control that lives for the duration of the application.
     /// </remarks>
     /// <seealso cref="IMainThreadDispatcher"/>
+    [ToolboxItem(false)]
     internal class MainThreadCallerControl : Control, IMainThreadDispatcher
     {
         /// <summary>

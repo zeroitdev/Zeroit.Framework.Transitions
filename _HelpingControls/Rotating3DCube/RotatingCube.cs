@@ -355,9 +355,15 @@ namespace Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube
         {
             base.OnPaint(e);
             m_timer.Interval = speedAdjust;
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            e.Graphics.Clear(BackColor);
+            Graphics g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
 
+            if (AllowTransparency)
+            {
+                MakeTransparent(this, e.Graphics);
+            }
+
+            
             int i = 0;
             int p = 0;
             int k = 0;
@@ -422,10 +428,90 @@ namespace Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube
             {
                 int index = order[m];
                 Point[] point = new Point[] { new Point(checked((int)Math.Round(t[this.m_faces[index, 0]].X)), checked((int)Math.Round(t[this.m_faces[index, 0]].Y))), new Point(checked((int)Math.Round(t[this.m_faces[index, 1]].X)), checked((int)Math.Round(t[this.m_faces[index, 1]].Y))), new Point(checked((int)Math.Round(t[this.m_faces[index, 2]].X)), checked((int)Math.Round(t[this.m_faces[index, 2]].Y))), new Point(checked((int)Math.Round(t[this.m_faces[index, 3]].X)), checked((int)Math.Round(t[this.m_faces[index, 3]].Y))) };
-                e.Graphics.FillPolygon(this.m_brushes[index], point);
+                g.FillPolygon(this.m_brushes[index], point);
                 m++;
             }
             while (m <= 5);
         }
+
+
+
+
+        #region Transparency
+
+
+        #region Include in Paint
+
+        private void TransInPaint(Graphics g)
+        {
+            if (AllowTransparency)
+            {
+                MakeTransparent(this, g);
+            }
+        }
+
+        #endregion
+
+        #region Include in Private Field
+
+        private bool allowTransparency = true;
+
+        #endregion
+
+        #region Include in Public Properties
+
+        public bool AllowTransparency
+        {
+            get { return allowTransparency; }
+            set
+            {
+                allowTransparency = value;
+
+                Invalidate();
+            }
+        }
+
+        #endregion
+
+        #region Method
+
+        //-----------------------------Include in Paint--------------------------//
+        //
+        // if(AllowTransparency)
+        //  {
+        //    MakeTransparent(this,g);
+        //  }
+        //
+        //-----------------------------Include in Paint--------------------------//
+
+        private static void MakeTransparent(Control control, Graphics g)
+        {
+            var parent = control.Parent;
+            if (parent == null) return;
+            var bounds = control.Bounds;
+            var siblings = parent.Controls;
+            int index = siblings.IndexOf(control);
+            Bitmap behind = null;
+            for (int i = siblings.Count - 1; i > index; i--)
+            {
+                var c = siblings[i];
+                if (!c.Bounds.IntersectsWith(bounds)) continue;
+                if (behind == null)
+                    behind = new Bitmap(control.Parent.ClientSize.Width, control.Parent.ClientSize.Height);
+                c.DrawToBitmap(behind, c.Bounds);
+            }
+            if (behind == null) return;
+            g.DrawImage(behind, control.ClientRectangle, bounds, GraphicsUnit.Pixel);
+            behind.Dispose();
+        }
+
+        #endregion
+
+
+        #endregion
+
+
+
+
     }
 }

@@ -44,7 +44,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="control"></param>
         /// <param name="duration"></param>
         /// <param name="accelFunc"></param>
-        public FadeOut(Control control, int duration, Func<double, double> accelFunc)
+        public FadeOut(Control control, int duration, Func<float,float> accelFunc)
             : base(control, 1, 0, duration, accelFunc) {
         }
     }

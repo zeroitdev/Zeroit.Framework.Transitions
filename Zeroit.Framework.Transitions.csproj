@@ -63,12 +63,25 @@
     <Compile Include="Added_Animations\FormAnimator\Constants.cs" />
     <Compile Include="Added_Animations\FormAnimator\Enum.cs" />
     <Compile Include="Added_Animations\FormAnimator\FormAnimations.cs" />
+    <Compile Include="Added_Animations\FormAnimator\FormAnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Added_Animations\FormAnimator\FormAnimatorWithEditor.Designer.cs">
+      <DependentUpon>FormAnimatorWithEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Added_Animations\FormAnimator\FormAnimator.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Added_Animations\FormAnimator\FormAnimator.Designer.cs">
       <DependentUpon>FormAnimator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Added_Animations\FormAnimator\Shake.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Locations.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Move.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Grow.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Opacity.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Positions.cs" />
+    <Compile Include="Added_Animations\FormAnimator\Timer.cs" />
     <Compile Include="Added_Animations\FormTransformer\FormTransformer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -96,9 +109,7 @@
     <Compile Include="Added_Animations\SpecAnimator\ControlForeColorAnimator.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Added_Animations\SpecAnimator\DummyAnimator.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Added_Animations\SpecAnimator\DummyAnimator.cs" />
     <Compile Include="Added_Animations\SpecAnimator\FormOpacityAnimator.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -141,6 +152,19 @@
     <Compile Include="Added_Animations\DBTweener\CQuadratic.cs" />
     <Compile Include="Added_Animations\DBTweener\CLinear.cs" />
     <Compile Include="Added_Animations\DBTweener\CEquation.cs" />
+    <Compile Include="AnimationEditors\FormAnimator\Converter.cs" />
+    <Compile Include="AnimationEditors\FormAnimator\FormAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\FormAnimator\FormAnimatorDialog.Designer.cs">
+      <DependentUpon>FormAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnimationEditors\FormAnimator\PreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimationEditors\FormAnimator\PreviewForm.Designer.cs">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorUITypeEditor.cs" />
     <Compile Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorDialog.cs">
       <SubType>Form</SubType>
@@ -167,6 +191,8 @@
       <DependentUpon>PizaroAnimatorDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="AnimationEditors\PizaroAnimatorDialog\PizaroAnimatorInput.cs" />
+    <Compile Include="AnimationEditors\FormAnimator\FormAnimatorEditorUITypeEditor.cs" />
+    <Compile Include="AnimationEditors\FormAnimator\FormAnimatorInput.cs" />
     <Compile Include="AnimationEditors\VisualEffectsAnimatorDialog\UserControls\BottomAnchoredHeightEffect_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -360,6 +386,27 @@
     </Compile>
     <Compile Include="AnimationEditors\ZeroitAnimate_Transition_Google_AnimatorDialog\ZeroitTransitionInput.cs" />
     <Compile Include="ClickAnimator\MetroAnimator.cs" />
+    <Compile Include="PizaroAnimator\Animation.cs" />
+    <Compile Include="PizaroAnimator\Animation2D.cs" />
+    <Compile Include="PizaroAnimator\AnimationException.cs" />
+    <Compile Include="PizaroAnimator\AnimationStatus.cs" />
+    <Compile Include="PizaroAnimator\Easing.cs" />
+    <Compile Include="PizaroAnimator\Fade.cs" />
+    <Compile Include="PizaroAnimator\FadeIn.cs" />
+    <Compile Include="PizaroAnimator\FadeInAndShow.cs" />
+    <Compile Include="PizaroAnimator\FadeOut.cs" />
+    <Compile Include="PizaroAnimator\FadeOutAndHide.cs" />
+    <Compile Include="PizaroAnimator\Flags.cs" />
+    <Compile Include="PizaroAnimator\IEffect.cs" />
+    <Compile Include="PizaroAnimator\PizaroTransition.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PizaroAnimator\PredefinedEffect.cs" />
+    <Compile Include="PizaroAnimator\Resize.cs" />
+    <Compile Include="PizaroAnimator\ResizeHeight.cs" />
+    <Compile Include="PizaroAnimator\ResizeWidth.cs" />
+    <Compile Include="PizaroAnimator\Slide .cs" />
+    <Compile Include="PizaroAnimator\SlideFrom.cs" />
     <Compile Include="Visual Effects Animation\FoldAnimation .cs" />
     <Compile Include="ZeroitAnimate_Animator _WithEditor\Animation.cs" />
     <Compile Include="ZeroitAnimate_Animator _WithEditor\AnimatorWithEditor.cs">
@@ -408,6 +455,7 @@
     <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_UserDefined.cs" />
     <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\TransitionType_Zeroit.cs" />
     <Compile Include="ZeroitAnimate_Transition_GoogleTransition_WithEditor\Utility.cs" />
+    <Compile Include="_HelpingControls\LBKnob\LBKnob.cs" />
     <Compile Include="_HelpingControls\NoFlickerPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -553,30 +601,9 @@
     <Compile Include="PeaceAnimator_WinformAnimation\SafeInvoker`1.cs" />
     <Compile Include="PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - StartFasterAnimation.cs" />
     <Compile Include="PeaceAnimator_WinformAnimation\Timer.cs" />
-    <Compile Include="PizaroAnimator\Animation2D.cs" />
-    <Compile Include="PizaroAnimator\Animation.cs" />
-    <Compile Include="PizaroAnimator\AnimationException.cs" />
-    <Compile Include="PizaroAnimator\AnimationStatus.cs" />
-    <Compile Include="PizaroAnimator\Easing.cs" />
-    <Compile Include="PizaroAnimator\Fade.cs" />
-    <Compile Include="PizaroAnimator\FadeIn.cs" />
-    <Compile Include="PizaroAnimator\FadeInAndShow.cs" />
-    <Compile Include="PizaroAnimator\FadeOut.cs" />
-    <Compile Include="PizaroAnimator\FadeOutAndHide.cs" />
-    <Compile Include="PizaroAnimator\Flags.cs" />
-    <Compile Include="PizaroAnimator\IEffect.cs" />
-    <Compile Include="PizaroAnimator\PizaroTransition.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="PizaroAnimator\PizaroTransitionWithEditor.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PizaroAnimator\PredefinedEffect.cs" />
-    <Compile Include="PizaroAnimator\Resize.cs" />
-    <Compile Include="PizaroAnimator\ResizeHeight.cs" />
-    <Compile Include="PizaroAnimator\ResizeWidth.cs" />
-    <Compile Include="PizaroAnimator\Slide .cs" />
-    <Compile Include="PizaroAnimator\SlideFrom.cs" />
     <Compile Include="Added_Animations\DBTweener\DBTweener.cs" />
     <Compile Include="Added_Animations\SmoothTransitions\DelayedCall.cs" />
     <Compile Include="Added_Animations\TweenerAnimator\Ease.cs" />
@@ -704,7 +731,7 @@
     <Compile Include="_HelpingControls\KnobControl\KnobControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="_HelpingControls\LBKnob\LBKnob.cs" />
+    <Compile Include="_HelpingControls\LBKnob\Backup.cs" />
     <Compile Include="_HelpingControls\Rotating3DCube\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -746,10 +773,19 @@
     <Compile Include="_HelpingControls\TrackBar\ZeroitTrackBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="_HelpingControls\TransparentText.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AnimationEditors\AtomicAnimatorDialog\AtomicAnimatorDialog.resx">
       <DependentUpon>AtomicAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\FormAnimator\FormAnimatorDialog.resx">
+      <DependentUpon>FormAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimationEditors\FormAnimator\PreviewForm.resx">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnimationEditors\ObjectAnimatorDialog\ObjectAnimatorDialog.resx">
       <DependentUpon>ObjectAnimatorDialog.cs</DependentUpon>
@@ -921,7 +957,33 @@
   <ItemGroup>
     <None Include="Resources\zeroitAnimate_Icon 48x48.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\arrow_top_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_top_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_top_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_bottom_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_bottom_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_bottom_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\center.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

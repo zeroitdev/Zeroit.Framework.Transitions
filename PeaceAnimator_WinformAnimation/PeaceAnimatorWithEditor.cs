@@ -609,7 +609,7 @@ namespace Zeroit.Framework.Transitions.WinformAnimation
         /// </summary>
         /// <value>The peace input.</value>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
-        public PeaceInput PeaceInput
+        public PeaceInput Editor
         {
             get
             {

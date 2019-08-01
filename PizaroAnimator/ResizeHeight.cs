@@ -45,8 +45,8 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="end">End height.</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public ResizeHeight(Control control, double start, double end, int duration, Func<double, double> accelFunc)
-            : base(control, new double[] { start }, new double[] { end }, duration, accelFunc) {
+        public ResizeHeight(Control control, float start, float end, int duration, Func<float,float,float,float, float> accelFunc)
+            : base(control, new float[] { start }, new float[] { end }, duration, accelFunc) {
         }
 
         /// <summary>

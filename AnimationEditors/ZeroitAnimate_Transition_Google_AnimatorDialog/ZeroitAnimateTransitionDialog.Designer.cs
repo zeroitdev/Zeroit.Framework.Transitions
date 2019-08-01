@@ -63,17 +63,18 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZeroitAnimateTransitionDialog));
-            this.thematic1501 = new ThemeManagers.Orains();
-            this.zeroitSimpleLine24 = new _HelpingControls.LineSimple2();
-            this.zeroitSimpleLine23 = new _HelpingControls.LineSimple2();
-            this.zeroitSimpleLine22 = new _HelpingControls.LineSimple2();
-            this.zeroitSimpleLine21 = new _HelpingControls.LineSimple2();
+            this.thematic1501 = new Zeroit.Framework.Transitions.ThemeManagers.Orains();
+            this.zeroitLBKnob1 = new Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob();
+            this.zeroitSimpleLine24 = new Zeroit.Framework.Transitions._HelpingControls.LineSimple2();
+            this.zeroitSimpleLine23 = new Zeroit.Framework.Transitions._HelpingControls.LineSimple2();
+            this.zeroitSimpleLine22 = new Zeroit.Framework.Transitions._HelpingControls.LineSimple2();
+            this.zeroitSimpleLine21 = new Zeroit.Framework.Transitions._HelpingControls.LineSimple2();
             this.label7 = new System.Windows.Forms.Label();
             this.mainControl_Position_ComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.animation_GroupBox = new System.Windows.Forms.GroupBox();
+            this.animation_RotatingCube = new Zeroit.Framework.Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.animation_Preview_Btn = new System.Windows.Forms.Button();
-            this.animation_RotatingCube = new Transitions._HelpingControls.Rotating3DCube.RotatingCube();
             this.animationProgress_Label = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
             this.okBtn = new System.Windows.Forms.Button();
@@ -90,7 +91,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label1 = new System.Windows.Forms.Label();
             this.mainControl_Transition_ComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.zeroitLBKnob1 = new Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob();
             this.transitionAnimator = new Zeroit.Framework.Transitions.ZeroitTransitor();
             this.thematic1501.SuspendLayout();
             this.animation_GroupBox.SuspendLayout();
@@ -103,6 +103,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.thematic1501.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.thematic1501.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.thematic1501.Colors = new Zeroit.Framework.Transitions.ThemeManagers.Bloom[0];
             this.thematic1501.Controls.Add(this.zeroitLBKnob1);
             this.thematic1501.Controls.Add(this.zeroitSimpleLine24);
             this.thematic1501.Controls.Add(this.zeroitSimpleLine23);
@@ -138,7 +139,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.thematic1501.Name = "thematic1501";
             this.thematic1501.NoRounding = false;
             this.thematic1501.Sizable = true;
-            this.thematic1501.Size = new System.Drawing.Size(1296, 556);
+            this.thematic1501.Size = new System.Drawing.Size(1292, 556);
             this.thematic1501.SmartBounds = true;
             this.thematic1501.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.thematic1501.TabIndex = 0;
@@ -146,23 +147,46 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.thematic1501.Transparent = false;
             this.thematic1501.Click += new System.EventHandler(this.thematic1501_Click);
             // 
+            // zeroitLBKnob1
+            // 
+            this.zeroitLBKnob1.AllowTransparency = true;
+            this.zeroitLBKnob1.BackColor = System.Drawing.Color.Transparent;
+            this.zeroitLBKnob1.DrawRatio = 0.59F;
+            this.zeroitLBKnob1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.zeroitLBKnob1.IndicatorOffset = 10F;
+            this.zeroitLBKnob1.KnobCenter = ((System.Drawing.PointF)(resources.GetObject("zeroitLBKnob1.KnobCenter")));
+            this.zeroitLBKnob1.KnobColor = System.Drawing.Color.Silver;
+            this.zeroitLBKnob1.KnobRect = ((System.Drawing.RectangleF)(resources.GetObject("zeroitLBKnob1.KnobRect")));
+            this.zeroitLBKnob1.Location = new System.Drawing.Point(331, 281);
+            this.zeroitLBKnob1.MaxValue = 100F;
+            this.zeroitLBKnob1.MinValue = 0F;
+            this.zeroitLBKnob1.Name = "zeroitLBKnob1";
+            this.zeroitLBKnob1.Renderer = null;
+            this.zeroitLBKnob1.ScaleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.zeroitLBKnob1.Size = new System.Drawing.Size(118, 121);
+            this.zeroitLBKnob1.StepValue = 0.1F;
+            this.zeroitLBKnob1.Style = Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob.KnobStyle.Circular;
+            this.zeroitLBKnob1.TabIndex = 126;
+            this.zeroitLBKnob1.Value = 0F;
+            this.zeroitLBKnob1.Visible = false;
+            // 
             // zeroitSimpleLine24
             // 
-            this.zeroitSimpleLine24.Angle = 50F;
+            this.zeroitSimpleLine24.Angle = 40F;
             this.zeroitSimpleLine24.AngleIncrement = 10F;
             this.zeroitSimpleLine24.AngleLimit = 360F;
             this.zeroitSimpleLine24.AutoAnimate = true;
             this.zeroitSimpleLine24.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.zeroitSimpleLine24.FitToParent = false;
             this.zeroitSimpleLine24.Gradient = System.Drawing.Color.Orange;
-            this.zeroitSimpleLine24.GradientAngle = _HelpingControls.ZeroitSimpleLine2GradientDirection.Horizontal;
+            this.zeroitSimpleLine24.GradientAngle = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2GradientDirection.Horizontal;
             this.zeroitSimpleLine24.LineColor = System.Drawing.Color.Black;
             this.zeroitSimpleLine24.LineWidth = 1;
             this.zeroitSimpleLine24.Location = new System.Drawing.Point(20, 49);
             this.zeroitSimpleLine24.Name = "zeroitSimpleLine24";
             this.zeroitSimpleLine24.Size = new System.Drawing.Size(1, 398);
             this.zeroitSimpleLine24.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.zeroitSimpleLine24.Style = _HelpingControls.ZeroitSimpleLine2LineStyle.Vertical;
+            this.zeroitSimpleLine24.Style = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2LineStyle.Vertical;
             this.zeroitSimpleLine24.TabIndex = 125;
             this.zeroitSimpleLine24.Text = "zeroitSimpleLine24";
             this.zeroitSimpleLine24.TimerInterVal = 10;
@@ -178,14 +202,14 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.zeroitSimpleLine23.FillColor = System.Drawing.Color.Cyan;
             this.zeroitSimpleLine23.FitToParent = false;
             this.zeroitSimpleLine23.Gradient = System.Drawing.Color.Orange;
-            this.zeroitSimpleLine23.GradientAngle = _HelpingControls.ZeroitSimpleLine2GradientDirection.Vertical;
+            this.zeroitSimpleLine23.GradientAngle = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2GradientDirection.Vertical;
             this.zeroitSimpleLine23.LineColor = System.Drawing.Color.Black;
             this.zeroitSimpleLine23.LineWidth = 1;
             this.zeroitSimpleLine23.Location = new System.Drawing.Point(20, 49);
             this.zeroitSimpleLine23.Name = "zeroitSimpleLine23";
             this.zeroitSimpleLine23.Size = new System.Drawing.Size(436, 1);
             this.zeroitSimpleLine23.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.zeroitSimpleLine23.Style = _HelpingControls.ZeroitSimpleLine2LineStyle.Horizontal;
+            this.zeroitSimpleLine23.Style = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2LineStyle.Horizontal;
             this.zeroitSimpleLine23.TabIndex = 124;
             this.zeroitSimpleLine23.Text = "zeroitSimpleLine23";
             this.zeroitSimpleLine23.TimerInterVal = 70;
@@ -200,14 +224,14 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.zeroitSimpleLine22.FillColor = System.Drawing.Color.Cyan;
             this.zeroitSimpleLine22.FitToParent = false;
             this.zeroitSimpleLine22.Gradient = System.Drawing.Color.Orange;
-            this.zeroitSimpleLine22.GradientAngle = _HelpingControls.ZeroitSimpleLine2GradientDirection.Vertical;
+            this.zeroitSimpleLine22.GradientAngle = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2GradientDirection.Vertical;
             this.zeroitSimpleLine22.LineColor = System.Drawing.Color.Black;
             this.zeroitSimpleLine22.LineWidth = 1;
             this.zeroitSimpleLine22.Location = new System.Drawing.Point(20, 446);
             this.zeroitSimpleLine22.Name = "zeroitSimpleLine22";
             this.zeroitSimpleLine22.Size = new System.Drawing.Size(436, 1);
             this.zeroitSimpleLine22.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.zeroitSimpleLine22.Style = _HelpingControls.ZeroitSimpleLine2LineStyle.Horizontal;
+            this.zeroitSimpleLine22.Style = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2LineStyle.Horizontal;
             this.zeroitSimpleLine22.TabIndex = 123;
             this.zeroitSimpleLine22.Text = "zeroitSimpleLine22";
             this.zeroitSimpleLine22.TimerInterVal = 70;
@@ -222,14 +246,14 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.zeroitSimpleLine21.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.zeroitSimpleLine21.FitToParent = false;
             this.zeroitSimpleLine21.Gradient = System.Drawing.Color.Orange;
-            this.zeroitSimpleLine21.GradientAngle = _HelpingControls.ZeroitSimpleLine2GradientDirection.Horizontal;
+            this.zeroitSimpleLine21.GradientAngle = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2GradientDirection.Horizontal;
             this.zeroitSimpleLine21.LineColor = System.Drawing.Color.Black;
             this.zeroitSimpleLine21.LineWidth = 1;
             this.zeroitSimpleLine21.Location = new System.Drawing.Point(455, 49);
             this.zeroitSimpleLine21.Name = "zeroitSimpleLine21";
             this.zeroitSimpleLine21.Size = new System.Drawing.Size(1, 398);
             this.zeroitSimpleLine21.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.zeroitSimpleLine21.Style = _HelpingControls.ZeroitSimpleLine2LineStyle.Vertical;
+            this.zeroitSimpleLine21.Style = Zeroit.Framework.Transitions._HelpingControls.ZeroitSimpleLine2LineStyle.Vertical;
             this.zeroitSimpleLine21.TabIndex = 122;
             this.zeroitSimpleLine21.Text = "zeroitSimpleLine21";
             this.zeroitSimpleLine21.TimerInterVal = 10;
@@ -275,8 +299,8 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // animation_GroupBox
             // 
-            this.animation_GroupBox.Controls.Add(this.animation_Preview_Btn);
             this.animation_GroupBox.Controls.Add(this.animation_RotatingCube);
+            this.animation_GroupBox.Controls.Add(this.animation_Preview_Btn);
             this.animation_GroupBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.animation_GroupBox.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.animation_GroupBox.Location = new System.Drawing.Point(508, 38);
@@ -286,6 +310,25 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.animation_GroupBox.TabStop = false;
             this.animation_GroupBox.Text = "Animation";
             this.animation_GroupBox.Enter += new System.EventHandler(this.animation_GroupBox_Enter);
+            // 
+            // animation_RotatingCube
+            // 
+            this.animation_RotatingCube.AllowTransparency = true;
+            this.animation_RotatingCube.AutoAnimate = true;
+            this.animation_RotatingCube.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.BlueViolet,
+        System.Drawing.Color.Cyan,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Violet,
+        System.Drawing.Color.LightSkyBlue};
+            this.animation_RotatingCube.Location = new System.Drawing.Point(313, 126);
+            this.animation_RotatingCube.Name = "animation_RotatingCube";
+            this.animation_RotatingCube.Shrink = 4;
+            this.animation_RotatingCube.Size = new System.Drawing.Size(141, 141);
+            this.animation_RotatingCube.SpeedAdjust = 10;
+            this.animation_RotatingCube.TabIndex = 115;
+            this.animation_RotatingCube.Text = "rotatingCube1";
             // 
             // animation_Preview_Btn
             // 
@@ -304,24 +347,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.animation_Preview_Btn.Click += new System.EventHandler(this.animation_Preview_Btn_Click);
             this.animation_Preview_Btn.MouseEnter += new System.EventHandler(this.animation_Preview_Btn_MouseEnter);
             this.animation_Preview_Btn.MouseLeave += new System.EventHandler(this.animation_Preview_Btn_MouseLeave);
-            // 
-            // animation_RotatingCube
-            // 
-            this.animation_RotatingCube.AutoAnimate = true;
-            this.animation_RotatingCube.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.BlueViolet,
-        System.Drawing.Color.Cyan,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Violet,
-        System.Drawing.Color.LightSkyBlue};
-            this.animation_RotatingCube.Location = new System.Drawing.Point(313, 126);
-            this.animation_RotatingCube.Name = "animation_RotatingCube";
-            this.animation_RotatingCube.Shrink = 4;
-            this.animation_RotatingCube.Size = new System.Drawing.Size(141, 141);
-            this.animation_RotatingCube.SpeedAdjust = 10;
-            this.animation_RotatingCube.TabIndex = 115;
-            this.animation_RotatingCube.Text = "rotatingCube1";
             // 
             // animationProgress_Label
             // 
@@ -342,7 +367,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
             this.closeBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.closeBtn.Location = new System.Drawing.Point(1269, 3);
+            this.closeBtn.Location = new System.Drawing.Point(1265, 3);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(23, 23);
             this.closeBtn.TabIndex = 114;
@@ -577,28 +602,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.label2.TabIndex = 94;
             this.label2.Text = "Control";
             // 
-            // zeroitLBKnob1
-            // 
-            this.zeroitLBKnob1.BackColor = System.Drawing.Color.Transparent;
-            this.zeroitLBKnob1.DrawRatio = 0.59F;
-            this.zeroitLBKnob1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.zeroitLBKnob1.IndicatorOffset = 10F;
-            this.zeroitLBKnob1.KnobCenter = ((System.Drawing.PointF)(resources.GetObject("zeroitLBKnob1.KnobCenter")));
-            this.zeroitLBKnob1.KnobColor = System.Drawing.Color.Silver;
-            this.zeroitLBKnob1.KnobRect = ((System.Drawing.RectangleF)(resources.GetObject("zeroitLBKnob1.KnobRect")));
-            this.zeroitLBKnob1.Location = new System.Drawing.Point(331, 281);
-            this.zeroitLBKnob1.MaxValue = 100F;
-            this.zeroitLBKnob1.MinValue = 0F;
-            this.zeroitLBKnob1.Name = "zeroitLBKnob1";
-            this.zeroitLBKnob1.Renderer = null;
-            this.zeroitLBKnob1.ScaleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.zeroitLBKnob1.Size = new System.Drawing.Size(118, 121);
-            this.zeroitLBKnob1.StepValue = 0.1F;
-            this.zeroitLBKnob1.Style = Zeroit.Framework.Transitions._HelpingControls.LBKnob.ZeroitLBKnob.KnobStyle.Circular;
-            this.zeroitLBKnob1.TabIndex = 126;
-            this.zeroitLBKnob1.Value = 0F;
-            this.zeroitLBKnob1.Visible = false;
-            // 
             // transitionAnimator
             // 
             this.transitionAnimator.Destination = 0;
@@ -612,11 +615,12 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 556);
+            this.ClientSize = new System.Drawing.Size(1292, 556);
             this.Controls.Add(this.thematic1501);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ZeroitAnimateTransitionDialog";
+            this.ShowInTaskbar = false;
             this.Text = "Zeroit Transition Animator";
             this.thematic1501.ResumeLayout(false);
             this.thematic1501.PerformLayout();

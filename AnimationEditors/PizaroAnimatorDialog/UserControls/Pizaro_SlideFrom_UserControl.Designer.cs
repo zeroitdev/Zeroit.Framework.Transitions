@@ -83,6 +83,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.slideFrom_Rotating_Cube);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.slideFrom_EndY_Numeric);
             this.groupBox1.Controls.Add(this.label4);
@@ -92,7 +93,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.slideFrom_StartX_Numeric);
             this.groupBox1.Controls.Add(this.slideFrom_Preview_btn);
-            this.groupBox1.Controls.Add(this.slideFrom_Rotating_Cube);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -254,6 +254,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // slideFrom_Rotating_Cube
             // 
+            this.slideFrom_Rotating_Cube.AllowTransparency = true;
             this.slideFrom_Rotating_Cube.AutoAnimate = true;
             this.slideFrom_Rotating_Cube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -272,25 +273,25 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // slideFrom_Animator
             // 
-            this.slideFrom_Animator.Acceleration = 0.7D;
+            this.slideFrom_Animator.Acceleration = 0.7F;
             this.slideFrom_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.SlideFrom;
             this.slideFrom_Animator.Control = this.slideFrom_Rotating_Cube;
             this.slideFrom_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.slideFrom_Animator.ControlStylesBool = false;
-            this.slideFrom_Animator.CordinateEnd_X = 50D;
-            this.slideFrom_Animator.CordinateEnd_Y = 50D;
-            this.slideFrom_Animator.CordinateStart_X = 10D;
-            this.slideFrom_Animator.CordinateStart_Y = 10D;
+            this.slideFrom_Animator.CordinateEnd_X = 50F;
+            this.slideFrom_Animator.CordinateEnd_Y = 50F;
+            this.slideFrom_Animator.CordinateStart_X = 10F;
+            this.slideFrom_Animator.CordinateStart_Y = 10F;
             this.slideFrom_Animator.Duration = 1000;
-            this.slideFrom_Animator.EasingEnd = 1D;
+            this.slideFrom_Animator.EasingEnd = 1F;
             this.slideFrom_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.slideFrom_Animator.EasingStart = 0.2D;
-            this.slideFrom_Animator.Fade_Begin = 0D;
-            this.slideFrom_Animator.Fade_Limit = 1D;
-            this.slideFrom_Animator.ResizeHeight_Begin = 10D;
-            this.slideFrom_Animator.ResizeHeight_Limit = 50D;
-            this.slideFrom_Animator.ResizeWidth_Begin = 10D;
-            this.slideFrom_Animator.ResizeWidth_Limit = 50D;
+            this.slideFrom_Animator.EasingStart = 0.2F;
+            this.slideFrom_Animator.Fade_Begin = 0F;
+            this.slideFrom_Animator.Fade_Limit = 1F;
+            this.slideFrom_Animator.ResizeHeight_Begin = 10F;
+            this.slideFrom_Animator.ResizeHeight_Limit = 50F;
+            this.slideFrom_Animator.ResizeWidth_Begin = 10F;
+            this.slideFrom_Animator.ResizeWidth_Limit = 50F;
             // 
             // Pizaro_SlideFrom_UserControl
             // 

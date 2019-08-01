@@ -27,7 +27,10 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using System;
 using System.ComponentModel;
+using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Zeroit.Framework.Transitions.TweenerAnimator
@@ -36,7 +39,7 @@ namespace Zeroit.Framework.Transitions.TweenerAnimator
     /// Class ZeroitTweener.
     /// </summary>
     /// <seealso cref="System.ComponentModel.Component" />
-    [ToolboxItem(true)]
+    [ToolboxItem(false)]
     public class ZeroitTweener : Component
     {
         #region Variables
@@ -60,6 +63,9 @@ namespace Zeroit.Framework.Transitions.TweenerAnimator
         /// The delay
         /// </summary>
         private float delay = 0f;
+
+        private string propertyName = "Location";
+        
         #endregion
 
         /// <summary>
@@ -71,6 +77,16 @@ namespace Zeroit.Framework.Transitions.TweenerAnimator
         }
 
         #region Properties
+
+        public string PropertyName
+        {
+            get { return propertyName; }
+            set
+            {
+                propertyName = value;
+                
+            }
+        }
 
         /// <summary>
         /// Gets or sets the target.
@@ -138,10 +154,7 @@ namespace Zeroit.Framework.Transitions.TweenerAnimator
         }
 
         #endregion
-
-
-
-
+        
         /// <summary>
         /// Activates the specified property name.
         /// </summary>
@@ -153,15 +166,20 @@ namespace Zeroit.Framework.Transitions.TweenerAnimator
             //Type myType = typeof(Control);
             // Get the PropertyInfo object by passing the property name.
             //PropertyInfo myPropInfo = myType.GetProperty(propertyName);
-            
+
+            Type myType = target.GetType();
+
+            PropertyInfo myPropInfo = myType.GetProperty(target.GetType().GetProperty(propertyName).ToString());
 
             //	This tween will move the X and Y properties of the target
-            //UnglideInfo unglideInfo = new UnglideInfo(Target, myPropInfo.Name);
-            
+            UnglideInfo unglideInfo = new UnglideInfo(Target, myPropInfo.Name);
+
+            //target.GetType().GetProperty(propertyName).SetValue(target, 10);
+
             var TweenAnimator = new Tweener();
             
             TweenAnimator.AddTween(new Tween());
-            TweenAnimator.Tween(target, new { Value = 100}, duration, delay);
+            TweenAnimator.Tween(target, unglideInfo.Value, duration, delay);
             //TweenAnimator.Tween(Target, unglideInfo.Value = valueSets, duration, delay);
             
             

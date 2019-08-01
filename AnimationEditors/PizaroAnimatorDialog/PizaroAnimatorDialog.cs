@@ -972,9 +972,9 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
             #region Values
 
-            pizaroAnimatorInput.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            pizaroAnimatorInput.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            pizaroAnimatorInput.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
+            pizaroAnimatorInput.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            pizaroAnimatorInput.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            pizaroAnimatorInput.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
             pizaroAnimatorInput.Duration = (int)generalContainer_Duration_Numeric.Value;
 
             #endregion
@@ -1244,22 +1244,22 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             pizaro_Resize_UserControl.resize_EndX_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateEnd_X;
             pizaro_Resize_UserControl.resize_EndY_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateEnd_Y;
 
-            pizaro_Resize_UserControl.resize_Animator.CordinateStart_X = (double)pizaroAnimatorInput.CordinateStart_X;
-            pizaro_Resize_UserControl.resize_Animator.CordinateStart_Y = (double)pizaroAnimatorInput.CordinateStart_Y;
-            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (double)pizaroAnimatorInput.CordinateEnd_X;
-            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (double)pizaroAnimatorInput.CordinateEnd_Y;
+            pizaro_Resize_UserControl.resize_Animator.CordinateStart_X = (float)pizaroAnimatorInput.CordinateStart_X;
+            pizaro_Resize_UserControl.resize_Animator.CordinateStart_Y = (float)pizaroAnimatorInput.CordinateStart_Y;
+            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (float)pizaroAnimatorInput.CordinateEnd_X;
+            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (float)pizaroAnimatorInput.CordinateEnd_Y;
 
             pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value = (decimal)pizaroAnimatorInput.ResizeWidth_Begin;
             pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value = (decimal)pizaroAnimatorInput.ResizeWidth_Limit;
 
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (double)pizaroAnimatorInput.ResizeWidth_Begin;
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (double)pizaroAnimatorInput.ResizeWidth_Limit;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (float)pizaroAnimatorInput.ResizeWidth_Begin;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (float)pizaroAnimatorInput.ResizeWidth_Limit;
 
             pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value = (decimal)pizaroAnimatorInput.ResizeHeight_Begin;
             pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value = (decimal)pizaroAnimatorInput.ResizeHeight_Limit;
 
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (double)pizaroAnimatorInput.ResizeHeight_Begin;
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (double)pizaroAnimatorInput.ResizeHeight_Limit;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (float)pizaroAnimatorInput.ResizeHeight_Begin;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (float)pizaroAnimatorInput.ResizeHeight_Limit;
 
 
             pizaro_Slide_UserControl.slide_StartX_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateStart_X;
@@ -1267,20 +1267,20 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             pizaro_Slide_UserControl.slide_EndX_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateEnd_X;
             pizaro_Slide_UserControl.slide_EndY_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateEnd_Y;
 
-            pizaro_Slide_UserControl.slide_Animator.CordinateStart_X = (double)pizaroAnimatorInput.CordinateStart_X;
-            pizaro_Slide_UserControl.slide_Animator.CordinateStart_Y = (double)pizaroAnimatorInput.CordinateStart_Y;
-            pizaro_Slide_UserControl.slide_Animator.CordinateEnd_X = (double)pizaroAnimatorInput.CordinateEnd_X;
-            pizaro_Slide_UserControl.slide_Animator.CordinateEnd_Y = (double)pizaroAnimatorInput.CordinateEnd_Y;
+            pizaro_Slide_UserControl.slide_Animator.CordinateStart_X = (float)pizaroAnimatorInput.CordinateStart_X;
+            pizaro_Slide_UserControl.slide_Animator.CordinateStart_Y = (float)pizaroAnimatorInput.CordinateStart_Y;
+            pizaro_Slide_UserControl.slide_Animator.CordinateEnd_X = (float)pizaroAnimatorInput.CordinateEnd_X;
+            pizaro_Slide_UserControl.slide_Animator.CordinateEnd_Y = (float)pizaroAnimatorInput.CordinateEnd_Y;
 
             pizaro_SlideFrom_UserControl.slideFrom_StartX_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateStart_X;
             pizaro_SlideFrom_UserControl.slideFrom_StartY_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateStart_Y;
             pizaro_SlideFrom_UserControl.slideFrom_EndX_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateEnd_X;
             pizaro_SlideFrom_UserControl.slideFrom_EndY_Numeric.Value = (decimal)pizaroAnimatorInput.CordinateEnd_Y;
 
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_X = (double)pizaroAnimatorInput.CordinateStart_X;
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_Y = (double)pizaroAnimatorInput.CordinateStart_Y;
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_X = (double)pizaroAnimatorInput.CordinateEnd_X;
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_Y = (double)pizaroAnimatorInput.CordinateEnd_Y;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_X = (float)pizaroAnimatorInput.CordinateStart_X;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_Y = (float)pizaroAnimatorInput.CordinateStart_Y;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_X = (float)pizaroAnimatorInput.CordinateEnd_X;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_Y = (float)pizaroAnimatorInput.CordinateEnd_Y;
 
             #endregion
 
@@ -1341,7 +1341,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Fade_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fade_Animator.Fade_Begin = (double)pizaro_Fade_UserControl.fade_Begin_Numeric.Value;
+            fade_Animator.Fade_Begin = (float)pizaro_Fade_UserControl.fade_Begin_Numeric.Value;
 
         }
 
@@ -1352,7 +1352,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Fade_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fade_Animator.Fade_Limit = (double)pizaro_Fade_UserControl.fade_Limit_Numeric.Value;
+            fade_Animator.Fade_Limit = (float)pizaro_Fade_UserControl.fade_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1365,7 +1365,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeIn_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeIn_Animator.Fade_Begin = (double)pizaro_FadeIn_UserControl.fadeIn_Begin_Numeric.Value;
+            fadeIn_Animator.Fade_Begin = (float)pizaro_FadeIn_UserControl.fadeIn_Begin_Numeric.Value;
 
         }
 
@@ -1376,7 +1376,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeIn_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeIn_Animator.Fade_Limit = (double)pizaro_FadeIn_UserControl.fadeIn_Limit_Numeric.Value;
+            fadeIn_Animator.Fade_Limit = (float)pizaro_FadeIn_UserControl.fadeIn_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1389,7 +1389,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeInAndShow_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeInAndShow_Animator.Fade_Begin = (double)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Begin_Numeric.Value;
+            fadeInAndShow_Animator.Fade_Begin = (float)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Begin_Numeric.Value;
 
         }
 
@@ -1400,7 +1400,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeInAndShow_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeInAndShow_Animator.Fade_Limit = (double)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Limit_Numeric.Value;
+            fadeInAndShow_Animator.Fade_Limit = (float)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1413,7 +1413,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeOut_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeOut_Animator.Fade_Begin = (double)pizaro_FadeOut_UserControl.fadeOut_Begin_Numeric.Value;
+            fadeOut_Animator.Fade_Begin = (float)pizaro_FadeOut_UserControl.fadeOut_Begin_Numeric.Value;
 
         }
 
@@ -1424,7 +1424,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeOut_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fade_Animator.Fade_Limit = (double)pizaro_FadeOut_UserControl.fadeOut_Limit_Numeric.Value;
+            fade_Animator.Fade_Limit = (float)pizaro_FadeOut_UserControl.fadeOut_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1437,7 +1437,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeOutandHide_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeOutAndHide_Animator.Fade_Begin = (double)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Begin_Numeric.Value;
+            fadeOutAndHide_Animator.Fade_Begin = (float)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Begin_Numeric.Value;
 
         }
 
@@ -1448,7 +1448,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void FadeOutandHide_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fadeOutAndHide_Animator.Fade_Limit = (double)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Limit_Numeric.Value;
+            fadeOutAndHide_Animator.Fade_Limit = (float)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1461,7 +1461,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Resize_StartX_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_Resize_UserControl.resize_Animator.CordinateStart_X = (double)pizaro_Resize_UserControl.resize_StartX_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.CordinateStart_X = (float)pizaro_Resize_UserControl.resize_StartX_Numeric.Value;
 
         }
 
@@ -1472,7 +1472,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Resize_StartY_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_Resize_UserControl.resize_Animator.CordinateStart_Y = (double)pizaro_Resize_UserControl.resize_StartY_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.CordinateStart_Y = (float)pizaro_Resize_UserControl.resize_StartY_Numeric.Value;
 
         }
 
@@ -1483,7 +1483,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Resize_EndX_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (double)pizaro_Resize_UserControl.resize_EndX_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (float)pizaro_Resize_UserControl.resize_EndX_Numeric.Value;
 
         }
 
@@ -1494,7 +1494,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Resize_EndY_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_Y = (double)pizaro_Resize_UserControl.resize_EndY_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.CordinateEnd_Y = (float)pizaro_Resize_UserControl.resize_EndY_Numeric.Value;
 
         }
         #endregion
@@ -1507,7 +1507,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void ResizeHeight_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (double)pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (float)pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value;
 
         }
 
@@ -1518,7 +1518,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void ResizeHeight_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Limit = (double)pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Limit = (float)pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1531,7 +1531,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void ResizeWidth_Begin_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (double)pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (float)pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value;
 
         }
 
@@ -1542,7 +1542,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void ResizeWidth_Limit_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Limit = (double)pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Limit = (float)pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value;
 
         }
         #endregion
@@ -1602,7 +1602,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void SlideFrom_StartX_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_X = (double)pizaro_SlideFrom_UserControl.slideFrom_StartX_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_X = (float)pizaro_SlideFrom_UserControl.slideFrom_StartX_Numeric.Value;
 
         }
 
@@ -1613,7 +1613,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void SlideFrom_StartY_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_Y = (double)pizaro_SlideFrom_UserControl.slideFrom_StartY_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateStart_Y = (float)pizaro_SlideFrom_UserControl.slideFrom_StartY_Numeric.Value;
 
         }
 
@@ -1624,7 +1624,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void SlideFrom_EndX_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_X = (double)pizaro_SlideFrom_UserControl.slideFrom_EndX_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_X = (float)pizaro_SlideFrom_UserControl.slideFrom_EndX_Numeric.Value;
 
         }
 
@@ -1635,7 +1635,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void SlideFrom_EndY_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_Y = (double)pizaro_SlideFrom_UserControl.slideFrom_EndY_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.CordinateEnd_Y = (float)pizaro_SlideFrom_UserControl.slideFrom_EndY_Numeric.Value;
 
         }
         #endregion
@@ -1667,11 +1667,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.Fade;
 
-                pizaroAnimatorInput.Fade_Begin = (double)pizaro_Fade_UserControl.fade_Begin_Numeric.Value;
-                pizaroAnimatorInput.Fade_Limit = (double)pizaro_Fade_UserControl.fade_Limit_Numeric.Value;
+                pizaroAnimatorInput.Fade_Begin = (float)pizaro_Fade_UserControl.fade_Begin_Numeric.Value;
+                pizaroAnimatorInput.Fade_Limit = (float)pizaro_Fade_UserControl.fade_Limit_Numeric.Value;
 
-                fadeIn_Animator.Fade_Begin = (double)pizaro_Fade_UserControl.fade_Begin_Numeric.Value;
-                fadeIn_Animator.Fade_Limit = (double)pizaro_Fade_UserControl.fade_Limit_Numeric.Value;
+                fadeIn_Animator.Fade_Begin = (float)pizaro_Fade_UserControl.fade_Begin_Numeric.Value;
+                fadeIn_Animator.Fade_Limit = (float)pizaro_Fade_UserControl.fade_Limit_Numeric.Value;
 
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeIn)
@@ -1741,11 +1741,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.FadeIn;
 
-                pizaroAnimatorInput.Fade_Begin = (double)pizaro_FadeIn_UserControl.fadeIn_Begin_Numeric.Value;
-                pizaroAnimatorInput.Fade_Limit = (double)pizaro_FadeIn_UserControl.fadeIn_Limit_Numeric.Value;
+                pizaroAnimatorInput.Fade_Begin = (float)pizaro_FadeIn_UserControl.fadeIn_Begin_Numeric.Value;
+                pizaroAnimatorInput.Fade_Limit = (float)pizaro_FadeIn_UserControl.fadeIn_Limit_Numeric.Value;
 
-                fadeIn_Animator.Fade_Begin = (double)pizaro_FadeIn_UserControl.fadeIn_Begin_Numeric.Value;
-                fadeIn_Animator.Fade_Limit = (double)pizaro_FadeIn_UserControl.fadeIn_Limit_Numeric.Value;
+                fadeIn_Animator.Fade_Begin = (float)pizaro_FadeIn_UserControl.fadeIn_Begin_Numeric.Value;
+                fadeIn_Animator.Fade_Limit = (float)pizaro_FadeIn_UserControl.fadeIn_Limit_Numeric.Value;
 
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeInAndShow)
@@ -1814,11 +1814,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.FadeInAndShow;
 
-                pizaroAnimatorInput.Fade_Begin = (double)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Begin_Numeric.Value;
-                pizaroAnimatorInput.Fade_Limit = (double)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Limit_Numeric.Value;
+                pizaroAnimatorInput.Fade_Begin = (float)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Begin_Numeric.Value;
+                pizaroAnimatorInput.Fade_Limit = (float)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Limit_Numeric.Value;
 
-                fadeInAndShow_Animator.Fade_Begin = (double)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Begin_Numeric.Value;
-                fadeInAndShow_Animator.Fade_Limit = (double)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Limit_Numeric.Value;
+                fadeInAndShow_Animator.Fade_Begin = (float)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Begin_Numeric.Value;
+                fadeInAndShow_Animator.Fade_Limit = (float)pizaro_FadeInAndShow_UserControl.fadeInAndShow_Limit_Numeric.Value;
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeOut)
             {
@@ -1886,11 +1886,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.FadeOut;
 
-                pizaroAnimatorInput.Fade_Begin = (double)pizaro_FadeOut_UserControl.fadeOut_Begin_Numeric.Value;
-                pizaroAnimatorInput.Fade_Limit = (double)pizaro_FadeOut_UserControl.fadeOut_Limit_Numeric.Value;
+                pizaroAnimatorInput.Fade_Begin = (float)pizaro_FadeOut_UserControl.fadeOut_Begin_Numeric.Value;
+                pizaroAnimatorInput.Fade_Limit = (float)pizaro_FadeOut_UserControl.fadeOut_Limit_Numeric.Value;
 
-                fadeOut_Animator.Fade_Begin = (double)pizaro_FadeOut_UserControl.fadeOut_Begin_Numeric.Value;
-                fadeOut_Animator.Fade_Limit = (double)pizaro_FadeOut_UserControl.fadeOut_Limit_Numeric.Value;
+                fadeOut_Animator.Fade_Begin = (float)pizaro_FadeOut_UserControl.fadeOut_Begin_Numeric.Value;
+                fadeOut_Animator.Fade_Limit = (float)pizaro_FadeOut_UserControl.fadeOut_Limit_Numeric.Value;
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeOutandHide)
             {
@@ -1958,11 +1958,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.FadeOutandHide;
 
-                pizaroAnimatorInput.Fade_Begin= (double)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Begin_Numeric.Value;
-                pizaroAnimatorInput.Fade_Limit= (double)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Limit_Numeric.Value;
+                pizaroAnimatorInput.Fade_Begin= (float)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Begin_Numeric.Value;
+                pizaroAnimatorInput.Fade_Limit= (float)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Limit_Numeric.Value;
 
-                fadeOutAndHide_Animator.Fade_Begin = (double)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Begin_Numeric.Value;
-                fadeOutAndHide_Animator.Fade_Limit = (double)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Limit_Numeric.Value;
+                fadeOutAndHide_Animator.Fade_Begin = (float)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Begin_Numeric.Value;
+                fadeOutAndHide_Animator.Fade_Limit = (float)pizaro_FadeOutandHide_UserControl.fadeOutandHide_Limit_Numeric.Value;
 
 
             }
@@ -2032,16 +2032,16 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.Resize;
 
-                pizaroAnimatorInput.CordinateStart_X = (double)pizaro_Resize_UserControl.resize_StartX_Numeric.Value;
-                pizaroAnimatorInput.CordinateStart_Y = (double)pizaro_Resize_UserControl.resize_StartY_Numeric.Value;
-                pizaroAnimatorInput.CordinateEnd_X = (double)pizaro_Resize_UserControl.resize_EndX_Numeric.Value;
-                pizaroAnimatorInput.CordinateEnd_Y = (double)pizaro_Resize_UserControl.resize_EndY_Numeric.Value;
+                pizaroAnimatorInput.CordinateStart_X = (float)pizaro_Resize_UserControl.resize_StartX_Numeric.Value;
+                pizaroAnimatorInput.CordinateStart_Y = (float)pizaro_Resize_UserControl.resize_StartY_Numeric.Value;
+                pizaroAnimatorInput.CordinateEnd_X = (float)pizaro_Resize_UserControl.resize_EndX_Numeric.Value;
+                pizaroAnimatorInput.CordinateEnd_Y = (float)pizaro_Resize_UserControl.resize_EndY_Numeric.Value;
 
 
-                pizaro_Resize_UserControl.resize_Animator.CordinateStart_X = (double)pizaro_Resize_UserControl.resize_StartX_Numeric.Value;
-                pizaro_Resize_UserControl.resize_Animator.CordinateStart_Y = (double)pizaro_Resize_UserControl.resize_StartY_Numeric.Value;
-                pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (double)pizaro_Resize_UserControl.resize_EndX_Numeric.Value;
-                pizaro_Resize_UserControl.resize_Animator.CordinateEnd_Y = (double)pizaro_Resize_UserControl.resize_EndY_Numeric.Value;
+                pizaro_Resize_UserControl.resize_Animator.CordinateStart_X = (float)pizaro_Resize_UserControl.resize_StartX_Numeric.Value;
+                pizaro_Resize_UserControl.resize_Animator.CordinateStart_Y = (float)pizaro_Resize_UserControl.resize_StartY_Numeric.Value;
+                pizaro_Resize_UserControl.resize_Animator.CordinateEnd_X = (float)pizaro_Resize_UserControl.resize_EndX_Numeric.Value;
+                pizaro_Resize_UserControl.resize_Animator.CordinateEnd_Y = (float)pizaro_Resize_UserControl.resize_EndY_Numeric.Value;
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_ResizeWidth)
             {
@@ -2113,11 +2113,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.ResizeHeight;
 
-                pizaroAnimatorInput.ResizeHeight_Begin = (double)pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value;
-                pizaroAnimatorInput.ResizeHeight_Limit = (double)pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value;
+                pizaroAnimatorInput.ResizeHeight_Begin = (float)pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value;
+                pizaroAnimatorInput.ResizeHeight_Limit = (float)pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value;
 
-                pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (double)pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value;
-                pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Limit = (double)pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value;
+                pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Begin = (float)pizaro_ResizeHeight_UserControl.resizeHeight_Begin_Numeric.Value;
+                pizaro_ResizeHeight_UserControl.resizeHeight_Animator.ResizeHeight_Limit = (float)pizaro_ResizeHeight_UserControl.resizeHeight_Limit_Numeric.Value;
 
 
             }
@@ -2179,11 +2179,11 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.ResizeWidth;
 
-                pizaroAnimatorInput.ResizeWidth_Begin = (double)pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value;
-                pizaroAnimatorInput.ResizeWidth_Limit = (double)pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value;
+                pizaroAnimatorInput.ResizeWidth_Begin = (float)pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value;
+                pizaroAnimatorInput.ResizeWidth_Limit = (float)pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value;
 
-                pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (double)pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value;
-                pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Limit = (double)pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value;
+                pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Begin = (float)pizaro_ResizeWidth_UserControl.resizeWidth_Begin_Numeric.Value;
+                pizaro_ResizeWidth_UserControl.resizeWidth_Animator.ResizeWidth_Limit = (float)pizaro_ResizeWidth_UserControl.resizeWidth_Limit_Numeric.Value;
 
 
             }
@@ -2257,15 +2257,15 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.Slide;
 
-                pizaroAnimatorInput.CordinateStart_X = (double)pizaro_Slide_UserControl.slide_StartX_Numeric.Value;
-                pizaroAnimatorInput.CordinateStart_Y = (double)pizaro_Slide_UserControl.slide_StartY_Numeric.Value;
-                pizaroAnimatorInput.CordinateEnd_X = (double)pizaro_Slide_UserControl.slide_EndX_Numeric.Value;
-                pizaroAnimatorInput.CordinateEnd_Y = (double)pizaro_Slide_UserControl.slide_EndY_Numeric.Value;
+                pizaroAnimatorInput.CordinateStart_X = (float)pizaro_Slide_UserControl.slide_StartX_Numeric.Value;
+                pizaroAnimatorInput.CordinateStart_Y = (float)pizaro_Slide_UserControl.slide_StartY_Numeric.Value;
+                pizaroAnimatorInput.CordinateEnd_X = (float)pizaro_Slide_UserControl.slide_EndX_Numeric.Value;
+                pizaroAnimatorInput.CordinateEnd_Y = (float)pizaro_Slide_UserControl.slide_EndY_Numeric.Value;
 
-                pizaro_Slide_UserControl.slide_Animator.CordinateStart_X = (double)pizaro_Slide_UserControl.slide_StartX_Numeric.Value;
-                pizaro_Slide_UserControl.slide_Animator.CordinateStart_Y = (double)pizaro_Slide_UserControl.slide_StartY_Numeric.Value;
-                pizaro_Slide_UserControl.slide_Animator.CordinateEnd_X = (double)pizaro_Slide_UserControl.slide_EndX_Numeric.Value;
-                pizaro_Slide_UserControl.slide_Animator.CordinateEnd_Y = (double)pizaro_Slide_UserControl.slide_EndY_Numeric.Value;
+                pizaro_Slide_UserControl.slide_Animator.CordinateStart_X = (float)pizaro_Slide_UserControl.slide_StartX_Numeric.Value;
+                pizaro_Slide_UserControl.slide_Animator.CordinateStart_Y = (float)pizaro_Slide_UserControl.slide_StartY_Numeric.Value;
+                pizaro_Slide_UserControl.slide_Animator.CordinateEnd_X = (float)pizaro_Slide_UserControl.slide_EndX_Numeric.Value;
+                pizaro_Slide_UserControl.slide_Animator.CordinateEnd_Y = (float)pizaro_Slide_UserControl.slide_EndY_Numeric.Value;
 
 
             }
@@ -2335,10 +2335,10 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             {
                 pizaroAnimatorInput.AnimationType = animationType.SlideFrom;
 
-                pizaroAnimatorInput.CordinateStart_X = (double)pizaro_SlideFrom_UserControl.slideFrom_StartX_Numeric.Value;
-                pizaroAnimatorInput.CordinateStart_Y = (double)pizaro_SlideFrom_UserControl.slideFrom_StartY_Numeric.Value;
-                pizaroAnimatorInput.CordinateEnd_X = (double)pizaro_SlideFrom_UserControl.slideFrom_EndX_Numeric.Value;
-                pizaroAnimatorInput.CordinateEnd_Y = (double)pizaro_SlideFrom_UserControl.slideFrom_EndY_Numeric.Value;
+                pizaroAnimatorInput.CordinateStart_X = (float)pizaro_SlideFrom_UserControl.slideFrom_StartX_Numeric.Value;
+                pizaroAnimatorInput.CordinateStart_Y = (float)pizaro_SlideFrom_UserControl.slideFrom_StartY_Numeric.Value;
+                pizaroAnimatorInput.CordinateEnd_X = (float)pizaro_SlideFrom_UserControl.slideFrom_EndX_Numeric.Value;
+                pizaroAnimatorInput.CordinateEnd_Y = (float)pizaro_SlideFrom_UserControl.slideFrom_EndY_Numeric.Value;
 
                 
 
@@ -2414,62 +2414,62 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         {
             if(generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_Fade)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(animationType.Fade, 0, 1, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(animationType.Fade, 0, 1, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_Fade_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeIn)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(animationType.FadeIn, 0, 1,true, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(animationType.FadeIn, 0, 1,true, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_FadeIn_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeInAndShow)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.FadeInAndShow, 0, 1, true, true, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.FadeInAndShow, 0, 1, true, true, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_FadeInAndShow_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeOut)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.FadeOut, 0, 1, "", (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.FadeOut, 0, 1, "", (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_FadeOut_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_FadeOutandHide)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.FadeOutandHide, 0, 1, "", "", (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.FadeOutandHide, 0, 1, "", "", (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_FadeOutandHide_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_Resize)
             {
             
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.Resize, 10, 10, 300, 300, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.Resize, 10, 10, 300, 300, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_Resize_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_ResizeWidth)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.ResizeWidth, "", 10, 50, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.ResizeWidth, "", 10, 50, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_ResizeWidth_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_ResizeHeight)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.ResizeHeight, true, 10, 50, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.ResizeHeight, true, 10, 50, (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_ResizeHeight_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_Slide)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.Slide, 10, 10, 50, 50, true,(Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.Slide, 10, 10, 50, 50, true,(Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_Slide_Retrieved_Values(pizaroAnimatorInput);
             }
             else if (generalContainer_AnimationType_ComboBox.SelectedIndex == Pizaro_SlideFrom)
             {
-                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.SlideFrom, 10, 10, 50, 50, "", (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7, 0.2, 1);
+                pizaroAnimatorInput = new ZeroitPizaroAnimatorInput(ZeroitPizaroAnimator.ZeroitPizaroAnimEdit.animationType.SlideFrom, 10, 10, 50, 50, "", (Control)generalContainer_Control_ComboBox.SelectedItem, 1000, 0.7f, 0.2f, 1);
 
                 Set_SlideFrom_Retrieved_Values(pizaroAnimatorInput);
             }
@@ -3113,16 +3113,16 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void generalContainer_EasingStart_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fade_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            fadeIn_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            fadeInAndShow_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            fadeOut_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            fadeOutAndHide_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            pizaro_Resize_UserControl.resize_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            pizaro_Slide_UserControl.slide_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.EasingStart = (double)generalContainer_EasingStart_Numeric.Value;
+            fade_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            fadeIn_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            fadeInAndShow_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            fadeOut_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            fadeOutAndHide_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            pizaro_Slide_UserControl.slide_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.EasingStart = (float)generalContainer_EasingStart_Numeric.Value;
             
         }
 
@@ -3133,16 +3133,16 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void generalContainer_EasingEnd_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fade_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            fadeIn_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            fadeInAndShow_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            fadeOut_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            fadeOutAndHide_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            pizaro_Resize_UserControl.resize_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            pizaro_Slide_UserControl.slide_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.EasingEnd = (double)generalContainer_EasingEnd_Numeric.Value;
+            fade_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            fadeIn_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            fadeInAndShow_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            fadeOut_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            fadeOutAndHide_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            pizaro_Slide_UserControl.slide_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.EasingEnd = (float)generalContainer_EasingEnd_Numeric.Value;
 
         }
 
@@ -3153,16 +3153,16 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void generalContainer_Acceleration_Numeric_ValueChanged(object sender, EventArgs e)
         {
-            fade_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            fadeIn_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            fadeInAndShow_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            fadeOut_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            fadeOutAndHide_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            pizaro_Resize_UserControl.resize_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            pizaro_Slide_UserControl.slide_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
-            pizaro_SlideFrom_UserControl.slideFrom_Animator.Acceleration = (double)generalContainer_Acceleration_Numeric.Value;
+            fade_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            fadeIn_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            fadeInAndShow_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            fadeOut_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            fadeOutAndHide_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            pizaro_Resize_UserControl.resize_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            pizaro_ResizeHeight_UserControl.resizeHeight_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            pizaro_ResizeWidth_UserControl.resizeWidth_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            pizaro_Slide_UserControl.slide_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
+            pizaro_SlideFrom_UserControl.slideFrom_Animator.Acceleration = (float)generalContainer_Acceleration_Numeric.Value;
 
         }
 

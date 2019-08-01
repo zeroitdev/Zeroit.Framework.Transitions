@@ -44,6 +44,31 @@ namespace Zeroit.Framework.Transitions.ThemeManagers
     [ToolboxItem(false)]
     public class NYX : ThemeContainer
     {
+        Font titleFont = new Font("Arial", 10, FontStyle.Bold);
+
+        private Color titleColor = Color.White;
+
+
+        public Color TitleColor
+        {
+            get { return titleColor; }
+            set
+            {
+                titleColor = value;
+                Invalidate();
+            }
+        }
+
+        public Font TitleFont
+        {
+            get { return titleFont; }
+            set
+            {
+                titleFont = value;
+                Invalidate();
+            }
+        }
+        
         /// <summary>
         /// The h
         /// </summary>
@@ -162,13 +187,12 @@ namespace Zeroit.Framework.Transitions.ThemeManagers
             G.FillRectangle(new SolidBrush(Color.FromArgb(22, 22, 22)), mainRect);
             G.DrawRectangle(Pens.Black, mainRect);
             //Text
-            Font titleFont = new Font("Arial", 10, FontStyle.Bold);
             int textWidth = (int)this.CreateGraphics().MeasureString(Text, Font).Width;
             int textHeight = (int)this.CreateGraphics().MeasureString(Text, Font).Height;
             SolidBrush textShadow = new SolidBrush(Color.FromArgb(30, 0, 0));
             int m = Width / 2;
             G.DrawString(Text, titleFont, textShadow, new Point(m - (textWidth / 2) + 1, 5));
-            G.DrawString(Text, titleFont, new SolidBrush(Color.FromArgb(210, 10, 10)), new Point(m - (textWidth / 2), 4));
+            G.DrawString(Text, titleFont, new SolidBrush(TitleColor), new Point(m - (textWidth / 2), 4));
         }
     }
     

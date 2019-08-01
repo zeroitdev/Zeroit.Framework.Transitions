@@ -44,7 +44,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="control">The Windows Forms control to be used in the animation.</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public FadeInAndShow(Control control, int duration, Func<double, double> accelFunc)
+        public FadeInAndShow(Control control, int duration, Func<float, float> accelFunc)
             : base(control, duration, accelFunc) {
         }
 

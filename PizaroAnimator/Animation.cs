@@ -45,12 +45,12 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <summary>
         /// Start point of the animation.
         /// </summary>
-        protected double[] m_Start;
+        protected float[] m_Start;
 
         /// <summary>
         /// End point of the animation.
         /// </summary>
-        protected double[] m_End;
+        protected float[] m_End;
 
         /// <summary>
         /// Duration of the animation in milliseconds.
@@ -61,9 +61,15 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// Acceleration function, which must return a number between 0 and 1 for inputs between 0
         /// and 1.
         /// </summary>
-        private Func<double, double> m_AccelFunc;
+        private Func<float, float, float, float, float> m_AccelFunc;
 
-        
+        /// <summary>
+        /// Acceleration function, which must return a number between 0 and 1 for inputs between 0
+        /// and 1.
+        /// </summary>
+        private Func<float, float> m_AccelFunc_Second;
+
+
 
         /// <summary>
         /// Timestamp for when the animation was started.
@@ -88,7 +94,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <summary>
         /// Current co-ordinates for animation.
         /// </summary>
-        protected double[] m_Current;
+        protected float[] m_Current;
 
         /// <summary>
         /// Current state of the animation.
@@ -98,9 +104,11 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <summary>
         /// Percent of the way through the animation (between 0.0 and 1.0).
         /// </summary>
-        protected double m_Progress;
+        protected float m_Progress;
 
         private Timer m_Timer;
+
+        bool fade;
 
         /// <summary>
         /// Constructs an animation object.
@@ -109,7 +117,9 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <param name="end">Array of end co-ordinates.</param>
         /// <param name="duration">Length of animation in milliseconds.</param>
         /// <param name="accelFunc">Acceleration function, returns 0-1 for inputs 0-1.</param>
-        public Animation(double[] start, double[] end, int duration, Func<double, double> accelFunc) {
+        public Animation(float[] start, float[] end, int duration, Func<float, float, float, float, float> accelFunc)
+        {
+            fade = false;
             if (start.Length != end.Length) {
                 throw new AnimationException("Start and end arrays must be the same length.");
             }
@@ -118,17 +128,45 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
             m_Duration = duration;
             m_AccelFunc = accelFunc;
 
-            m_Current = new double[m_Start.Length];
+            m_Current = new float[m_Start.Length];
             m_State = AnimationState.Stopped;
             m_Progress = 0;
             m_Timer = new Timer(TIMEOUT);
             m_Timer.Elapsed += new ElapsedEventHandler(m_Timer_Elapsed);
         }
 
-        
+        public Animation(float[] start, float[] end, int duration, Func<float, float> secondAccelFunc)
+        {
+            fade = true;
+            if (start.Length != end.Length)
+            {
+                throw new AnimationException("Start and end arrays must be the same length.");
+            }
+            m_Start = start;
+            m_End = end;
+            m_Duration = duration;
+            m_AccelFunc_Second = secondAccelFunc;
 
+            m_Current = new float[m_Start.Length];
+            m_State = AnimationState.Stopped;
+            m_Progress = 0;
+            m_Timer = new Timer(TIMEOUT);
+            m_Timer.Elapsed += new ElapsedEventHandler(m_Timer_Elapsed);
+        }
+        
         void m_Timer_Elapsed(object sender, ElapsedEventArgs e) {
-            Cycle(e.SignalTime);
+            switch (fade)
+            {
+                case true:
+                    FadeCycle(e.SignalTime);
+                    break;
+                case false:
+                    Cycle(e.SignalTime);
+                    break;
+                default:
+                    break;
+            }
+            
         }
 
         /// <summary>
@@ -150,7 +188,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         /// <summary>
         /// Gets the current co-ordinates of the animation.
         /// </summary>
-        public double[] CurrentCoordinates {
+        public float[] CurrentCoordinates {
             get { return m_Current; }
         }
 
@@ -216,7 +254,20 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
             m_State = AnimationState.Playing;
 
             m_Timer.Start();
-            Cycle(m_StartTime);
+
+            switch (fade)
+            {
+                case true:
+                    FadeCycle(m_StartTime);
+                    break;
+                case false:
+                    Cycle(m_StartTime);
+                    break;
+                default:
+                    break;
+            }
+
+            
 
             return true;
         }
@@ -250,12 +301,40 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
             }
         }
 
+        public bool Resumes(bool restart)
+        {
+            
+            
+            m_StartTime = DateTime.Now;
+            
+            m_EndTime = m_StartTime + new TimeSpan((m_Duration) * 10000);
+            m_LastFrame = m_StartTime;
+            
+            m_State = AnimationState.Playing;
+
+            m_Timer.Start();
+                        
+            switch (fade)
+            {
+                case true:
+                    FadeCycle(m_StartTime);
+                    break;
+                case false:
+                    Cycle(m_StartTime);
+                    break;
+                default:
+                    break;
+            }
+            
+            return true;
+        }
+
         /// <summary>
         /// Handles the actual iteration of the animation in a timeout.
         /// </summary>
         /// <param name="now">The current time.</param>
         private void Cycle(DateTime now) {
-            m_Progress = (now - m_StartTime).TotalMilliseconds / (m_EndTime - m_StartTime).TotalMilliseconds;
+            m_Progress = (float)(now - m_StartTime).TotalMilliseconds / (float)(m_EndTime - m_StartTime).TotalMilliseconds;
 
             if (m_Progress >= 1) {
                 m_Progress = 1;
@@ -273,8 +352,18 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
 
             if (m_AccelFunc == null) {
                 UpdateCoords(m_Progress);
-            } else {
-                UpdateCoords(m_AccelFunc(m_Progress));
+            }
+            else
+            {
+                                
+                //UpdateCoords(m_AccelFunc(m_Progress));
+
+                //----------Working-----------//
+                //UpdateCoords(m_AccelFunc((float)Math.Pow(m_Progress, m_Progress * m_Progress) * (float)Math.Pow(m_Progress, m_Progress * m_Progress), (float)Math.Pow(m_Progress, m_Progress * m_Progress), (float)Math.Pow(m_Progress, m_Progress * m_Progress), (float)Math.Pow(m_Progress, m_Progress * m_Progress)));
+
+                UpdateCoords(m_AccelFunc((float)Math.Pow(m_Progress/ 15, m_Progress * m_Progress), (float)Math.Pow(m_Progress / 15, m_Progress * m_Progress), (float)Math.Pow(m_Progress, m_Progress * m_Progress), (float)Math.Pow(m_Progress, m_Progress * m_Progress)));
+
+
             }
 
             // Animation has finished.
@@ -291,14 +380,62 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         }
 
         /// <summary>
+        /// Handles the actual iteration of the animation in a timeout.
+        /// </summary>
+        /// <param name="now">The current time.</param>
+        private void FadeCycle(DateTime now)
+        {
+            m_Progress = (float)(now - m_StartTime).TotalMilliseconds / (float)(m_EndTime - m_StartTime).TotalMilliseconds;
+
+            if (m_Progress >= 1)
+            {
+                m_Progress = 1;
+            }
+
+            m_Fps = (int)(1000d / (now - m_LastFrame).TotalMilliseconds);
+
+
+            #region Zeroit Additions
+
+
+            #endregion
+
+            m_LastFrame = now;
+                        
+            if (m_AccelFunc_Second == null)
+            {
+                UpdateCoords(m_Progress);
+            }
+            else
+            {
+                UpdateCoords(m_AccelFunc_Second(m_Progress));                
+            }
+
+            // Animation has finished.
+            if (m_Progress == 1)
+            {
+                m_State = AnimationState.Stopped;
+                m_Timer.Stop();
+
+                OnFinish();
+                OnEnd();
+                // Animation is still under way.
+            }
+            else if (m_State == AnimationState.Playing)
+            {
+                OnAnimate();
+            }
+        }
+
+        /// <summary>
         /// Calculates current co-ordinates, based on the current state.
         /// </summary>
         /// <param name="t">Percentage of the way through the animation as a decimal.</param>
-        private void UpdateCoords(double t) {
+        private void UpdateCoords(float t) {
             if (t == 1) {
                 m_Current = m_End;
             } else {
-                m_Current = new double[m_Start.Length];
+                m_Current = new float[m_Start.Length];
                 for (int i = 0; i < m_Start.Length; i++) {
                     m_Current[i] = (m_End[i] - m_Start[i]) * t + m_Start[i];
                 }

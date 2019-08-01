@@ -83,6 +83,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.resize_Rotating_Cube);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.resize_EndY_Numeric);
             this.groupBox1.Controls.Add(this.label4);
@@ -92,7 +93,6 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.resize_StartX_Numeric);
             this.groupBox1.Controls.Add(this.resize_Preview_btn);
-            this.groupBox1.Controls.Add(this.resize_Rotating_Cube);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -254,6 +254,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // resize_Rotating_Cube
             // 
+            this.resize_Rotating_Cube.AllowTransparency = true;
             this.resize_Rotating_Cube.AutoAnimate = true;
             this.resize_Rotating_Cube.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.BlueViolet,
@@ -272,25 +273,25 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             // 
             // resize_Animator
             // 
-            this.resize_Animator.Acceleration = 0.7D;
+            this.resize_Animator.Acceleration = 0.7F;
             this.resize_Animator.AnimationType = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.animationType.Resize;
             this.resize_Animator.Control = this.resize_Rotating_Cube;
             this.resize_Animator.ControlStyles = System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer;
             this.resize_Animator.ControlStylesBool = false;
-            this.resize_Animator.CordinateEnd_X = 86D;
-            this.resize_Animator.CordinateEnd_Y = 86D;
-            this.resize_Animator.CordinateStart_X = 10D;
-            this.resize_Animator.CordinateStart_Y = 10D;
+            this.resize_Animator.CordinateEnd_X = 86F;
+            this.resize_Animator.CordinateEnd_Y = 86F;
+            this.resize_Animator.CordinateStart_X = 10F;
+            this.resize_Animator.CordinateStart_Y = 10F;
             this.resize_Animator.Duration = 1000;
-            this.resize_Animator.EasingEnd = 1D;
+            this.resize_Animator.EasingEnd = 1F;
             this.resize_Animator.EasingNames = Zeroit.Framework.Transitions.ZeroitPizaroAnimator.ZeroitPizaroAnim.easingNames.BackEaseIn;
-            this.resize_Animator.EasingStart = 0.2D;
-            this.resize_Animator.Fade_Begin = 0D;
-            this.resize_Animator.Fade_Limit = 1D;
-            this.resize_Animator.ResizeHeight_Begin = 10D;
-            this.resize_Animator.ResizeHeight_Limit = 50D;
-            this.resize_Animator.ResizeWidth_Begin = 10D;
-            this.resize_Animator.ResizeWidth_Limit = 50D;
+            this.resize_Animator.EasingStart = 0.2F;
+            this.resize_Animator.Fade_Begin = 0F;
+            this.resize_Animator.Fade_Limit = 1F;
+            this.resize_Animator.ResizeHeight_Begin = 10F;
+            this.resize_Animator.ResizeHeight_Limit = 50F;
+            this.resize_Animator.ResizeWidth_Begin = 10F;
+            this.resize_Animator.ResizeWidth_Limit = 50F;
             // 
             // Pizaro_Resize_UserControl
             // 

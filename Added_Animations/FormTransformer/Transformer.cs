@@ -40,6 +40,10 @@ namespace Zeroit.Framework.Transitions
     /// </summary>
     class FormTransform
     {
+
+        Form frm;
+        int newWidth, newHeight;
+
         /// <summary>
         /// The f ps
         /// </summary>
@@ -68,8 +72,31 @@ namespace Zeroit.Framework.Transitions
         /// <param name="newHeight">The new height.</param>
         public void TransformSize(System.Windows.Forms.Form frm, int newWidth, int newHeight)
         {
+            this.frm = frm;
+            this.newWidth = newWidth;
+            this.newHeight = newHeight;
+
             TransformSize(frm, new Size(newWidth, newHeight));
+
+            
         }
+
+        private void Frm_SizeChanged(object sender, EventArgs e)
+        {
+            
+            if (frm.Size.Width == (newWidth + 36)  || frm.Size.Height == (newHeight + 9))
+            {
+                if(transformThread != null)
+                {
+                    transformThread.Abort();
+                }
+                
+            }
+        }
+
+        Size newSize;
+
+        Thread transformThread;
 
         /// <summary>
         /// Transforms the size.
@@ -78,11 +105,14 @@ namespace Zeroit.Framework.Transitions
         /// <param name="newSize">The new size.</param>
         public void TransformSize(System.Windows.Forms.Form frm, Size newSize)
         {
-            ParameterizedThreadStart threadStart = new ParameterizedThreadStart(RunTransformation);
             
+            ParameterizedThreadStart threadStart = new ParameterizedThreadStart(RunTransformation);
+
             Thread transformThread = new Thread(threadStart);
 
             transformThread.Start(new object[] { frm, newSize });
+
+            
         }
 
         /// <summary>
@@ -205,5 +235,15 @@ namespace Zeroit.Framework.Transitions
         {
             return FPS;
         }
+
+        public void Stop()
+        {
+            if(transformThread !=null)
+            {
+                transformThread.Abort();
+            }
+        }
+
+        
     }
 }

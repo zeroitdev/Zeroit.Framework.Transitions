@@ -111,18 +111,32 @@ namespace Zeroit.Framework.Transitions
 
         #region Methods
 
+        FormTransform transformAnimation;
         /// <summary>
         /// Starts the specified form.
         /// </summary>
         /// <param name="Form">The form.</param>
         public void Start(System.Windows.Forms.Form Form)
         {
-            FormTransform transformAnimation = new FormTransform();
+            transformAnimation = new FormTransform();
             transformAnimation.FPS = FPS;
             transformAnimation.Step = Step;
-            transformAnimation.TransformSize(Form, new Size(Width, Height));
-        } 
+            //transformAnimation.TransformSize(Form, new Size(Width, Height));
 
+            transformAnimation.TransformSize(Form, Width, Height);
+
+        }
+
+        public void Stop()
+        {
+            if(transformAnimation !=null)
+            {
+                transformAnimation.Stop();
+                
+            }
+        }
+        
+        
         #endregion
     }
 }

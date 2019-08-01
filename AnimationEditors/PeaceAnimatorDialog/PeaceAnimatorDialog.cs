@@ -887,6 +887,52 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
 
             peaceInput.Control = (Control) control_ComboBox.SelectedItem;
 
+
+            #region Path Continue Retrieval
+
+            if (mainControl_Path_Continue_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.OneD_Continue = true;
+                peaceInput.TwoDContinue = true;
+                peaceInput.ThreeDContinue = true;
+
+            }
+            else
+            {
+                peaceInput.OneD_Continue = false;
+                peaceInput.TwoDContinue = false;
+                peaceInput.ThreeDContinue = false;
+            }
+
+            #endregion
+
+            #region Repeat Retrieval
+
+            if (mainControl_Repeat_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.Repeat = true;
+            }
+            else
+            {
+                peaceInput.Repeat = false;
+            }
+
+            #endregion
+
+            #region Reverse Retrieval
+
+            if (mainControl_Reverse_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.Reverse = true;
+            }
+            else
+            {
+                peaceInput.Reverse = false;
+            }
+
+            #endregion
+
+
             #region Property Retrieved
             if (oneD_Property_ComboBox.SelectedIndex == OneD_Property_Custom)
             {
@@ -1588,6 +1634,51 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         {
             peaceInput.Control = (Control)control_ComboBox.SelectedItem;
 
+
+            #region Path Continue Retrieval
+
+            if (mainControl_Path_Continue_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.OneD_Continue = true;
+                peaceInput.TwoDContinue = true;
+                peaceInput.ThreeDContinue = true;
+
+            }
+            else
+            {
+                peaceInput.OneD_Continue = false;
+                peaceInput.TwoDContinue = false;
+                peaceInput.ThreeDContinue = false;
+            }
+
+            #endregion
+
+            #region Repeat Retrieval
+
+            if (mainControl_Repeat_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.Repeat = true;
+            }
+            else
+            {
+                peaceInput.Repeat = false;
+            }
+
+            #endregion
+
+            #region Reverse Retrieval
+
+            if (mainControl_Reverse_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.Reverse = true;
+            }
+            else
+            {
+                peaceInput.Reverse = false;
+            }
+
+            #endregion
+            
             #region Property Retrieved
             if (twoD_Property_ComboBox.SelectedIndex == TwoD_Property_Location)
             {
@@ -2355,7 +2446,51 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
             peaceInput.Control = (Control)control_ComboBox.SelectedItem;
 
             peaceInput.ColorPropertyName = threeD_Color_Property_Name_TextBox.Text;
+            
+            #region Path Continue Retrieval
 
+            if (mainControl_Path_Continue_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.OneD_Continue = true;
+                peaceInput.TwoDContinue = true;
+                peaceInput.ThreeDContinue = true;
+
+            }
+            else
+            {
+                peaceInput.OneD_Continue = false;
+                peaceInput.TwoDContinue = false;
+                peaceInput.ThreeDContinue = false;
+            }
+
+            #endregion
+
+            #region Repeat Retrieval
+
+            if (mainControl_Repeat_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.Repeat = true;
+            }
+            else
+            {
+                peaceInput.Repeat = false;
+            }
+
+            #endregion
+
+            #region Reverse Retrieval
+
+            if (mainControl_Reverse_ComboBox.SelectedIndex == Yes)
+            {
+                peaceInput.Reverse = true;
+            }
+            else
+            {
+                peaceInput.Reverse = false;
+            }
+
+            #endregion
+            
             #region Property Retrieved
             if (threeD_Property_ComboBox.SelectedIndex == ThreeD_Property_BackColor)
             {

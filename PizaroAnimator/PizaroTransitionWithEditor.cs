@@ -882,9 +882,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
         //}
 
         #endregion
-
-
-
+            
         #region NewlyAdded
 
         Fade fade;

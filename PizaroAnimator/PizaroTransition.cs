@@ -1349,8 +1349,7 @@ namespace Zeroit.Framework.Transitions.ZeroitPizaroAnimator
                 default:
                     break;
             }
-
-
+            
             return FadeAll(var1);
         }
 

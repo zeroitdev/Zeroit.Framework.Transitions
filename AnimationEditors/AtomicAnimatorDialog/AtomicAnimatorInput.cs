@@ -501,8 +501,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
                 bool reverse,
                 float duration,
                 ZeroitAtomEdit.Animations animations,
-                string animationString
-            
+                string animationString            
             )
         {
             this.point1X = point1X;
@@ -659,7 +658,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         }
 
         /// <summary>
-        /// Constructor for Size Animation.
+        /// Constructor for Location Animation.
         /// </summary>
         /// <param name="animatedProperty">The animated property.</param>
         /// <param name="point1X">The point1 x.</param>
@@ -724,7 +723,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         }
 
         /// <summary>
-        /// Constructor for Size Animation.
+        /// Constructor for BackColor Animation.
         /// </summary>
         /// <param name="animatedProperty">The animated property.</param>
         /// <param name="point1X">The point1 x.</param>
@@ -789,7 +788,7 @@ namespace Zeroit.Framework.Transitions.AnimationEditors
         }
 
         /// <summary>
-        /// Constructor for Size Animation.
+        /// Constructor for ForeColor Animation.
         /// </summary>
         /// <param name="animatedProperty">The animated property.</param>
         /// <param name="point1X">The point1 x.</param>

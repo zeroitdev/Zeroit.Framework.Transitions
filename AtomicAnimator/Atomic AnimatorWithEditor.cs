@@ -155,32 +155,19 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
             0.5f,
             0.5f,
             1.0f,
-            0.0f,
-            "text",
+            0.0f,            
             new System.Drawing.Size(100, 100),
-            new System.Drawing.Point(447, 356),
-            Color.Black,
-            Color.Transparent,
             true,
             2f,
             ZeroitAtomEdit.Animations.EaseInEaseOut,
-            ""
-
+            new Control()
         );
 
+        private Control control = new Control();
 
         #endregion
 
-        #region Old Code
-        //public PointF point1 = new PointF(0.5f, 0.0f);
-        //public PointF point2 = new PointF(0.5f, 1.0f);
-
-        //public PointF point3 = new PointF(0.7f, 1.0f);
-        //public PointF point4 = new PointF(1.0f, 0.0f);
-
-        //private PointF[] customAnimationPoints = new PointF[1]; 
-        #endregion
-
+        
         #region Public Properties
 
         /// <summary>
@@ -198,7 +185,7 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
             set
             {
                 atomicAnimatorInput = value;
-                Control.Invalidate();
+                //Control.Invalidate();
             }
         }
 
@@ -349,15 +336,27 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
         /// Gets or sets the control for the animation.
         /// </summary>
         /// <value>The control.</value>
-        public Control Control
+        [Browsable(false)]
+        public Control Target
         {
             get { return atomicAnimatorInput.Control; }
             set
             {
                 atomicAnimatorInput.Control = value;
-
+                Control = value;
             }
         }
+
+        public Control Control
+        {
+            get { return control; }
+            set
+            {
+                control = value;
+                atomicAnimatorInput.Control = value;
+            }
+        }
+
 
         //public string ControlAnimationString
         //{
@@ -507,6 +506,11 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
 
         #endregion
 
+        public ZeroitAtomEdit()
+        {
+            
+        }
+
         /// <summary>
         /// Activates the Animation.
         /// </summary>
@@ -540,9 +544,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
                     }
 
                     btnsAnim.Reverses = Reverse;
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim);
+                    Run(AnimationString, btnsAnim);
                     break;
                 case Animations.EaseIn:
                     AnimationContext btnsAnim1 = new AnimationContext(AnimationCurves.AnimationCurve.EaseIn);
@@ -570,9 +574,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
 
                     btnsAnim1.Reverses = Reverse;
 
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim1);
+                    Run(AnimationString, btnsAnim1);
                     break;
                 case Animations.EaseOut:
                     AnimationContext btnsAnim2 = new AnimationContext(AnimationCurves.AnimationCurve.EaseOut);
@@ -600,9 +604,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
 
                     btnsAnim2.Reverses = Reverse;
 
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim2);
+                    Run(AnimationString, btnsAnim2);
                     break;
                 case Animations.EaseInEaseOut:
                     AnimationContext btnsAnim3 = new AnimationContext(AnimationCurves.AnimationCurve.EaseInEaseOut);
@@ -630,9 +634,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
 
                     btnsAnim3.Reverses = Reverse;
 
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim3);
+                    Run(AnimationString, btnsAnim3);
                     break;
                 case Animations.Linear:
                     AnimationContext btnsAnim4 = new AnimationContext(AnimationCurves.AnimationCurve.Linear);
@@ -660,9 +664,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
 
                     btnsAnim4.Reverses = Reverse;
 
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim4);
+                    Run(AnimationString, btnsAnim4);
                     break;
                 case Animations.CustomAnimation2Points:
                     AnimationContext btnsAnim5 = new AnimationContext(CustomAnimation2Points);
@@ -689,9 +693,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
                     }
 
                     btnsAnim5.Reverses = Reverse;
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim5);
+                    Run(AnimationString, btnsAnim5);
                     break;
                 case Animations.CustomAnimation3Points:
                     AnimationContext threepoints = new AnimationContext(CustomAnimation4Points);
@@ -719,9 +723,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
                     }
 
                     threepoints.Reverses = Reverse;
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, threepoints);
+                    Run(AnimationString, threepoints);
 
                     break;
                 case Animations.CustomAnimation4Points:
@@ -749,9 +753,9 @@ namespace Zeroit.Framework.Transitions.AtomicAnimator
                     }
 
                     btnsAnim7.Reverses = Reverse;
-                    ZeroitAtom.InitWithControl(Control);
+                    InitWithControl(Control);
 
-                    ZeroitAtom.Run(AnimationString, btnsAnim7);
+                    Run(AnimationString, btnsAnim7);
                     break;
                 default:
                     break;
